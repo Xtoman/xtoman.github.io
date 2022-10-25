@@ -1,15 +1,20 @@
 ---
 layout: page
-title: About
+title: Обо мне
 permalink: /about/
 ---
 
-Some information about you!
+Блог человека, который пытается разобраться в себе, а получается лишь увеличивать количество знаний в случайных областях.
 
-### More Information
+### Именно так и появился этот блог
 
-A place to include any other types of information that you'd like to include about yourself.
+* Фотография
+* Проектный менеджмент
+* Програмирование
+* Автомобили
+* Велосипеды
+* и много рандомных штук
 
-### Contact me
+### Контакты
 
-[email@domain.com](mailto:email@domain.com)
+Telegram -  [@Xtoman](http://t.me/xtoman)
