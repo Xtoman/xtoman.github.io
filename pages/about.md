@@ -4,6 +4,13 @@ title: About
 permalink: /about
 ---
 
-# Portfolio Jekyll Theme
+# About Me
 
-This is a personal portfolio theme that I built from the ground up, using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). You can [check out the demo](lenpaul.github.io/portfolio-jekyll-theme/), and [fork the repository](https://github.com/LeNPaul/portfolio-jekyll-theme/fork), to get started.
+Hello! I'm a passionate photographer specializing in various genres including reportage, street photography, nature, and portraits. My journey through the lens allows me to capture the essence of moments, whether it's the bustling energy of city streets, the serene beauty of nature, or the unique expressions of individuals.
+
+I am always open to collaboration and excited about interesting projects. If you have an idea or a project that you think we can work on together, feel free to reach out. Let's create something amazing!
+
+## Contact Me
+
+- **Email:** [xtoman@vk.com](mailto:xtoman@vk.com)
+- **Instagram:** [@xtlld](https://instagram.com/xtlld)
