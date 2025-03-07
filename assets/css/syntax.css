@@ -1,0 +1,30 @@
+.highlight {
+  background: #f8f8f8;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 0;
+}
+
+.highlight code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* Базовые цвета для подсветки синтаксиса */
+.highlight .c { color: #998; font-style: italic } /* Комментарий */
+.highlight .k { color: #000; font-weight: bold } /* Ключевое слово */
+.highlight .o { color: #000; font-weight: bold } /* Оператор */
+.highlight .cm { color: #998; font-style: italic } /* Многострочный комментарий */
+.highlight .cp { color: #999; font-weight: bold } /* Препроцессор */
+.highlight .s { color: #d14 } /* Строка */
+.highlight .na { color: #008080 } /* Имя атрибута */
+.highlight .nb { color: #0086B3 } /* Встроенное */
+.highlight .nc { color: #458; font-weight: bold } /* Имя класса */
+.highlight .nf { color: #900; font-weight: bold } /* Имя функции */
