@@ -1,7 +1,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
-    --accent-color: #3498db;
+    --accent-color: #2ecc71;
     --background-color: #fff;
     --light-gray: #f8f9fa;
     --border-color: #e9ecef;
@@ -114,7 +114,7 @@ main {
 }
 
 .read-more:hover {
-    background-color: #2980b9;
+    background-color: #27ae60;
     transform: translateY(-1px);
     text-decoration: none;
 }
