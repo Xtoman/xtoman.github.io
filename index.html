@@ -6,12 +6,16 @@ title: Главная
 <div class="posts">
     {% for post in site.posts %}
     <article class="post-preview">
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <h2>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
         <div class="post-date">{{ post.date | date: "%d.%m.%Y" }}</div>
+        
         <div class="post-excerpt">
-            {{ post.excerpt }}
+            {{ post.content | strip_html | truncatewords: 50 }}
         </div>
-        <a href="{{ post.url | relative_url }}" class="read-more">Читать далее →</a>
+        
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее...</a>
     </article>
     {% endfor %}
 </div> 

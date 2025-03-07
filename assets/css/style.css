@@ -48,20 +48,35 @@ main {
 }
 
 .post-preview {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
 }
 
-.post-date {
+.post-preview h2 {
+    margin-bottom: 0.5em;
+}
+
+.post-preview .post-date {
     color: #666;
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.post-excerpt {
+    margin: 1em 0;
+    line-height: 1.6;
 }
 
 .read-more {
-    color: var(--link-color);
+    display: inline-block;
+    color: #0066cc;
     text-decoration: none;
+    margin-top: 0.5em;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
 
 .post h1 {
