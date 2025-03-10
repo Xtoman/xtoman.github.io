@@ -45,38 +45,7 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/100272918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="{{ site.baseurl }}/">Главная</a>
-            <a href="{{ site.baseurl }}/about">Об авторе</a>
-            <a href="{{ site.baseurl }}/search">Поиск</a>
-        </nav>
-        <div class="quick-search">
-            <form action="{{ site.baseurl }}/search/" method="get">
-                <input type="text" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
-                <button type="submit" aria-label="Искать">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </form>
-        </div>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
-            <span class="material-icons">light_mode</span>
-        </button>
-    </header>
-
-    <main>
-        {{ content }}
-    </main>
-
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
-    </footer>
-
+    
     <!-- Скрипт для темной темы -->
     <script>
         // Проверяем сохраненную тему при загрузке страницы
@@ -90,7 +59,7 @@
             // Устанавливаем начальную иконку
             themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
             
-            // Обработчик клика
+            // Обработчик клика для темы
             themeToggle.addEventListener('click', () => {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -99,7 +68,62 @@
                 localStorage.setItem('theme', newTheme);
                 themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
             });
+
+            // Обработчик для поиска
+            const searchToggle = document.getElementById('search-toggle');
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+
+            searchToggle.addEventListener('click', () => {
+                searchContainer.classList.toggle('search-active');
+                if (searchContainer.classList.contains('search-active')) {
+                    searchInput.focus();
+                }
+            });
+
+            // Закрываем поиск при клике вне его
+            document.addEventListener('click', (e) => {
+                if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
+                    searchContainer.classList.remove('search-active');
+                }
+            });
+
+            // Закрываем поиск при нажатии Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchContainer.classList.remove('search-active');
+                }
+            });
         });
     </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ site.baseurl }}/">Главная</a>
+            <a href="{{ site.baseurl }}/about">Об авторе</a>
+        </nav>
+        <div class="header-controls">
+            <button id="search-toggle" class="icon-button" aria-label="Поиск">
+                <span class="material-icons">search</span>
+            </button>
+            <button id="theme-toggle" class="icon-button" aria-label="Переключить тему">
+                <span class="material-icons">light_mode</span>
+            </button>
+            <div id="search-container" class="search-container">
+                <form action="{{ site.baseurl }}/search/" method="get">
+                    <input type="text" id="search-input" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </footer>
 </body>
 </html> 

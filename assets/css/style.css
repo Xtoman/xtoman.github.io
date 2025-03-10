@@ -49,12 +49,13 @@ body {
 header {
     background-color: var(--light-gray);
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px var(--shadow-color);
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 nav {
@@ -251,41 +252,81 @@ figcaption {
 }
 
 /* Стили для поиска */
-.quick-search {
-    margin-left: auto;
+.search-container {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--card-background);
+    border-radius: 24px;
+    overflow: hidden;
+    width: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px var(--shadow-color);
 }
 
-.quick-search form {
+.search-container.search-active {
+    width: 300px;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.search-container form {
     display: flex;
     align-items: center;
 }
 
-.quick-search input {
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px 0 0 4px;
-    font-size: 0.9rem;
-    width: 180px;
-    background-color: var(--card-background);
+.search-container input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: var(--card-background);
     color: var(--text-color);
+    font-size: 16px;
+    outline: none;
 }
 
-.quick-search button {
-    background-color: var(--accent-color);
-    color: white;
+.search-container input::placeholder {
+    color: var(--meta-color);
+}
+
+/* Стили для контролов в шапке */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Общие стили для кнопок с иконками */
+.icon-button {
+    background: none;
     border: none;
-    padding: 0.5rem;
-    border-radius: 0 4px 4px 0;
+    padding: 8px;
     cursor: pointer;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
-.quick-search button:hover {
-    background-color: #27ae60;
+.icon-button:hover {
+    background-color: var(--border-color);
 }
 
+.icon-button .material-icons {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-button:hover .material-icons {
+    transform: rotate(30deg);
+}
+
+/* Медиа-запросы */
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap;
@@ -297,14 +338,27 @@ figcaption {
         margin-bottom: 1rem;
     }
     
-    .quick-search {
+    .header-controls {
         order: 2;
-        flex: 1;
-        margin-right: 1rem;
     }
     
-    .theme-toggle {
-        order: 3;
+    .search-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+        width: 100%;
+        border-radius: 0;
+        z-index: 1000;
+    }
+    
+    .search-container.search-active {
+        width: 100%;
+    }
+    
+    .search-container input {
+        padding: 15px 20px;
     }
 }
 
