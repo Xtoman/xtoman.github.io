@@ -24,6 +24,10 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav {
@@ -33,6 +37,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -215,4 +221,59 @@ figcaption {
     cursor: pointer;
     transform: scale(1.01);
     transition: transform 0.2s ease;
+}
+
+/* Стили для поиска */
+.quick-search {
+    margin-left: auto;
+}
+
+.quick-search form {
+    display: flex;
+    align-items: center;
+}
+
+.quick-search input {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+    width: 180px;
+}
+
+.quick-search button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-search button:hover {
+    background-color: #27ae60;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .quick-search {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .quick-search input {
+        width: 100%;
+    }
 } 
