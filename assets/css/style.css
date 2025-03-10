@@ -48,7 +48,7 @@ body {
 
 header {
     background-color: var(--light-gray);
-    padding: 1rem;
+    padding: 1rem 2rem;
     box-shadow: 0 2px 4px var(--shadow-color);
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
@@ -59,18 +59,13 @@ header {
 }
 
 nav {
-    max-width: 800px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav a {
-    color: var(--secondary-color);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -254,17 +249,18 @@ figcaption {
 /* Стили для поиска */
 .search-container {
     position: absolute;
-    right: 100px;
+    right: 100%;
     top: 50%;
     transform: translateY(-50%);
     background: var(--card-background);
     border-radius: 24px;
     overflow: hidden;
-    width: 40px;
+    width: 0;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px var(--shadow-color);
+    margin-right: 10px;
 }
 
 .search-container.search-active {
@@ -276,6 +272,7 @@ figcaption {
 .search-container form {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .search-container input {
@@ -297,13 +294,15 @@ figcaption {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
 }
 
 /* Общие стили для кнопок с иконками */
 .icon-button {
     background: none;
     border: none;
-    padding: 8px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 50%;
     display: flex;
@@ -320,6 +319,7 @@ figcaption {
 .icon-button .material-icons {
     font-size: 24px;
     transition: transform 0.3s ease;
+    color: var(--text-color);
 }
 
 .icon-button:hover .material-icons {
@@ -329,17 +329,19 @@ figcaption {
 /* Медиа-запросы */
 @media (max-width: 768px) {
     header {
-        flex-wrap: wrap;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
     }
     
     nav {
-        order: 1;
         width: 100%;
-        margin-bottom: 1rem;
+        justify-content: center;
     }
     
     .header-controls {
-        order: 2;
+        width: 100%;
+        justify-content: center;
     }
     
     .search-container {
@@ -347,13 +349,15 @@ figcaption {
         top: 0;
         left: 0;
         right: 0;
-        transform: translateY(0);
+        transform: translateY(-100%);
         width: 100%;
         border-radius: 0;
         z-index: 1000;
+        margin-right: 0;
     }
     
     .search-container.search-active {
+        transform: translateY(0);
         width: 100%;
     }
     
