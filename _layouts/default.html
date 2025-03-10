@@ -29,16 +29,6 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <!-- Скрипт для темной темы -->
-    <script>
-        // Проверяем сохраненную тему при загрузке страницы
-        let theme = localStorage.getItem('theme');
-        if (!theme) {
-            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        document.documentElement.setAttribute('data-theme', theme);
-    </script>
-    
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -87,27 +77,29 @@
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
     </footer>
 
-    <!-- Скрипт для переключения темы -->
+    <!-- Скрипт для темной темы -->
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('.material-icons');
-        
-        // Устанавливаем правильную иконку при загрузке
-        updateThemeIcon();
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        // Проверяем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
             
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon();
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('.material-icons');
+            
+            // Устанавливаем начальную иконку
+            themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
+            
+            // Обработчик клика
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
+            });
         });
-        
-        function updateThemeIcon() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            themeIcon.textContent = currentTheme === 'light' ? 'light_mode' : 'dark_mode';
-        }
     </script>
 </body>
 </html> 

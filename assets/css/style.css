@@ -1,12 +1,40 @@
+/* Переменные для светлой темы (по умолчанию) */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
     --accent-color: #2ecc71;
     --background-color: #fff;
+    --card-background: #fff;
     --light-gray: #f8f9fa;
     --border-color: #e9ecef;
     --text-color: #444;
     --meta-color: #6c757d;
+    --heading-color: #2c3e50;
+    --code-background: #f5f5f5;
+    --blockquote-color: #f0f0f0;
+    --shadow-color: rgba(0,0,0,0.05);
+}
+
+/* Переменные для темной темы */
+[data-theme="dark"] {
+    --primary-color: #8bc34a;
+    --secondary-color: #7cb342;
+    --accent-color: #4caf50;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --light-gray: #2a2a2a;
+    --border-color: #333;
+    --text-color: #e0e0e0;
+    --meta-color: #aaa;
+    --heading-color: #fff;
+    --code-background: #2d2d2d;
+    --blockquote-color: #2a2a2a;
+    --shadow-color: rgba(0,0,0,0.2);
+}
+
+/* Плавный переход между темами */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -74,12 +102,12 @@ main {
 }
 
 .post-preview {
-    background: white;
+    background: var(--card-background);
     border-radius: 8px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .post-preview:hover {
@@ -125,10 +153,10 @@ main {
 }
 
 .post {
-    background: white;
+    background: var(--card-background);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .post h1 {
@@ -238,6 +266,8 @@ figcaption {
     border-radius: 4px 0 0 4px;
     font-size: 0.9rem;
     width: 180px;
+    background-color: var(--card-background);
+    color: var(--text-color);
 }
 
 .quick-search button {
