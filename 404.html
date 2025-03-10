@@ -1,0 +1,41 @@
+---
+layout: default
+title: Страница не найдена
+permalink: /404.html
+---
+
+<div class="error-page">
+  <h1>404</h1>
+  <h2>Страница не найдена</h2>
+  <p>Извините, запрашиваемая страница не существует или была перемещена.</p>
+  <a href="{{ site.baseurl }}/" class="home-button">Вернуться на главную</a>
+</div>
+
+<style>
+  .error-page {
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+  .error-page h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #2ecc71;
+  }
+  .error-page h2 {
+    margin-top: 0;
+  }
+  .home-button {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: all 0.2s ease;
+  }
+  .home-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+  }
+</style> 

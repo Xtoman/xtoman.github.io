@@ -1,11 +1,48 @@
-title: Мой блог
-description: Персональный блог обо всем, что я изучаю
-baseurl: ""
-url: ""
+# Основные настройки сайта
+title: "Мой блог"
+description: "Личный блог о технологиях, путешествиях и саморазвитии"
+baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
+url: "https://xtoman.ru"  # укажите ваш домен здесь
 
+# Настройки автора
+author:
+  name: "Maxim Lloyd"
+  email: "xim395@gmail.com"
+
+# Настройки SEO
+lang: ru
+timezone: Europe/Moscow
+
+# Настройки постов
+permalink: /:year/:month/:day/:title/
+
+# Плагины
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Исключения из сборки
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Настройки сборки
 markdown: kramdown
-highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-permalink: /:year/:month/:day/:title/ 
+
+# Настройки компрессии
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body] 
