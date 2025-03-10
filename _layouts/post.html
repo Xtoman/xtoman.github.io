@@ -7,11 +7,6 @@ layout: default
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
             {{ page.date | date: "%d.%m.%Y" }}
         </time>
-        {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">{{ page.author }}</span>
-        </span>
-        {% endif %}
     </div>
     
     <div class="post-content" itemprop="articleBody">

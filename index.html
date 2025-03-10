@@ -14,11 +14,6 @@ description: Личный блог о технологиях, путешеств
             <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
                 {{ post.date | date: "%d.%m.%Y" }}
             </time>
-            {% if post.author %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ post.author }}</span>
-            </span>
-            {% endif %}
         </div>
         
         <div class="post-excerpt" itemprop="description">

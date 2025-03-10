@@ -56,6 +56,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    min-height: 64px;
 }
 
 nav {
@@ -455,27 +456,31 @@ figcaption {
 @media (max-width: 768px) {
     .mobile-only {
         display: flex;
+        position: absolute;
+        left: 1rem;
     }
 
     header {
         padding: 1rem;
+        justify-content: flex-end;
     }
 
     #main-nav {
         position: fixed;
-        top: 64px; /* Высота шапки */
+        top: 64px;
         left: 0;
+        right: 0;
         width: 100%;
+        height: auto;
         background-color: var(--card-background);
-        padding: 1rem;
+        padding: 0.5rem;
         box-shadow: 0 2px 4px var(--shadow-color);
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: transform 0.3s ease;
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        align-items: stretch;
     }
 
     #main-nav.nav-active {
@@ -486,9 +491,12 @@ figcaption {
         width: 100%;
         text-align: center;
         padding: 1rem;
+        margin: 0;
+        border-radius: 0;
     }
 
     .header-controls {
-        margin-left: auto;
+        position: relative;
+        z-index: 1001;
     }
 } 
