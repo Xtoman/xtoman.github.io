@@ -9,6 +9,10 @@ author:
   name: "Maxim Lloyd"
   email: "xim395@gmail.com"
 
+# Настройки пагинации
+paginate: 5
+paginate_path: "/page/:num/"
+
 # Настройки SEO
 lang: ru
 timezone: Europe/Moscow
@@ -21,6 +25,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Исключения из сборки
 exclude:

@@ -276,4 +276,51 @@ figcaption {
     .quick-search input {
         width: 100%;
     }
+}
+
+/* Стили для пагинации */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.pagination-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    transition: all 0.2s ease;
+}
+
+.pagination-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.pagination-active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.pagination-disabled {
+    color: var(--meta-color);
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .pagination {
+        margin: 2rem 0;
+    }
+    
+    .pagination-item {
+        padding: 0.4rem 0.8rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
 } 

@@ -5,7 +5,7 @@ description: Личный блог о технологиях, путешеств
 ---
 
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
         <h2 itemprop="name headline">
             <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
@@ -28,4 +28,31 @@ description: Личный блог о технологиях, путешеств
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more" aria-label="Читать полностью статью {{ post.title }}">Читать далее...</a>
     </article>
     {% endfor %}
-</div> 
+</div>
+
+<!-- Пагинация -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-item">&laquo; Назад</a>
+    {% else %}
+        <span class="pagination-item pagination-disabled">&laquo; Назад</span>
+    {% endif %}
+    
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+            <span class="pagination-item pagination-active">{{ page }}</span>
+        {% elsif page == 1 %}
+            <a href="{{ site.baseurl }}/" class="pagination-item">{{ page }}</a>
+        {% else %}
+            <a href="{{ site.baseurl }}/page/{{ page }}/" class="pagination-item">{{ page }}</a>
+        {% endif %}
+    {% endfor %}
+    
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-item">Вперед &raquo;</a>
+    {% else %}
+        <span class="pagination-item pagination-disabled">Вперед &raquo;</span>
+    {% endif %}
+</div>
+{% endif %} 
