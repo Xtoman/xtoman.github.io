@@ -131,74 +131,77 @@
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
     </footer>
 
-    <!-- Скрипт для темной темы и мобильного меню -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Существующий код для темы
+            // Инициализация темы
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
             
+            // Переключатель темы
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = themeToggle.querySelector('.material-icons');
-            
             themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
             
             themeToggle.addEventListener('click', () => {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                
                 document.documentElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
                 themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
             });
 
-            // Код для поиска
+            // Поиск
             const searchToggle = document.getElementById('search-toggle');
             const searchContainer = document.getElementById('search-container');
             const searchInput = document.getElementById('search-input');
 
-            searchToggle.addEventListener('click', () => {
+            searchToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
                 searchContainer.classList.toggle('search-active');
                 if (searchContainer.classList.contains('search-active')) {
                     searchInput.focus();
                 }
             });
 
+            // Мобильное меню
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const menuIcon = menuToggle.querySelector('.material-icons');
+
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mainNav.classList.toggle('nav-active');
+                menuIcon.textContent = mainNav.classList.contains('nav-active') ? 'close' : 'menu';
+            });
+
+            // Закрытие при клике вне элементов
             document.addEventListener('click', (e) => {
+                // Закрытие поиска
                 if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
                     searchContainer.classList.remove('search-active');
                 }
+                
+                // Закрытие мобильного меню
+                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mainNav.classList.remove('nav-active');
+                    menuIcon.textContent = 'menu';
+                }
             });
 
+            // Закрытие при нажатии Escape
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     searchContainer.classList.remove('search-active');
-                }
-            });
-
-            // Новый код для мобильного меню
-            const menuToggle = document.getElementById('menu-toggle');
-            const mainNav = document.getElementById('main-nav');
-            
-            menuToggle.addEventListener('click', () => {
-                mainNav.classList.toggle('nav-active');
-                menuToggle.querySelector('.material-icons').textContent = 
-                    mainNav.classList.contains('nav-active') ? 'close' : 'menu';
-            });
-
-            // Закрываем меню при клике вне его
-            document.addEventListener('click', (e) => {
-                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     mainNav.classList.remove('nav-active');
-                    menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    menuIcon.textContent = 'menu';
                 }
             });
 
-            // Закрываем меню при изменении размера окна
+            // Закрытие меню при изменении размера окна
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 768) {
                     mainNav.classList.remove('nav-active');
-                    menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    menuIcon.textContent = 'menu';
                 }
             });
         });
