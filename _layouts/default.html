@@ -45,57 +45,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/100272918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    
-    <!-- Скрипт для темной темы -->
-    <script>
-        // Проверяем сохраненную тему при загрузке страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = themeToggle.querySelector('.material-icons');
-            
-            // Устанавливаем начальную иконку
-            themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
-            
-            // Обработчик клика для темы
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
-            });
-
-            // Обработчик для поиска
-            const searchToggle = document.getElementById('search-toggle');
-            const searchContainer = document.getElementById('search-container');
-            const searchInput = document.getElementById('search-input');
-
-            searchToggle.addEventListener('click', () => {
-                searchContainer.classList.toggle('search-active');
-                if (searchContainer.classList.contains('search-active')) {
-                    searchInput.focus();
-                }
-            });
-
-            // Закрываем поиск при клике вне его
-            document.addEventListener('click', (e) => {
-                if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
-                    searchContainer.classList.remove('search-active');
-                }
-            });
-
-            // Закрываем поиск при нажатии Escape
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    searchContainer.classList.remove('search-active');
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -133,6 +82,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded');
+            
             // Инициализация темы
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -140,9 +91,13 @@
             // Переключатель темы
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = themeToggle.querySelector('.material-icons');
+            
+            console.log('Theme toggle:', themeToggle);
+            
             themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
             
             themeToggle.addEventListener('click', () => {
+                console.log('Theme toggle clicked');
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
                 document.documentElement.setAttribute('data-theme', newTheme);
@@ -154,8 +109,11 @@
             const searchToggle = document.getElementById('search-toggle');
             const searchContainer = document.getElementById('search-container');
             const searchInput = document.getElementById('search-input');
+            
+            console.log('Search toggle:', searchToggle);
 
             searchToggle.addEventListener('click', (e) => {
+                console.log('Search toggle clicked');
                 e.stopPropagation();
                 searchContainer.classList.toggle('search-active');
                 if (searchContainer.classList.contains('search-active')) {
@@ -167,8 +125,11 @@
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
             const menuIcon = menuToggle.querySelector('.material-icons');
+            
+            console.log('Menu toggle:', menuToggle);
 
             menuToggle.addEventListener('click', (e) => {
+                console.log('Menu toggle clicked');
                 e.stopPropagation();
                 mainNav.classList.toggle('nav-active');
                 menuIcon.textContent = mainNav.classList.contains('nav-active') ? 'close' : 'menu';

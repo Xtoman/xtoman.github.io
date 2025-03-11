@@ -2,7 +2,6 @@
 layout: post
 title: "Создание современного блога с помощью Jekyll и Cursor"
 date: 2025-03-10
-author: "Maxim Lloyd"
 description: "Подробное руководство по созданию современного блога с использованием Jekyll, GitHub Pages и Cursor. Разбор ключевых возможностей и преимуществ выбранного стека технологий."
 image: "2025-03-10-creating-blog-with-cursor/preview.jpg"
 tags: [Jekyll, GitHub Pages, Cursor, Web Development]
