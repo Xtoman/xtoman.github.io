@@ -52,22 +52,21 @@
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
         </div>
         
-        <button id="menu-toggle" class="icon-button" aria-label="Меню">
-            <span class="material-icons">menu</span>
-        </button>
-        
         <div class="header-controls">
+            <div id="search-container" class="search-container">
+                <form action="{{ site.baseurl }}/search/" method="get">
+                    <input type="text" id="search-input" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
+                </form>
+            </div>
             <button id="search-toggle" class="icon-button" aria-label="Поиск">
                 <span class="material-icons">search</span>
             </button>
             <button id="theme-toggle" class="icon-button" aria-label="Переключить тему">
                 <span class="material-icons">light_mode</span>
             </button>
-            <div id="search-container" class="search-container">
-                <form action="{{ site.baseurl }}/search/" method="get">
-                    <input type="text" id="search-input" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
-                </form>
-            </div>
+            <button id="menu-toggle" class="icon-button" aria-label="Меню">
+                <span class="material-icons">menu</span>
+            </button>
         </div>
         
         <nav id="main-nav">

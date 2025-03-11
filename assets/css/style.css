@@ -296,6 +296,7 @@ figcaption {
     align-items: center;
     gap: 0.5rem;
     position: relative;
+    margin-left: auto;
 }
 
 /* Общие стили для кнопок с иконками */
@@ -646,7 +647,7 @@ body.menu-open::after {
     }
     
     #menu-toggle {
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
     
     #main-nav {
@@ -812,7 +813,7 @@ body.menu-open::after {
     }
     
     #menu-toggle {
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
     
     #main-nav {
