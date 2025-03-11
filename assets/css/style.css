@@ -463,25 +463,28 @@ figcaption {
 
     header {
         padding: 1rem;
-        justify-content: flex-end;
+        justify-content: center;
+        position: relative;
     }
 
     #main-nav {
         position: fixed;
-        top: 64px;
+        top: 0;
         left: 0;
         right: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
         background-color: var(--card-background);
-        padding: 0.5rem;
+        padding: 2rem 1rem;
         box-shadow: 0 2px 4px var(--shadow-color);
-        transform: translateY(-150%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
 
     #main-nav.nav-active {
@@ -489,15 +492,24 @@ figcaption {
     }
 
     #main-nav a {
-        width: 100%;
+        width: 80%;
+        max-width: 300px;
         text-align: center;
         padding: 1rem;
         margin: 0;
-        border-radius: 0;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+    }
+
+    #main-nav a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px var(--shadow-color);
     }
 
     .header-controls {
-        position: relative;
+        position: absolute;
+        right: 1rem;
         z-index: 1001;
     }
 }
@@ -516,6 +528,7 @@ figcaption {
     color: var(--text-color);
     transition: all 0.3s ease;
     padding: 8px;
+    z-index: 1003;
 }
 
 #menu-toggle:hover {
@@ -524,7 +537,7 @@ figcaption {
 
 #menu-toggle .material-icons {
     font-size: 24px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     color: var(--text-color);
 }
 
@@ -535,4 +548,63 @@ figcaption {
 /* Анимация для иконки меню */
 #menu-toggle .material-icons.close {
     transform: rotate(180deg);
+}
+
+/* Анимация для мобильного меню */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #main-nav a {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    #main-nav a:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    
+    #main-nav a:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    #main-nav a:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+    
+    #main-nav a:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+    
+    #main-nav a:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+    
+    /* Затемнение фона при открытом меню */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    body.menu-open::after {
+        opacity: 1;
+        pointer-events: auto;
+    }
 } 

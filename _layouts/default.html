@@ -124,6 +124,7 @@
             // Мобильное меню
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
+            const body = document.body;
             
             console.log('Menu toggle:', menuToggle);
 
@@ -136,6 +137,7 @@
                     e.stopPropagation();
                     
                     mainNav.classList.toggle('nav-active');
+                    body.classList.toggle('menu-open');
                     
                     if (mainNav.classList.contains('nav-active')) {
                         menuIcon.textContent = 'close';
@@ -157,6 +159,7 @@
                 // Закрытие мобильного меню
                 if (mainNav && menuToggle && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
                     if (menuToggle.querySelector('.material-icons')) {
                         menuToggle.querySelector('.material-icons').textContent = 'menu';
                     }
@@ -171,6 +174,7 @@
                     }
                     if (mainNav) {
                         mainNav.classList.remove('nav-active');
+                        body.classList.remove('menu-open');
                         if (menuToggle && menuToggle.querySelector('.material-icons')) {
                             menuToggle.querySelector('.material-icons').textContent = 'menu';
                         }
@@ -182,6 +186,7 @@
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 768 && mainNav) {
                     mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
                     if (menuToggle && menuToggle.querySelector('.material-icons')) {
                         menuToggle.querySelector('.material-icons').textContent = 'menu';
                     }
