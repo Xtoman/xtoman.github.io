@@ -124,45 +124,67 @@
             // Мобильное меню
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
-            const menuIcon = menuToggle.querySelector('.material-icons');
             
             console.log('Menu toggle:', menuToggle);
 
-            menuToggle.addEventListener('click', (e) => {
-                console.log('Menu toggle clicked');
-                e.stopPropagation();
-                mainNav.classList.toggle('nav-active');
-                menuIcon.textContent = mainNav.classList.contains('nav-active') ? 'close' : 'menu';
-            });
+            if (menuToggle) {
+                const menuIcon = menuToggle.querySelector('.material-icons');
+                
+                menuToggle.addEventListener('click', function(e) {
+                    console.log('Menu toggle clicked');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    mainNav.classList.toggle('nav-active');
+                    
+                    if (mainNav.classList.contains('nav-active')) {
+                        menuIcon.textContent = 'close';
+                    } else {
+                        menuIcon.textContent = 'menu';
+                    }
+                    
+                    console.log('Nav active:', mainNav.classList.contains('nav-active'));
+                });
+            }
 
             // Закрытие при клике вне элементов
             document.addEventListener('click', (e) => {
                 // Закрытие поиска
-                if (!searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
+                if (searchContainer && !searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
                     searchContainer.classList.remove('search-active');
                 }
                 
                 // Закрытие мобильного меню
-                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                if (mainNav && menuToggle && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     mainNav.classList.remove('nav-active');
-                    menuIcon.textContent = 'menu';
+                    if (menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
                 }
             });
 
             // Закрытие при нажатии Escape
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
-                    searchContainer.classList.remove('search-active');
-                    mainNav.classList.remove('nav-active');
-                    menuIcon.textContent = 'menu';
+                    if (searchContainer) {
+                        searchContainer.classList.remove('search-active');
+                    }
+                    if (mainNav) {
+                        mainNav.classList.remove('nav-active');
+                        if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                            menuToggle.querySelector('.material-icons').textContent = 'menu';
+                        }
+                    }
                 }
             });
 
             // Закрытие меню при изменении размера окна
             window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 768 && mainNav) {
                     mainNav.classList.remove('nav-active');
-                    menuIcon.textContent = 'menu';
+                    if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
                 }
             });
         });

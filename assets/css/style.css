@@ -455,9 +455,10 @@ figcaption {
 /* Медиа-запросы для мобильного меню */
 @media (max-width: 768px) {
     .mobile-only {
-        display: flex;
+        display: flex !important;
         position: absolute;
         left: 1rem;
+        z-index: 1002;
     }
 
     header {
@@ -499,4 +500,39 @@ figcaption {
         position: relative;
         z-index: 1001;
     }
+}
+
+/* Стили для кнопки бургера */
+#menu-toggle {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+#menu-toggle:hover {
+    background-color: var(--border-color);
+}
+
+#menu-toggle .material-icons {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+#menu-toggle:hover .material-icons {
+    transform: rotate(90deg);
+}
+
+/* Анимация для иконки меню */
+#menu-toggle .material-icons.close {
+    transform: rotate(180deg);
 } 
