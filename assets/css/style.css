@@ -449,7 +449,7 @@ figcaption {
 
 /* Стили для мобильного меню */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 /* Медиа-запросы для мобильного меню */
