@@ -48,14 +48,13 @@
 </head>
 <body>
     <header>
-        <button id="menu-toggle" class="icon-button mobile-only" aria-label="Меню">
+        <div class="site-logo">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </div>
+        
+        <button id="menu-toggle" class="icon-button" aria-label="Меню">
             <span class="material-icons">menu</span>
         </button>
-        
-        <nav id="main-nav">
-            <a href="{{ site.baseurl }}/">Главная</a>
-            <a href="{{ site.baseurl }}/about">Об авторе</a>
-        </nav>
         
         <div class="header-controls">
             <button id="search-toggle" class="icon-button" aria-label="Поиск">
@@ -70,6 +69,11 @@
                 </form>
             </div>
         </div>
+        
+        <nav id="main-nav">
+            <a href="{{ site.baseurl }}/">Главная</a>
+            <a href="{{ site.baseurl }}/about">Об авторе</a>
+        </nav>
     </header>
 
     <main>
