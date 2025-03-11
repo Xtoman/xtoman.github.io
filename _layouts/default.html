@@ -140,13 +140,21 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
+                    // Закрываем поиск при открытии меню
+                    searchContainer.classList.remove('search-active');
+                    
+                    // Переключаем класс для меню
                     mainNav.classList.toggle('nav-active');
                     body.classList.toggle('menu-open');
                     
                     if (mainNav.classList.contains('nav-active')) {
                         menuIcon.textContent = 'close';
+                        // Блокируем прокрутку страницы при открытом меню
+                        body.style.overflow = 'hidden';
                     } else {
                         menuIcon.textContent = 'menu';
+                        // Разрешаем прокрутку страницы при закрытом меню
+                        body.style.overflow = '';
                     }
                     
                     console.log('Nav active:', mainNav.classList.contains('nav-active'));
@@ -164,6 +172,7 @@
                 if (mainNav && menuToggle && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     mainNav.classList.remove('nav-active');
                     body.classList.remove('menu-open');
+                    body.style.overflow = '';
                     if (menuToggle.querySelector('.material-icons')) {
                         menuToggle.querySelector('.material-icons').textContent = 'menu';
                     }
@@ -179,6 +188,7 @@
                     if (mainNav) {
                         mainNav.classList.remove('nav-active');
                         body.classList.remove('menu-open');
+                        body.style.overflow = '';
                         if (menuToggle && menuToggle.querySelector('.material-icons')) {
                             menuToggle.querySelector('.material-icons').textContent = 'menu';
                         }
@@ -191,10 +201,24 @@
                 if (window.innerWidth > 768 && mainNav) {
                     mainNav.classList.remove('nav-active');
                     body.classList.remove('menu-open');
+                    body.style.overflow = '';
                     if (menuToggle && menuToggle.querySelector('.material-icons')) {
                         menuToggle.querySelector('.material-icons').textContent = 'menu';
                     }
                 }
+            });
+            
+            // Закрытие меню при клике на ссылку внутри меню
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                });
             });
         });
     </script>

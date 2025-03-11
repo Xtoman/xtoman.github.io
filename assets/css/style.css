@@ -661,10 +661,12 @@ body.menu-open::after {
     justify-content: flex-start;
     gap: 1rem;
     padding-top: 5rem;
+    visibility: hidden;
 }
 
 #main-nav.nav-active {
     transform: translateX(0);
+    visibility: visible;
 }
 
 #main-nav a {
@@ -684,4 +686,63 @@ body.menu-open::after {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    
+    .site-logo {
+        font-size: 1.2rem;
+        max-width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .header-controls {
+        position: static;
+        margin-left: auto;
+    }
+    
+    #main-nav {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+    }
+    
+    #main-nav.nav-active {
+        transform: translateY(0);
+    }
+    
+    #main-nav a {
+        width: 80%;
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+    
+    .search-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        border-radius: 0;
+        z-index: 1000;
+        margin-right: 0;
+    }
+    
+    .search-container.search-active {
+        transform: translateY(0);
+        width: 100%;
+    }
+    
+    .search-container input {
+        padding: 15px 20px;
+    }
 } 
