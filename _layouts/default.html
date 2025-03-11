@@ -113,23 +113,42 @@
             const searchToggle = document.getElementById('search-toggle');
             const searchContainer = document.getElementById('search-container');
             const searchInput = document.getElementById('search-input');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const body = document.body;
             
             console.log('Search toggle:', searchToggle);
 
             searchToggle.addEventListener('click', (e) => {
                 console.log('Search toggle clicked');
                 e.stopPropagation();
+                
+                // Закрываем меню, если оно открыто
+                if (mainNav.classList.contains('nav-active')) {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                }
+                
                 searchContainer.classList.toggle('search-active');
                 if (searchContainer.classList.contains('search-active')) {
                     searchInput.focus();
                 }
             });
+            
+            // Закрытие поиска при клике на крестик
+            if (searchContainer) {
+                searchContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'INPUT' && e.target !== searchToggle) {
+                        searchContainer.classList.remove('search-active');
+                    }
+                });
+            }
 
             // Мобильное меню
-            const menuToggle = document.getElementById('menu-toggle');
-            const mainNav = document.getElementById('main-nav');
-            const body = document.body;
-            
             console.log('Menu toggle:', menuToggle);
 
             if (menuToggle) {
