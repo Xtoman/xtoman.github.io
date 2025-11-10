@@ -4,22 +4,34 @@
 
 ## Вариант 1: Personal Access Token (Рекомендуется)
 
+### ⚠️ ВАЖНО: Используйте классический токен (classic token), а не fine-grained!
+
 1. Перейдите на https://github.com/settings/tokens
-2. Нажмите "Generate new token" → "Generate new token (classic)"
+2. Нажмите "Generate new token" → **"Generate new token (classic)"** (не fine-grained!)
 3. Укажите имя токена (например, "Blog Repo Access")
 4. Выберите срок действия (рекомендуется "No expiration" или "90 days")
 5. Выберите права доступа:
-   - ✅ `repo` (полный доступ к репозиториям)
+   - ✅ **`repo`** (полный доступ к репозиториям) - это обязательное право!
 6. Нажмите "Generate token"
 7. Скопируйте токен (он показывается только один раз!)
 
 ### Использование токена:
 
-При первом push Git попросит ввести:
-- **Username**: ваш GitHub username (Xtoman)
-- **Password**: вставьте Personal Access Token (не ваш пароль GitHub!)
+**Способ 1: Через URL (для первого push)**
+```bash
+git remote set-url origin https://Xtoman:ВАШ_ТОКЕН@github.com/Xtoman/xtoman.github.io.git
+git push -u origin main
+```
+
+**Способ 2: Через credential helper (рекомендуется)**
+Токен будет сохранен в macOS Keychain после первого использования.
 
 После первого успешного ввода токен будет сохранен в macOS Keychain и больше не потребуется.
+
+### Если получаете ошибку 403:
+- Убедитесь, что используете **классический токен** (classic), а не fine-grained
+- Проверьте, что токен имеет право `repo`
+- Для fine-grained токенов убедитесь, что репозиторий добавлен в список разрешенных
 
 ## Вариант 2: SSH ключ
 
