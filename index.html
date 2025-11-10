@@ -1,0 +1,53 @@
+---
+layout: default
+title: Главная страница
+description: Личный блог о технологиях, путешествиях и саморазвитии
+---
+
+<div class="posts">
+    {% for post in paginator.posts %}
+    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
+        <h2 itemprop="name headline">
+            <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
+        </h2>
+        <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+                {{ post.date | date: "%d.%m.%Y" }}
+            </time>
+        </div>
+        
+        <div class="post-excerpt" itemprop="description">
+            {{ post.content | strip_html | truncatewords: 50 }}
+        </div>
+        
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more" aria-label="Читать полностью статью {{ post.title }}">Читать далее...</a>
+    </article>
+    {% endfor %}
+</div>
+
+<!-- Пагинация -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-item">&laquo; Назад</a>
+    {% else %}
+        <span class="pagination-item pagination-disabled">&laquo; Назад</span>
+    {% endif %}
+    
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+            <span class="pagination-item pagination-active">{{ page }}</span>
+        {% elsif page == 1 %}
+            <a href="{{ site.baseurl }}/" class="pagination-item">{{ page }}</a>
+        {% else %}
+            <a href="{{ site.baseurl }}/page/{{ page }}/" class="pagination-item">{{ page }}</a>
+        {% endif %}
+    {% endfor %}
+    
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-item">Вперед &raquo;</a>
+    {% else %}
+        <span class="pagination-item pagination-disabled">Вперед &raquo;</span>
+    {% endif %}
+</div>
+{% endif %} 
