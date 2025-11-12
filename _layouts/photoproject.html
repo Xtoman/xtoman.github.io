@@ -27,7 +27,8 @@ layout: default
     <div class="photo-gallery" id="photo-gallery">
         {% for image in page.images %}
         <figure class="photo-item" data-index="{{ forloop.index0 }}">
-            {% assign project_folder = page.name | remove: '.md' %}
+            {% assign project_folder = page.slug | default: page.path %}
+            {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
             <img 
                 src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
                 alt="{{ image.caption | default: page.title }}"

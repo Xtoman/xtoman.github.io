@@ -14,7 +14,8 @@ description: Документальные фотопроекты и визуал
         {% for project in sorted_projects %}
         <article class="photoproject-preview" itemscope itemtype="http://schema.org/ImageGallery">
             <a href="{{ site.baseurl }}{{ project.url }}" class="photoproject-link">
-                {% assign project_folder = project.name | remove: '.md' %}
+                {% assign project_folder = project.slug | default: project.path %}
+                {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
                 {% if project.cover_image %}
                 <div class="photoproject-cover">
                     <img 
