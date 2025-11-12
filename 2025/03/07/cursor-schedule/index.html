@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как я доверил свой код ИИ, или История одного эксперимента с Cursor | Дневник</title>
+    <meta name="description" content="Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь “а что,...">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://xtoman.ru/2025/03/07/cursor-schedule/">
+    <meta property="og:title" content="Как я доверил свой код ИИ, или История одного эксперимента с Cursor">
+    <meta property="og:description" content="Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь “а что,...">
+    <meta property="og:image" content="https://xtoman.ru/assets/images/default-og.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Как я доверил свой код ИИ, или История одного эксперимента с Cursor">
+    <meta name="twitter:description" content="Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь “а что,...">
+    <meta name="twitter:image" content="https://xtoman.ru/assets/images/default-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://xtoman.ru/2025/03/07/cursor-schedule/">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+     
+        ym(100272918, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/100272918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <header>
+        <div class="site-logo">
+            <a href="/">Дневник</a>
+        </div>
+        
+        <div class="header-controls">
+            <div id="search-container" class="search-container">
+                <form action="/search/" method="get">
+                    <input type="text" id="search-input" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
+                </form>
+            </div>
+            <button id="search-toggle" class="icon-button" aria-label="Поиск">
+                <span class="material-icons">search</span>
+            </button>
+            <button id="theme-toggle" class="icon-button" aria-label="Переключить тему">
+                <span class="material-icons">light_mode</span>
+            </button>
+            <button id="menu-toggle" class="icon-button" aria-label="Меню">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+        
+        <nav id="main-nav">
+            <a href="/">Главная</a>
+            <a href="/photoprojects">Фотопроекты</a>
+            <a href="/about">Об авторе</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 itemprop="name headline">Как я доверил свой код ИИ, или История одного эксперимента с Cursor</h1>
+    <div class="post-meta">
+        <time datetime="2025-03-07T00:00:00+03:00" itemprop="datePublished" class="post-date">
+            07.03.2025
+        </time>
+    </div>
+    
+    <div class="post-content" itemprop="articleBody">
+        <p>Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь “а что, если…”? Вот у меня был именно такой.</p>
+
+<h2 id="знакомьтесь-мой-новый-напарник">Знакомьтесь, мой новый “напарник”</h2>
+
+<p>Итак, я решил создать приложение для управления расписанием. Обычно я бы даже не взялся за такую задачу - всё-таки я не программист. Но тут увидел рекламу Cursor - редактора кода со встроенным ИИ, который обещал помочь даже новичкам. Решил рискнуть и попробовать.</p>
+
+<h2 id="первые-шаги-и-первые-впечатления">Первые шаги и первые впечатления</h2>
+
+<p>Начали мы с того, что я просто описал словами, чего хочу: “Сделай простое приложение для управления расписанием”. Cursor предложил использовать React и какой-то Material-UI (честно говоря, я не особо понимал, что это, но звучало солидно).</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Мой первый React-компонент (спасибо, Cursor!)</span>
+<span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Моё</span> <span class="nx">расписание</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="p">{</span><span class="cm">/* Cursor сказал, что здесь будет таблица */</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="забавные-моменты">Забавные моменты</h2>
+
+<p>Общение с ИИ оказалось интереснее, чем я думал. Я просто писал свои пожелания обычными словами: “сделай кнопку покрасивее”, “добавь возможность сохранять расписание”, “почему оно не работает?” - и Cursor терпеливо предлагал решения. Иногда приходилось просить объяснить попроще, что именно он предлагает сделать.</p>
+
+<h2 id="неожиданные-открытия">Неожиданные открытия</h2>
+
+<p>Знаете, что самое удивительное? Cursor реально помог мне создать работающее приложение, хотя я практически не знаю код. Он:</p>
+<ul>
+  <li>Объяснял простыми словами, что делает каждая часть кода</li>
+  <li>Предлагал готовые решения типовых задач</li>
+  <li>Исправлял мои ошибки (а их было немало!)</li>
+</ul>
+
+<h2 id="что-получилось-в-итоге">Что получилось в итоге</h2>
+
+<p>После нескольких дней экспериментов у нас получилось что-то работающее. Вот основная часть приложения:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ThemeProvider</span><span class="p">,</span> <span class="nx">createTheme</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@mui/material</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">CssBaseline</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@mui/material/CssBaseline</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// Честно говоря, я не очень понимаю, что тут происходит,</span>
+<span class="c1">// но Cursor сказал, что это нужно для красивого интерфейса</span>
+<span class="kd">const</span> <span class="nx">theme</span> <span class="o">=</span> <span class="nf">createTheme</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ThemeProvider</span> <span class="nx">theme</span><span class="o">=</span><span class="p">{</span><span class="nx">theme</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">CssBaseline</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Router</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Header</span> <span class="o">/&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Schedule</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Router</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/ThemeProvider</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="чему-я-научился">Чему я научился</h2>
+
+<ul>
+  <li>Оказывается, создавать простые приложения можно даже без глубоких знаний программирования</li>
+  <li>ИИ может быть отличным помощником, если чётко объяснять ему свои желания</li>
+  <li>Не нужно бояться экспериментировать с новыми технологиями</li>
+</ul>
+
+<h2 id="планы-на-будущее">Планы на будущее</h2>
+
+<p>Теперь, когда у меня появился такой помощник, я планирую создать ещё несколько простых приложений для себя. Может быть, даже начну потихоньку разбираться в том, как это всё работает изнутри.</p>
+
+<p>P.S.
+Если вы, как и я, далеки от программирования, но хотите попробовать создать что-то своё - попробуйте Cursor! Это не так страшно, как кажется. В худшем случае потратите пару вечеров, в лучшем - создадите что-то полезное.</p>
+
+<p><em>Дата: когда-то в эпоху восстания машин</em></p>
+
+    </div>
+
+    
+
+    
+    <div class="post-navigation">
+        
+            <span></span>
+        
+        
+        
+            <a class="next" href="/2025/03/07/first-post/" rel="next">Год в спортзале: что изменилось? &raquo;</a>
+        
+    </div>
+    
+</article> 
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Дневник</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded');
+            
+            // Инициализация темы
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Переключатель темы
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('.material-icons');
+            
+            console.log('Theme toggle:', themeToggle);
+            
+            themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
+            
+            themeToggle.addEventListener('click', () => {
+                console.log('Theme toggle clicked');
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
+            });
+
+            // Поиск
+            const searchToggle = document.getElementById('search-toggle');
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const body = document.body;
+            
+            console.log('Search toggle:', searchToggle);
+
+            searchToggle.addEventListener('click', (e) => {
+                console.log('Search toggle clicked');
+                e.stopPropagation();
+                
+                // Закрываем меню, если оно открыто
+                if (mainNav.classList.contains('nav-active')) {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                }
+                
+                searchContainer.classList.toggle('search-active');
+                if (searchContainer.classList.contains('search-active')) {
+                    searchInput.focus();
+                }
+            });
+            
+            // Закрытие поиска при клике на крестик
+            if (searchContainer) {
+                searchContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'INPUT' && e.target !== searchToggle) {
+                        searchContainer.classList.remove('search-active');
+                    }
+                });
+            }
+
+            // Мобильное меню
+            console.log('Menu toggle:', menuToggle);
+
+            if (menuToggle) {
+                const menuIcon = menuToggle.querySelector('.material-icons');
+                
+                menuToggle.addEventListener('click', function(e) {
+                    console.log('Menu toggle clicked');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Закрываем поиск при открытии меню
+                    searchContainer.classList.remove('search-active');
+                    
+                    // Переключаем класс для меню
+                    mainNav.classList.toggle('nav-active');
+                    body.classList.toggle('menu-open');
+                    
+                    if (mainNav.classList.contains('nav-active')) {
+                        menuIcon.textContent = 'close';
+                        // Блокируем прокрутку страницы при открытом меню
+                        body.style.overflow = 'hidden';
+                    } else {
+                        menuIcon.textContent = 'menu';
+                        // Разрешаем прокрутку страницы при закрытом меню
+                        body.style.overflow = '';
+                    }
+                    
+                    console.log('Nav active:', mainNav.classList.contains('nav-active'));
+                });
+            }
+
+            // Закрытие при клике вне элементов
+            document.addEventListener('click', (e) => {
+                // Закрытие поиска
+                if (searchContainer && !searchContainer.contains(e.target) && !searchToggle.contains(e.target)) {
+                    searchContainer.classList.remove('search-active');
+                }
+                
+                // Закрытие мобильного меню
+                if (mainNav && menuToggle && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                }
+            });
+
+            // Закрытие при нажатии Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (searchContainer) {
+                        searchContainer.classList.remove('search-active');
+                    }
+                    if (mainNav) {
+                        mainNav.classList.remove('nav-active');
+                        body.classList.remove('menu-open');
+                        body.style.overflow = '';
+                        if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                            menuToggle.querySelector('.material-icons').textContent = 'menu';
+                        }
+                    }
+                }
+            });
+
+            // Закрытие меню при изменении размера окна
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mainNav) {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                }
+            });
+            
+            // Закрытие меню при клике на ссылку внутри меню
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mainNav.classList.remove('nav-active');
+                    body.classList.remove('menu-open');
+                    body.style.overflow = '';
+                    if (menuToggle && menuToggle.querySelector('.material-icons')) {
+                        menuToggle.querySelector('.material-icons').textContent = 'menu';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
