@@ -1,0 +1,94 @@
+---
+layout: default
+---
+<article class="photoproject" itemscope itemtype="http://schema.org/ImageGallery">
+    <header class="photoproject-header">
+        <h1 itemprop="name">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="photoproject-description">{{ page.description }}</p>
+        {% endif %}
+        <div class="photoproject-meta">
+            {% if page.date %}
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="photoproject-date">
+                {{ page.date | date: "%d.%m.%Y" }}
+            </time>
+            {% endif %}
+            {% if page.location %}
+            <span class="photoproject-location">{{ page.location }}</span>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="photoproject-content" itemprop="description">
+        {{ content }}
+    </div>
+    
+    {% if page.images and page.images.size > 0 %}
+    <div class="photo-gallery" id="photo-gallery">
+        {% for image in page.images %}
+        <figure class="photo-item" data-index="{{ forloop.index0 }}">
+            {% assign project_folder = page.name | remove: '.md' %}
+            <img 
+                src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
+                alt="{{ image.caption | default: page.title }}"
+                loading="lazy"
+                class="gallery-image"
+                data-src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}"
+            >
+            {% if image.caption %}
+            <figcaption class="photo-caption">{{ image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-gallery">
+        <p>Фотографии пока не добавлены в этот проект.</p>
+    </div>
+    {% endif %}
+    
+    <div class="photoproject-navigation">
+        {% assign sorted_projects = site.photoprojects | where_exp: "project", "project.published != false" | sort: 'date' | reverse %}
+        {% assign current_index = 0 %}
+        {% for project in sorted_projects %}
+            {% if project.name == page.name %}
+                {% assign current_index = forloop.index0 %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        
+        {% assign next_index = current_index | plus: 1 %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign total_projects = sorted_projects.size %}
+        
+        {% if prev_index >= 0 %}
+            {% assign prev_project = sorted_projects[prev_index] %}
+            <a class="prev" href="{{ site.baseurl }}{{ prev_project.url }}" rel="prev">&laquo; {{ prev_project.title }}</a>
+        {% else %}
+            <span></span>
+        {% endif %}
+        
+        <a href="{{ site.baseurl }}/photoprojects/" class="all-projects">Все проекты</a>
+        
+        {% if next_index < total_projects %}
+            {% assign next_project = sorted_projects[next_index] %}
+            <a class="next" href="{{ site.baseurl }}{{ next_project.url }}" rel="next">{{ next_project.title }} &raquo;</a>
+        {% else %}
+            <span></span>
+        {% endif %}
+    </div>
+</article>
+
+<!-- Lightbox для полноэкранного просмотра -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+    <button class="lightbox-prev" aria-label="Предыдущее изображение">&laquo;</button>
+    <button class="lightbox-next" aria-label="Следующее изображение">&raquo;</button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/photogallery.js"></script>
+

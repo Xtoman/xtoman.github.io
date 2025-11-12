@@ -1,6 +1,6 @@
 # Основные настройки сайта
 title: "Дневник"
-description: "Личный блог о технологиях, путешествиях и саморазвитии"
+description: "Личный блог о технологиях, путешествиях и пути"
 baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
 url: "https://xtoman.ru"  # укажите ваш домен здесь
 
@@ -20,6 +20,12 @@ timezone: Europe/Moscow
 # Настройки постов
 permalink: /:year/:month/:day/:title/
 
+# Коллекции
+collections:
+  photoprojects:
+    output: true
+    permalink: /photoprojects/:name/
+
 # Плагины
 plugins:
   - jekyll-redirect-from
@@ -34,6 +40,7 @@ exclude:
   - node_modules
   - vendor
   - README.md
+  - GITHUB_SETUP.md
 
 # Настройки сборки
 markdown: kramdown
