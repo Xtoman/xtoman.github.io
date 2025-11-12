@@ -1,14 +1,14 @@
 source "https://rubygems.org"
 
-# Используем gem github-pages вместо прямого указания Jekyll
-gem "github-pages", group: :jekyll_plugins
+# Jekyll и его зависимости
+gem "jekyll", "~> 4.3"
 
-# Плагины, поддерживаемые GitHub Pages
+# Плагины Jekyll
 group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
-  gem "jekyll-seo-tag"
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-redirect-from", "~> 0.16"
+  gem "jekyll-seo-tag", "~> 2.8"
 end
 
 # Windows и JRuby не включают файлы zoneinfo

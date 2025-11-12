@@ -41,20 +41,12 @@ exclude:
   - vendor
   - README.md
   - GITHUB_SETUP.md
+  - PHOTOPROJECTS_GUIDE.md
+  - _photoprojects/README.md
+  - _photoprojects/example-project.md
 
 # Настройки сборки
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-
-# Настройки компрессии
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  ignore:
-    envs: [local]
-  blanklines: false
-  profile: false
-  startings: [html, head, body] 
+  syntax_highlighter: rouge 
