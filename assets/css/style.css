@@ -1030,6 +1030,7 @@ body.menu-open::after {
     margin-bottom: 1rem;
     font-weight: 300;
     letter-spacing: -0.02em;
+    word-break: break-word;
 }
 
 .photoproject-description {
@@ -1275,6 +1276,8 @@ body.menu-open::after {
     
     .photoproject-header h1 {
         font-size: 2rem;
+        word-break: break-word;
+        hyphens: auto;
     }
     
     .photoproject-description {
