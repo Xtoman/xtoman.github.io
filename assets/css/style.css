@@ -908,6 +908,12 @@ body.menu-open::after {
     color: var(--meta-color);
     font-size: 1.1rem;
     font-style: italic;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding: 0 1rem;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 /* Сетка фотопроектов */
@@ -1032,6 +1038,9 @@ body.menu-open::after {
     max-width: 800px;
     margin: 1.5rem auto;
     font-style: italic;
+    padding: 0 1.25rem;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .photoproject-header .photoproject-meta {
@@ -1305,3 +1314,47 @@ body.menu-open::after {
     border-radius: 8px;
     margin: 4rem 0;
 }
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .site-logo {
+        font-size: 1.3rem;
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .header-controls {
+        margin-left: auto;
+        width: auto;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .header-controls .icon-button {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-description {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .photoproject-description {
+        font-size: 1.05rem;
+        padding: 0 1.25rem;
+    }
+}
+
