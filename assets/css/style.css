@@ -248,7 +248,7 @@ figcaption {
 }
 
 /* Стили для поиска */
-.search-container {
+.header-search {
     position: absolute;
     right: 100%;
     top: 50%;
@@ -264,19 +264,19 @@ figcaption {
     margin-right: 10px;
 }
 
-.search-container.search-active {
+.header-search.search-active {
     width: 300px;
     opacity: 1;
     pointer-events: all;
 }
 
-.search-container form {
+.header-search form {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.search-container input {
+.header-search input {
     width: 100%;
     padding: 12px 20px;
     border: none;
@@ -286,7 +286,7 @@ figcaption {
     outline: none;
 }
 
-.search-container input::placeholder {
+.header-search input::placeholder {
     color: var(--meta-color);
 }
 
@@ -346,7 +346,7 @@ figcaption {
         justify-content: center;
     }
     
-    .search-container {
+    .header-search {
         position: fixed;
         top: 0;
         left: 0;
@@ -358,12 +358,12 @@ figcaption {
         margin-right: 0;
     }
     
-    .search-container.search-active {
+    .header-search.search-active {
         transform: translateY(0);
         width: 100%;
     }
     
-    .search-container input {
+    .header-search input {
         padding: 15px 20px;
     }
 }
@@ -667,7 +667,7 @@ body.menu-open::after {
         font-size: 1.2rem;
     }
     
-    .search-container {
+    .header-search {
         position: fixed;
         top: 0;
         left: 0;
@@ -684,24 +684,24 @@ body.menu-open::after {
         box-shadow: 0 2px 5px var(--shadow-color);
     }
     
-    .search-container.search-active {
+    .header-search.search-active {
         transform: translateY(0);
         width: 100%;
     }
     
-    .search-container input {
+    .header-search input {
         padding: 12px 15px;
         height: 40px;
         border-radius: 20px;
     }
     
-    .search-container form {
+    .header-search form {
         width: 100%;
         position: relative;
     }
     
     /* Добавляем кнопку закрытия поиска */
-    .search-container form::after {
+    .header-search form::after {
         content: '\2715';
         position: absolute;
         right: 15px;
@@ -833,7 +833,7 @@ body.menu-open::after {
         font-size: 1.2rem;
     }
     
-    .search-container {
+    .header-search {
         position: fixed;
         top: 0;
         left: 0;
@@ -850,24 +850,24 @@ body.menu-open::after {
         box-shadow: 0 2px 5px var(--shadow-color);
     }
     
-    .search-container.search-active {
+    .header-search.search-active {
         transform: translateY(0);
         width: 100%;
     }
     
-    .search-container input {
+    .header-search input {
         padding: 12px 15px;
         height: 40px;
         border-radius: 20px;
     }
     
-    .search-container form {
+    .header-search form {
         width: 100%;
         position: relative;
     }
     
     /* Добавляем кнопку закрытия поиска */
-    .search-container form::after {
+    .header-search form::after {
         content: '\2715';
         position: absolute;
         right: 15px;
