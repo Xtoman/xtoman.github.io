@@ -7,14 +7,14 @@ layout: default
         {% if page.description %}
         <p class="photoproject-description">{{ page.description }}</p>
         {% endif %}
-        <div class="photoproject-meta">
+        <div class="photoproject-meta photoproject-meta--stacked">
             {% if page.date %}
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="photoproject-date">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="photoproject-meta-item">
                 {{ page.date | date: "%d.%m.%Y" }}
             </time>
             {% endif %}
             {% if page.location %}
-            <span class="photoproject-location">{{ page.location }}</span>
+            <span class="photoproject-meta-item photoproject-location">{{ page.location }}</span>
             {% endif %}
         </div>
     </header>
