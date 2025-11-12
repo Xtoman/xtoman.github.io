@@ -3,14 +3,17 @@ name: Build and deploy Jekyll site
 on:
   push:
     branches:
-      - main  # или master, в зависимости от названия вашей основной ветки
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -25,8 +28,7 @@ jobs:
 
       - name: 🚀 Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages  # Ветка, в которую будет публиковаться собранный сайт 
+          publish_branch: gh-pages
