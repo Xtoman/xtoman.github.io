@@ -1025,12 +1025,14 @@ body.menu-open::after {
 }
 
 .photoproject-header h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     color: var(--heading-color);
     margin-bottom: 1rem;
     font-weight: 300;
     letter-spacing: -0.02em;
-    word-break: break-word;
+    word-break: keep-all;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .photoproject-description {
