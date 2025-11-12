@@ -909,11 +909,12 @@ body.menu-open::after {
     font-size: 1.1rem;
     font-style: italic;
     max-width: 720px;
-    margin: 0 auto;
+    margin: 0.75rem auto 0;
     line-height: 1.6;
     padding: 0 1rem;
     word-break: break-word;
     hyphens: auto;
+    white-space: normal;
 }
 
 /* Сетка фотопроектов */
@@ -1349,7 +1350,9 @@ body.menu-open::after {
     .page-description {
         font-size: 1rem;
         max-width: 100%;
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
+        margin: 1rem auto 0;
+        text-align: center;
     }
 
     .photoproject-description {
