@@ -912,8 +912,8 @@ body.menu-open::after {
     margin: 0.75rem auto 0;
     line-height: 1.6;
     padding: 0 1rem;
-    word-break: break-word;
-    hyphens: auto;
+    word-break: normal;
+    hyphens: manual;
     white-space: normal;
 }
 
@@ -1018,44 +1018,62 @@ body.menu-open::after {
 }
 
 .photoproject-header {
-    text-align: center;
-    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
+    gap: 0.75rem;
 }
 
 .photoproject-header h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     color: var(--heading-color);
-    margin-bottom: 1rem;
+    margin: 0;
     font-weight: 300;
     letter-spacing: -0.02em;
-    word-break: keep-all;
+    width: 100%;
+    word-break: normal;
     white-space: normal;
-    word-wrap: break-word;
 }
 
 .photoproject-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-color);
     line-height: 1.8;
-    max-width: 800px;
-    margin: 1.5rem auto;
+    max-width: 100%;
+    margin: 0;
     font-style: italic;
-    padding: 0 1.25rem;
-    word-break: break-word;
-    hyphens: auto;
+    padding: 0;
+    text-align: left;
+    word-break: normal;
+    hyphens: manual;
 }
 
 .photoproject-header .photoproject-meta {
+    width: 100%;
+}
+.photoproject-meta--stacked {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
     color: var(--meta-color);
     font-size: 0.95rem;
-    margin-top: 1.5rem;
-    border-top: none;
+    margin-top: 0.25rem;
     padding-top: 0;
+    border-top: none;
+}
+
+.photoproject-meta--stacked .photoproject-meta-item {
+    display: block;
+    width: 100%;
+}
+
+.photoproject-meta--stacked .photoproject-meta-item + .photoproject-meta-item {
+    margin-top: 0.25rem;
 }
 
 .photoproject-content {
