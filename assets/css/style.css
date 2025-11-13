@@ -907,30 +907,33 @@ body.menu-open::after {
     align-items: flex-start;
     text-align: left;
     gap: 0.75rem;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    padding: 0;
+    border: none;
 }
 
 .page-header h1 {
     font-size: clamp(2rem, 6vw, 3rem);
     color: var(--heading-color);
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     font-weight: 300;
     letter-spacing: -0.02em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .page-description {
     color: var(--meta-color);
     font-size: 1.05rem;
     font-style: italic;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     line-height: 1.6;
     padding: 0;
     text-align: left;
     word-break: normal;
     hyphens: manual;
+    box-sizing: border-box;
 }
 
 /* br в описании автоматически создает перенос строки */
@@ -970,8 +973,8 @@ body.menu-open::after {
     
     .page-header {
         gap: 0.5rem;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 0;
     }
     
     .page-header h1 {
@@ -981,7 +984,9 @@ body.menu-open::after {
     .page-description {
         font-size: 0.9rem;
         line-height: 1.5;
-        padding-right: 0.5rem;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -992,8 +997,8 @@ body.menu-open::after {
     
     .page-header {
         gap: 0.4rem;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
+        padding: 0;
     }
     
     .page-header h1 {
@@ -1003,7 +1008,9 @@ body.menu-open::after {
     .page-description {
         font-size: 0.85rem;
         line-height: 1.4;
-        padding-right: 0.25rem;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
