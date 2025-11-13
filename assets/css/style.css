@@ -89,6 +89,9 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .site-title {
@@ -887,6 +890,9 @@ body.menu-open::after {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 @media (max-width: 480px) {
@@ -910,6 +916,9 @@ body.menu-open::after {
     margin-bottom: 2rem;
     padding: 0;
     border: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .page-header h1 {
@@ -931,9 +940,11 @@ body.menu-open::after {
     line-height: 1.6;
     padding: 0;
     text-align: left;
-    word-break: normal;
-    hyphens: manual;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* br в описании автоматически создает перенос строки */
@@ -969,16 +980,25 @@ body.menu-open::after {
 @media (max-width: 480px) {
     .photoprojects-page {
         padding: 1.5rem 0.75rem;
+        max-width: 100%;
     }
     
     .page-header {
         gap: 0.5rem;
         margin-bottom: 1.5rem;
         padding: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
     
     .page-header h1 {
         font-size: clamp(1.7rem, 9vw, 2.1rem);
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
     
     .page-description {
@@ -986,31 +1006,79 @@ body.menu-open::after {
         line-height: 1.5;
         padding: 0;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
 }
 
 @media (max-width: 360px) {
     .photoprojects-page {
-        padding: 1.25rem 0.5rem;
+        padding: 1rem 0.5rem;
+        max-width: 100%;
     }
     
     .page-header {
         gap: 0.4rem;
         margin-bottom: 1.25rem;
         padding: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
     
     .page-header h1 {
         font-size: clamp(1.6rem, 10vw, 1.9rem);
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        word-break: break-word;
     }
     
     .page-description {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         line-height: 1.4;
         padding: 0;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .photoprojects-page {
+        padding: 0.75rem 0.4rem;
+        max-width: 100%;
+    }
+    
+    .page-header {
+        gap: 0.35rem;
+        margin-bottom: 1rem;
+        min-width: 0;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(1.5rem, 11vw, 1.8rem);
+        min-width: 0;
+        word-break: break-word;
+    }
+    
+    .page-description {
+        font-size: 0.75rem;
+        line-height: 1.35;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+        min-width: 0;
     }
 }
 
