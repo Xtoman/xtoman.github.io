@@ -889,6 +889,18 @@ body.menu-open::after {
     padding: 2rem 1rem;
 }
 
+@media (max-width: 480px) {
+    .photoprojects-page {
+        padding: 1.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .photoprojects-page {
+        padding: 1.25rem 0.5rem;
+    }
+}
+
 .page-header {
     display: flex;
     flex-direction: column;
@@ -917,7 +929,11 @@ body.menu-open::after {
     line-height: 1.6;
     padding: 0;
     text-align: left;
+    word-break: normal;
+    hyphens: manual;
 }
+
+/* br в описании автоматически создает перенос строки */
 
 /* Сетка фотопроектов */
 .photoprojects-grid {
@@ -948,13 +964,46 @@ body.menu-open::after {
 }
 
 @media (max-width: 480px) {
+    .photoprojects-page {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .page-header {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
     .page-header h1 {
         font-size: clamp(1.7rem, 9vw, 2.1rem);
     }
     
     .page-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         line-height: 1.5;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .photoprojects-page {
+        padding: 1.25rem 0.5rem;
+    }
+    
+    .page-header {
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(1.6rem, 10vw, 1.9rem);
+    }
+    
+    .page-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding-right: 0.25rem;
     }
 }
 
