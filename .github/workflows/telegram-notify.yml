@@ -1,0 +1,190 @@
+name: Уведомление в Telegram о новом посте
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '_posts/**/*.md'
+  workflow_dispatch:
+    inputs:
+      test_post:
+        description: 'Путь к тестовому посту (например: _posts/2025-09-18-what_i_read_in_2025.md)'
+        required: false
+        default: ''
+
+jobs:
+  notify-telegram:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Установка зависимостей Python
+        run: |
+          pip install pyyaml requests
+
+      - name: Определение новых постов и отправка в Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BLOG_URL: ${{ secrets.BLOG_URL || 'https://xtoman.ru' }}
+          TEST_POST: ${{ inputs.test_post }}
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          import subprocess
+          import yaml
+          import requests
+          from pathlib import Path
+
+          # Получаем переменные окружения
+          BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+          CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+          BLOG_URL = os.environ.get('BLOG_URL', 'https://xtoman.ru')
+
+          if not BOT_TOKEN or not CHAT_ID:
+              print("❌ Не заданы TELEGRAM_BOT_TOKEN или TELEGRAM_CHAT_ID")
+              exit(1)
+
+          # Проверяем, это ручной запуск с указанием тестового поста
+          test_post = os.environ.get('TEST_POST', '')
+          
+          new_posts = []
+          
+          if test_post:
+              # Ручной запуск - используем указанный пост
+              print(f"🧪 Тестовый режим: используется пост {test_post}")
+              if Path(test_post).exists():
+                  new_posts = [test_post]
+              else:
+                  print(f"❌ Указанный пост не найден: {test_post}")
+                  exit(1)
+          else:
+              # Автоматический запуск - определяем новые посты
+              # Сначала проверяем, существует ли HEAD~1
+              check_parent = subprocess.run(
+                  ['git', 'rev-parse', '--verify', 'HEAD~1'],
+                  capture_output=True,
+                  text=True,
+                  cwd=os.getcwd()
+              )
+              
+              if check_parent.returncode == 0:
+                  # Есть предыдущий коммит - используем diff
+                  result = subprocess.run(
+                      ['git', 'diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD'],
+                      capture_output=True,
+                      text=True,
+                      cwd=os.getcwd()
+                  )
+                  new_files = result.stdout.strip().split('\n')
+                  new_posts = [f for f in new_files if f.startswith('_posts/') and f.endswith('.md')]
+              
+              if not new_posts:
+                  # Если не нашли через diff, используем git show для текущего коммита
+                  result = subprocess.run(
+                      ['git', 'show', '--name-only', '--pretty=format:', '--diff-filter=A', 'HEAD'],
+                      capture_output=True,
+                      text=True,
+                      cwd=os.getcwd()
+                  )
+                  all_files = result.stdout.strip().split('\n')
+                  new_posts = [f for f in all_files if f.startswith('_posts/') and f.endswith('.md')]
+              
+              # Фильтруем пустые строки
+              new_posts = [p for p in new_posts if p.strip()]
+
+          for post_file in new_posts:
+              if not post_file:
+                  continue
+              
+              post_path = Path(post_file)
+              if not post_path.exists():
+                  continue
+
+              print(f"📝 Обработка нового поста: {post_file}")
+
+              # Читаем файл поста
+              content = post_path.read_text(encoding='utf-8')
+
+              # Парсим frontmatter
+              frontmatter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', content, re.DOTALL)
+              
+              if not frontmatter_match:
+                  print(f"⚠️  Не удалось распарсить frontmatter в {post_file}")
+                  continue
+
+              frontmatter_str = frontmatter_match.group(1)
+              try:
+                  frontmatter = yaml.safe_load(frontmatter_str)
+              except Exception as e:
+                  print(f"⚠️  Ошибка парсинга YAML в {post_file}: {e}")
+                  continue
+
+              # Извлекаем данные
+              title = frontmatter.get('title', 'Без названия')
+              description = frontmatter.get('description', '')
+              date = frontmatter.get('date', '')
+              
+              # Формируем URL поста
+              # Имя файла без расширения
+              post_name = post_path.stem
+              # Формат: YYYY-MM-DD-title
+              date_match = re.match(r'^(\d{4}-\d{2}-\d{2})-(.+)$', post_name)
+              if date_match:
+                  year, month, day = date_match.group(1).split('-')
+                  title_slug = date_match.group(2)
+                  post_url = f"{BLOG_URL}/{year}/{month}/{day}/{title_slug}/"
+              else:
+                  post_url = f"{BLOG_URL}"
+
+              # Формируем сообщение
+              message = f"✨ <b>Новый пост в блоге!</b>\n\n"
+              message += f"📌 <b>{title}</b>\n\n"
+              
+              if description:
+                  # Обрезаем описание до 200 символов
+                  desc_short = description[:200] + "..." if len(description) > 200 else description
+                  message += f"{desc_short}\n\n"
+              
+              if date:
+                  message += f"📅 {date}\n\n"
+              
+              message += f"🔗 <a href='{post_url}'>Читать далее →</a>"
+
+              # Отправляем в Telegram
+              url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+              payload = {
+                  'chat_id': CHAT_ID,
+                  'text': message,
+                  'parse_mode': 'HTML',
+                  'disable_web_page_preview': False
+              }
+
+              try:
+                  response = requests.post(url, json=payload, timeout=10)
+                  response.raise_for_status()
+                  print(f"✅ Анонс отправлен в Telegram: {title}")
+              except Exception as e:
+                  print(f"❌ Ошибка отправки в Telegram для поста '{title}': {e}")
+                  if hasattr(e, 'response') and e.response is not None:
+                      print(f"   Ответ API: {e.response.text}")
+
+          if not new_posts:
+              print("ℹ️  Новых постов не обнаружено")
+          else:
+              print(f"✅ Обработано постов: {len(new_posts)}")
+
+          EOF
+        continue-on-error: true
+
