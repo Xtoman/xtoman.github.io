@@ -1,53 +1,65 @@
 ---
 layout: default
-title: Главная страница
-description: Личный блог о технологиях, путешествиях и саморазвитии
+title: Фотопроекты
+description: Документальные фотопроекты и визуальные истории
 ---
-
-<div class="posts">
-    {% for post in paginator.posts %}
-    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 itemprop="name headline">
-            <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
-                {{ post.date | date: "%d.%m.%Y" }}
-            </time>
-        </div>
-        
-        <div class="post-excerpt" itemprop="description">
-            {{ post.content | strip_html | truncatewords: 50 }}
-        </div>
-        
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more" aria-label="Читать полностью статью {{ post.title }}">Читать далее...</a>
-    </article>
-    {% endfor %}
-</div>
-
-<!-- Пагинация -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-item">&laquo; Назад</a>
-    {% else %}
-        <span class="pagination-item pagination-disabled">&laquo; Назад</span>
-    {% endif %}
+<div class="photoprojects-page">
+    <header class="page-header">
+        <h1>Фотопроекты</h1>
+        <p class="page-description">Документальные фотопроекты<br>и визуальные истории</p>
+    </header>
     
-    {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-            <span class="pagination-item pagination-active">{{ page }}</span>
-        {% elsif page == 1 %}
-            <a href="{{ site.baseurl }}/" class="pagination-item">{{ page }}</a>
-        {% else %}
-            <a href="{{ site.baseurl }}/page/{{ page }}/" class="pagination-item">{{ page }}</a>
-        {% endif %}
-    {% endfor %}
+    <div class="photoprojects-grid">
+        {% assign sorted_projects = site.photoprojects | where_exp: "project", "project.published != false" | sort: 'date' | reverse %}
+        {% for project in sorted_projects %}
+        <article class="photoproject-preview" itemscope itemtype="http://schema.org/ImageGallery">
+            <a href="{{ site.baseurl }}{{ project.url }}" class="photoproject-link">
+                {% assign project_folder = project.slug | default: project.path %}
+                {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
+                {% if project.cover_image %}
+                <div class="photoproject-cover">
+                    <img 
+                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.cover_image }}" 
+                        alt="{{ project.title }}"
+                        loading="lazy"
+                        itemprop="image"
+                    >
+                </div>
+                {% elsif project.images and project.images.size > 0 %}
+                <div class="photoproject-cover">
+                    <img 
+                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.images[0].path }}" 
+                        alt="{{ project.title }}"
+                        loading="lazy"
+                        itemprop="image"
+                    >
+                </div>
+                {% endif %}
+                
+                <div class="photoproject-info">
+                    <h2 itemprop="name">{{ project.title }}</h2>
+                    {% if project.description %}
+                    <p class="photoproject-excerpt">{{ project.description }}</p>
+                    {% endif %}
+                    <div class="photoproject-meta">
+                        {% if project.date %}
+                        <time datetime="{{ project.date | date_to_xmlschema }}" itemprop="datePublished">
+                            {{ project.date | date: "%Y" }}
+                        </time>
+                        {% endif %}
+                        {% if project.location %}
+                        <span class="photoproject-location">{{ project.location }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
     
-    {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-item">Вперед &raquo;</a>
-    {% else %}
-        <span class="pagination-item pagination-disabled">Вперед &raquo;</span>
+    {% if sorted_projects.size == 0 %}
+    <div class="empty-state">
+        <p>Фотопроекты пока не добавлены.</p>
+    </div>
     {% endif %}
-</div>
-{% endif %} 
+</div> 

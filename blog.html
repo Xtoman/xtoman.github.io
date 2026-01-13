@@ -1,0 +1,26 @@
+---
+layout: default
+title: Блог
+description: Личный блог о технологиях, путешествиях и саморазвитии
+---
+
+<div class="posts">
+    {% for post in site.posts %}
+    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
+        <h2 itemprop="name headline">
+            <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
+        </h2>
+        <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+                {{ post.date | date: "%d.%m.%Y" }}
+            </time>
+        </div>
+        
+        <div class="post-excerpt" itemprop="description">
+            {{ post.content | strip_html | truncatewords: 50 }}
+        </div>
+        
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more" aria-label="Читать полностью статью {{ post.title }}">Читать далее...</a>
+    </article>
+    {% endfor %}
+</div>
