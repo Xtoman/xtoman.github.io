@@ -39,8 +39,6 @@ images:
     caption: "Немного звезд"
   - path: "image16.jpg"
     caption: "Греческое в Москве"
-  - path: "image17.jpg"
-    caption: "Мужское"  
   - path: "image18.jpg"
     caption: ""
   - path: "image19.jpg"
