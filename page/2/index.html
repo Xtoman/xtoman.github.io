@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница | Дневник</title>
+    <title>Фотопроекты | Дневник</title>
     <meta name="description" content="Личный блог о технологиях, путешествиях и пути">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://xtoman.ru/page/2/">
-    <meta property="og:title" content="Главная страница">
+    <meta property="og:title" content="Фотопроекты">
     <meta property="og:description" content="Личный блог о технологиях, путешествиях и пути">
     <meta property="og:image" content="https://xtoman.ru/assets/images/default-og.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Главная страница">
+    <meta name="twitter:title" content="Фотопроекты">
     <meta name="twitter:description" content="Личный блог о технологиях, путешествиях и пути">
     <meta name="twitter:image" content="https://xtoman.ru/assets/images/default-og.jpg">
     
@@ -70,94 +70,64 @@
         </div>
         
         <nav id="main-nav">
-            <a href="/">Главная</a>
-            <a href="/photoprojects">Фотопроекты</a>
+            <a href="/">Фотопроекты</a>
+            <a href="/blog">Блог</a>
             <a href="/about">Об авторе</a>
         </nav>
     </header>
 
     <main>
-        <div class="posts">
+        <div class="photoprojects-page">
+    <header class="page-header">
+        <h1>Фотопроекты</h1>
+        <p class="page-description">Документальные фотопроекты<br>и визуальные истории</p>
+    </header>
     
-    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 itemprop="name headline">
-            <a href="/2025/03/10/creating-blog-with-cursor/" itemprop="url">Создание современного блога с помощью Jekyll и Cursor</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-03-10T00:00:00+03:00" itemprop="datePublished" class="post-date">
-                10.03.2025
-            </time>
-        </div>
+    <div class="photoprojects-grid">
         
-        <div class="post-excerpt" itemprop="description">
-            В этой статье я расскажу о процессе создания современного блога с использованием Jekyll и Cursor. Мы рассмотрим все ключевые особенности, технические решения и преимущества выбранного стека технологий. Почему Jekyll? Jekyll - это генератор статических сайтов, который превращает текстовые файлы в красивый веб-сайт. Вот его основные преимущества: Простота - не нужна...
-        </div>
         
-        <a href="/2025/03/10/creating-blog-with-cursor/" class="read-more" aria-label="Читать полностью статью Создание современного блога с помощью Jekyll и Cursor">Читать далее...</a>
-    </article>
-    
-    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 itemprop="name headline">
-            <a href="/2025/03/07/first-post/" itemprop="url">Год в спортзале: что изменилось?</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-03-07T00:00:00+03:00" itemprop="datePublished" class="post-date">
-                07.03.2025
-            </time>
-        </div>
+        <article class="photoproject-preview" itemscope itemtype="http://schema.org/ImageGallery">
+            <a href="/photoprojects/misc/" class="photoproject-link">
+                
+                
+                
+                <div class="photoproject-cover">
+                    <img 
+                        src="/assets/images/photoprojects/misc/cover.jpg" 
+                        alt="Разное снятое"
+                        loading="lazy"
+                        itemprop="image"
+                    >
+                </div>
+                
+                
+                <div class="photoproject-info">
+                    <h2 itemprop="name">Разное снятое</h2>
+                    
+                    <p class="photoproject-excerpt">Это я снимал когда-то</p>
+                    
+                    <div class="photoproject-meta">
+                        
+                        <time datetime="2025-11-12T00:00:00+03:00" itemprop="datePublished">
+                            2025
+                        </time>
+                        
+                        
+                        <span class="photoproject-location">Москва, Россия</span>
+                        
+                    </div>
+                </div>
+            </a>
+        </article>
         
-        <div class="post-excerpt" itemprop="description">
-            Ровно год назад я впервые попал в спортзал. На тот момент мне было 26 лет и такому решению способствовали два момента – цифра на весах после новогодних праздников и 26 лет праздной жизни напугала меня (при росте 188, весы показали 88 кг) и отваливающаяся спина тоже не радовала. Причиной таких...
-        </div>
-        
-        <a href="/2025/03/07/first-post/" class="read-more" aria-label="Читать полностью статью Год в спортзале: что изменилось?">Читать далее...</a>
-    </article>
-    
-    <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 itemprop="name headline">
-            <a href="/2025/03/07/cursor-schedule/" itemprop="url">Как я доверил свой код ИИ, или История одного эксперимента с Cursor</a>
-        </h2>
-        <div class="post-meta">
-            <time datetime="2025-03-07T00:00:00+03:00" itemprop="datePublished" class="post-date">
-                07.03.2025
-            </time>
-        </div>
-        
-        <div class="post-excerpt" itemprop="description">
-            Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь “а что, если…”? Вот у меня был именно такой. Знакомьтесь, мой новый “напарник” Итак, я решил создать приложение для управления расписанием. Обычно я бы даже не взялся за...
-        </div>
-        
-        <a href="/2025/03/07/cursor-schedule/" class="read-more" aria-label="Читать полностью статью Как я доверил свой код ИИ, или История одного эксперимента с Cursor">Читать далее...</a>
-    </article>
-    
-</div>
-
-<!-- Пагинация -->
-
-<div class="pagination">
-    
-        <a href="/" class="pagination-item">&laquo; Назад</a>
+    </div>
     
     
-    
-        
-            <a href="/" class="pagination-item">1</a>
-        
-    
-        
-            <span class="pagination-item pagination-active">2</span>
-        
-    
-    
-    
-        <span class="pagination-item pagination-disabled">Вперед &raquo;</span>
-    
-</div>
- 
+</div> 
     </main>
 
     <footer>
-        <p>&copy; 2025 Дневник</p>
+        <p>&copy; 2026 Дневник</p>
     </footer>
 
     <script>
