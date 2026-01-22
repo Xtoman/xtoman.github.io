@@ -57,6 +57,7 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">{{ t.common.skip_to_content }}</a>
     <header>
         <div class="site-logo">
             {% assign logo_title = site.title %}
@@ -118,7 +119,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         {{ content }}
     </main>
 

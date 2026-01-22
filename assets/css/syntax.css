@@ -4,6 +4,12 @@
   padding: 1rem;
   margin: 1rem 0;
   overflow-x: auto;
+  border: 1px solid #e9ecef;
+}
+
+[data-theme="dark"] .highlight {
+  background: #2d2d2d;
+  border-color: #333;
 }
 
 .highlight pre {
@@ -17,7 +23,7 @@
   line-height: 1.5;
 }
 
-/* Базовые цвета для подсветки синтаксиса */
+/* Базовые цвета для подсветки синтаксиса (светлая тема) */
 .highlight .c { color: #998; font-style: italic } /* Комментарий */
 .highlight .k { color: #000; font-weight: bold } /* Ключевое слово */
 .highlight .o { color: #000; font-weight: bold } /* Оператор */
@@ -28,3 +34,26 @@
 .highlight .nb { color: #0086B3 } /* Встроенное */
 .highlight .nc { color: #458; font-weight: bold } /* Имя класса */
 .highlight .nf { color: #900; font-weight: bold } /* Имя функции */
+
+/* Цвета для темной темы */
+[data-theme="dark"] .highlight .c { color: #6a9955; font-style: italic } /* Комментарий */
+[data-theme="dark"] .highlight .k { color: #569cd6; font-weight: bold } /* Ключевое слово */
+[data-theme="dark"] .highlight .o { color: #d4d4d4; font-weight: bold } /* Оператор */
+[data-theme="dark"] .highlight .cm { color: #6a9955; font-style: italic } /* Многострочный комментарий */
+[data-theme="dark"] .highlight .cp { color: #808080; font-weight: bold } /* Препроцессор */
+[data-theme="dark"] .highlight .s { color: #ce9178 } /* Строка */
+[data-theme="dark"] .highlight .na { color: #9cdcfe } /* Имя атрибута */
+[data-theme="dark"] .highlight .nb { color: #4ec9b0 } /* Встроенное */
+[data-theme="dark"] .highlight .nc { color: #4ec9b0; font-weight: bold } /* Имя класса */
+[data-theme="dark"] .highlight .nf { color: #dcdcaa; font-weight: bold } /* Имя функции */
+[data-theme="dark"] .highlight .n { color: #d4d4d4 } /* Имя */
+[data-theme="dark"] .highlight .p { color: #d4d4d4 } /* Пунктуация */
+[data-theme="dark"] .highlight .l { color: #ce9178 } /* Литерал */
+[data-theme="dark"] .highlight .m { color: #b5cea8 } /* Число */
+[data-theme="dark"] .highlight .mi { color: #b5cea8 } /* Число (integer) */
+[data-theme="dark"] .highlight .mf { color: #b5cea8 } /* Число (float) */
+[data-theme="dark"] .highlight .s1 { color: #ce9178 } /* Строка (одинарные кавычки) */
+[data-theme="dark"] .highlight .s2 { color: #ce9178 } /* Строка (двойные кавычки) */
+[data-theme="dark"] .highlight .err { color: #f48771 } /* Ошибка */
+[data-theme="dark"] .highlight .gd { color: #f48771 } /* Удаленное */
+[data-theme="dark"] .highlight .gi { color: #89d185 } /* Добавленное */

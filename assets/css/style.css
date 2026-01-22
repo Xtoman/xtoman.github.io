@@ -35,15 +35,29 @@
 /* Плавный переход между темами */
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
     color: var(--text-color);
     background: var(--background-color);
+}
+
+/* Skip to content для доступности */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-to-content:focus {
+    top: 0;
 }
 
 header {
@@ -250,6 +264,268 @@ figcaption {
     transition: transform 0.2s ease;
 }
 
+/* Стили для элементов контента */
+.post-content,
+.photoproject-content {
+    /* Ссылки в контенте */
+}
+
+.post-content a,
+.photoproject-content a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(46, 204, 113, 0.3);
+    text-underline-offset: 2px;
+    transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .post-content a,
+[data-theme="dark"] .photoproject-content a {
+    color: var(--accent-color);
+    text-decoration-color: rgba(76, 175, 80, 0.4);
+}
+
+.post-content a:hover,
+.photoproject-content a:hover {
+    color: var(--primary-color);
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+}
+
+[data-theme="dark"] .post-content a:hover,
+[data-theme="dark"] .photoproject-content a:hover {
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
+}
+
+/* Стили для заголовков в контенте */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.photoproject-content h1,
+.photoproject-content h2,
+.photoproject-content h3,
+.photoproject-content h4,
+.photoproject-content h5,
+.photoproject-content h6 {
+    color: var(--heading-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.post-content h1,
+.photoproject-content h1 {
+    font-size: 2.25rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.post-content h2,
+.photoproject-content h2 {
+    font-size: 1.875rem;
+}
+
+.post-content h3,
+.photoproject-content h3 {
+    font-size: 1.5rem;
+}
+
+.post-content h4,
+.photoproject-content h4 {
+    font-size: 1.25rem;
+}
+
+.post-content h5,
+.post-content h6,
+.photoproject-content h5,
+.photoproject-content h6 {
+    font-size: 1.125rem;
+}
+
+/* Стили для списков */
+.post-content ul,
+.post-content ol,
+.photoproject-content ul,
+.photoproject-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    line-height: 1.8;
+}
+
+.post-content ul li,
+.post-content ol li,
+.photoproject-content ul li,
+.photoproject-content ol li {
+    margin: 0.5rem 0;
+}
+
+.post-content ul {
+    list-style-type: disc;
+}
+
+.post-content ol {
+    list-style-type: decimal;
+}
+
+.post-content ul ul,
+.post-content ol ol,
+.post-content ul ol,
+.post-content ol ul,
+.photoproject-content ul ul,
+.photoproject-content ol ol,
+.photoproject-content ul ol,
+.photoproject-content ol ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для blockquote */
+.post-content blockquote,
+.photoproject-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    background: var(--blockquote-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.post-content blockquote p:last-child,
+.photoproject-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Стили для кода */
+.post-content code,
+.photoproject-content code {
+    background: var(--code-background);
+    color: var(--text-color);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.post-content pre,
+.photoproject-content pre {
+    background: var(--code-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.post-content pre code,
+.photoproject-content pre code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9em;
+}
+
+/* Стили для таблиц */
+.post-content table,
+.photoproject-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95em;
+}
+
+.post-content table th,
+.post-content table td,
+.photoproject-content table th,
+.photoproject-content table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-content table th,
+.photoproject-content table th {
+    background: var(--light-gray);
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.post-content table tr:hover,
+.photoproject-content table tr:hover {
+    background: var(--light-gray);
+}
+
+/* Стили для выделения текста */
+::selection {
+    background: var(--accent-color);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Стили для focus-visible (доступность) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.icon-button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Стили для печати */
+@media print {
+    header,
+    footer,
+    .header-controls,
+    #main-nav,
+    .post-navigation,
+    .photoproject-navigation {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .post,
+    .post-preview,
+    .photoproject {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+    
+    .post-content a,
+    .photoproject-content a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .post-content a::after,
+    .photoproject-content a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+}
+
 /* Стили для поиска */
 .header-search {
     position: absolute;
@@ -357,45 +633,7 @@ figcaption {
     border-color: var(--accent-color);
 }
 
-/* Медиа-запросы */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    nav {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .header-controls {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .header-search {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(-100%);
-        width: 100%;
-        border-radius: 0;
-        z-index: 1000;
-        margin-right: 0;
-    }
-    
-    .header-search.search-active {
-        transform: translateY(0);
-        width: 100%;
-    }
-    
-    .header-search input {
-        padding: 15px 20px;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 /* Стили для пагинации */
 .pagination {
@@ -482,67 +720,7 @@ figcaption {
     display: none !important;
 }
 
-/* Медиа-запросы для мобильного меню */
-@media (max-width: 768px) {
-    .mobile-only {
-        display: flex !important;
-        position: absolute;
-        left: 1rem;
-        z-index: 1002;
-    }
-
-    header {
-        padding: 1rem;
-        justify-content: center;
-        position: relative;
-    }
-
-    #main-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--card-background);
-        padding: 2rem 1rem;
-        box-shadow: 0 2px 4px var(--shadow-color);
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    #main-nav.nav-active {
-        transform: translateY(0);
-    }
-
-    #main-nav a {
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
-        padding: 1rem;
-        margin: 0;
-        border-radius: 8px;
-        font-size: 1.2rem;
-        transition: all 0.2s ease;
-    }
-
-    #main-nav a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px var(--shadow-color);
-    }
-
-    .header-controls {
-        position: absolute;
-        right: 1rem;
-        z-index: 1001;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 /* Стили для кнопки бургера */
 #menu-toggle {
@@ -637,110 +815,7 @@ body.menu-open::after {
     pointer-events: auto;
 }
 
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
-    header {
-        padding: 0.5rem 1rem;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        height: 60px;
-        position: relative;
-    }
-    
-    .site-logo {
-        font-size: 1.2rem;
-        max-width: 40%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        z-index: 1001;
-    }
-    
-    .header-controls {
-        position: static;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-        z-index: 1001;
-    }
-    
-    .icon-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .icon-button .material-icons {
-        font-size: 20px;
-    }
-    
-    #menu-toggle {
-        margin-left: 0;
-    }
-    
-    #main-nav {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-100%);
-    }
-    
-    #main-nav.nav-active {
-        transform: translateY(0);
-    }
-    
-    #main-nav a {
-        width: 80%;
-        max-width: 300px;
-        font-size: 1.2rem;
-    }
-    
-    .header-search {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(-100%);
-        width: 100%;
-        border-radius: 0;
-        z-index: 1005;
-        margin-right: 0;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        padding: 0 1rem;
-        box-shadow: 0 2px 5px var(--shadow-color);
-    }
-    
-    .header-search.search-active {
-        transform: translateY(0);
-        width: 100%;
-    }
-    
-    .header-search input {
-        padding: 12px 15px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    
-    .header-search form {
-        width: 100%;
-        position: relative;
-    }
-    
-    /* Добавляем кнопку закрытия поиска */
-    .header-search form::after {
-        content: '\2715';
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--meta-color);
-        font-size: 16px;
-        cursor: pointer;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 /* Стили для логотипа */
 .site-logo {
@@ -804,109 +879,7 @@ body.menu-open::after {
     box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
-    header {
-        padding: 0.5rem 1rem;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        height: 60px;
-    }
-    
-    .site-logo {
-        font-size: 1.2rem;
-        max-width: 40%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        z-index: 1001;
-    }
-    
-    .header-controls {
-        position: static;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-        z-index: 1001;
-    }
-    
-    .icon-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .icon-button .material-icons {
-        font-size: 20px;
-    }
-    
-    #menu-toggle {
-        margin-left: 0;
-    }
-    
-    #main-nav {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-100%);
-    }
-    
-    #main-nav.nav-active {
-        transform: translateY(0);
-    }
-    
-    #main-nav a {
-        width: 80%;
-        max-width: 300px;
-        font-size: 1.2rem;
-    }
-    
-    .header-search {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(-100%);
-        width: 100%;
-        border-radius: 0;
-        z-index: 1005;
-        margin-right: 0;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        padding: 0 1rem;
-        box-shadow: 0 2px 5px var(--shadow-color);
-    }
-    
-    .header-search.search-active {
-        transform: translateY(0);
-        width: 100%;
-    }
-    
-    .header-search input {
-        padding: 12px 15px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    
-    .header-search form {
-        width: 100%;
-        position: relative;
-    }
-    
-    /* Добавляем кнопку закрытия поиска */
-    .header-search form::after {
-        content: '\2715';
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--meta-color);
-        font-size: 16px;
-        cursor: pointer;
-    }
-} 
+/* Медиа-запросы объединены в конце файла */ 
 /* ========================================
    СТИЛИ ДЛЯ ФОТОПРОЕКТОВ
    ======================================== */
@@ -983,25 +956,7 @@ body.menu-open::after {
     margin-top: 3rem;
 }
 
-@media (max-width: 768px) {
-    .photoprojects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .page-header {
-        gap: 0.65rem;
-        margin-bottom: 2.5rem;
-    }
-    
-    .page-header h1 {
-        font-size: clamp(1.8rem, 8vw, 2.4rem);
-    }
-    
-    .page-description {
-        font-size: 1rem;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 @media (max-width: 480px) {
     .photoprojects-page {
@@ -1389,31 +1344,7 @@ body.menu-open::after {
     transform: translateY(-50%);
 }
 
-@media (max-width: 768px) {
-    .lightbox-prev,
-    .lightbox-next {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
-    
-    .lightbox-close {
-        top: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
-    }
-    
-    .lightbox-content img {
-        max-height: 70vh;
-    }
-    
-    .lightbox-caption {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 /* Навигация между фотопроектами */
 .photoproject-navigation {
@@ -1454,32 +1385,7 @@ body.menu-open::after {
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-    .photoproject-navigation {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .photoproject-navigation .prev,
-    .photoproject-navigation .next {
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .photoproject-header h1 {
-        font-size: 2rem;
-        word-break: break-word;
-        hyphens: auto;
-    }
-    
-    .photoproject-description {
-        font-size: 1rem;
-    }
-    
-    .photo-gallery {
-        gap: 2rem;
-    }
-}
+/* Медиа-запросы объединены в конце файла */
 
 /* Пустое состояние */
 .empty-state {
@@ -1512,34 +1418,59 @@ body.menu-open::after {
 }
 
 
+/* Медиа-запросы объединены в конце файла */
+
+/* ========================================
+   ОБЪЕДИНЕННЫЕ МЕДИА-ЗАПРОСЫ
+   ======================================== */
+
+/* Медиа-запрос для планшетов и мобильных устройств */
 @media (max-width: 768px) {
+    /* Header и навигация */
     header {
+        padding: 0.5rem 1rem;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 0.5rem;
+        height: 60px;
+        position: relative;
     }
-
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .site-logo {
-        font-size: 1.3rem;
-        max-width: 70%;
+        font-size: 1.2rem;
+        max-width: 40%;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        z-index: 1001;
     }
-
+    
     .header-controls {
+        position: static;
         margin-left: auto;
         width: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
         justify-content: flex-end;
-        gap: 0.5rem;
+        z-index: 1001;
     }
-
-    .header-controls .icon-button {
+    
+    .icon-button {
         width: 36px;
         height: 36px;
     }
-
+    
+    .icon-button .material-icons {
+        font-size: 20px;
+    }
+    
     .lang-switch {
         padding: 4px 8px;
         font-size: 12px;
@@ -1547,9 +1478,216 @@ body.menu-open::after {
         height: 28px;
         margin: 0 4px;
     }
+    
+    /* Поиск */
+    .header-search {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        border-radius: 0;
+        z-index: 1005;
+        margin-right: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        box-shadow: 0 2px 5px var(--shadow-color);
+    }
+    
+    .header-search.search-active {
+        transform: translateY(0);
+        width: 100%;
+    }
+    
+    .header-search input {
+        padding: 12px 15px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    
+    .header-search form {
+        width: 100%;
+        position: relative;
+    }
+    
+    .header-search form::after {
+        content: '\2715';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--meta-color);
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    /* Мобильное меню */
+    .mobile-only {
+        display: flex !important;
+        position: absolute;
+        left: 1rem;
+        z-index: 1002;
+    }
+    
+    #main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--card-background);
+        padding: 2rem 1rem;
+        box-shadow: 0 2px 4px var(--shadow-color);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        visibility: hidden;
+    }
+    
+    #main-nav.nav-active {
+        transform: translateY(0);
+        visibility: visible;
+    }
+    
+    #main-nav a {
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+    }
+    
+    #main-nav a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px var(--shadow-color);
+    }
+    
+    #menu-toggle {
+        margin-left: 0;
+    }
+    
+    /* Фотопроекты */
+    .photoprojects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .page-header {
+        gap: 0.65rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+    
+    .page-description {
+        font-size: 1rem;
+    }
+    
+    .photoproject-header h1 {
+        font-size: 2rem;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .photoproject-description {
+        font-size: 1rem;
+    }
+    
+    .photo-gallery {
+        gap: 2rem;
+    }
+    
+    .photoproject-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .photoproject-navigation .prev,
+    .photoproject-navigation .next {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    /* Lightbox */
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+    
+    .lightbox-content img {
+        max-height: 70vh;
+    }
+    
+    .lightbox-caption {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
 }
 
+/* Медиа-запрос для маленьких мобильных устройств */
 @media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+    }
+    
+    .nav-links a {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+    
+    .post-preview {
+        padding: 1.5rem;
+    }
+    
+    .post h1 {
+        font-size: 2rem;
+    }
+    
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .pagination {
+        margin: 2rem 0;
+    }
+    
+    .pagination-item {
+        padding: 0.4rem 0.8rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+    
     .page-description {
         font-size: 1rem;
         max-width: 100%;
@@ -1557,7 +1695,7 @@ body.menu-open::after {
         margin: 1rem auto 0;
         text-align: center;
     }
-
+    
     .photoproject-description {
         font-size: 1.05rem;
         padding: 0 1.25rem;

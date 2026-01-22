@@ -15,10 +15,12 @@ en:
     tags: "Tags:"
     previous: "Previous"
     next: "Next"
+    skip_to_content: "Skip to content"
   photoprojects:
     title: "Photoprojects"
     description: "Documentary photoprojects<br>and visual stories"
     empty: "No photoprojects added yet."
+    all_projects: "All projects"
   blog:
     title: "Blog"
     description: "Personal blog about technology, travel and self-development"
@@ -44,10 +46,12 @@ ru:
     tags: "Теги:"
     previous: "Предыдущая"
     next: "Следующая"
+    skip_to_content: "Перейти к содержимому"
   photoprojects:
     title: "Фотопроекты"
     description: "Документальные фотопроекты<br>и визуальные истории"
     empty: "Фотопроекты пока не добавлены."
+    all_projects: "Все проекты"
   blog:
     title: "Блог"
     description: "Личный блог о технологиях, путешествиях и саморазвитии"

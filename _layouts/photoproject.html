@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include i18n.html %}
 <article class="photoproject" itemscope itemtype="http://schema.org/ImageGallery">
     <header class="photoproject-header">
         <h1 itemprop="name">{{ page.title }}</h1>
@@ -69,7 +70,7 @@ layout: default
             <span></span>
         {% endif %}
         
-        <a href="{{ site.baseurl }}/photoprojects/" class="all-projects">Все проекты</a>
+        <a href="{{ site.baseurl }}{% if current_lang == 'ru' %}/ru{% endif %}/photoprojects/" class="all-projects">{{ t.photoprojects.all_projects }}</a>
         
         {% if next_index < total_projects %}
             {% assign next_project = sorted_projects[next_index] %}
