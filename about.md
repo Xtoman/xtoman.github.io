@@ -1,41 +1,41 @@
 ---
 layout: default
-title: Обо мне
+lang: en
+title: About me
 ---
 
-# Обо мне
+# About me
 
-Привет! Я увлекающийся человек с широким кругом интересов и коротким фокусом внимания, поэтому часто меняю сферу интересов. Благодаря этому у меня формируются поверхностные знания о различных хобби и сферах деятельности. Мне нравится исследовать новое и постоянно учиться чему-то интересному.
+Hello! I'm an enthusiastic person with a wide range of interests and a short attention span, so I often change my focus areas. This has led me to develop surface-level knowledge about various hobbies and fields of activity. I enjoy exploring new things and constantly learning something interesting.
 
-## Мои увлечения
+## My interests
 
-### 🎨 Искусство и медиа
-- **Фотография**: Люблю запечатлевать моменты жизни через объектив камеры
-- **Музыка**: Ценитель качественного звука и разных музыкальных жанров. Учусь играть на гитаре
+### 🎨 Art and media
+- **Photography**: I love capturing life moments through the camera lens
+- **Music**: An enthusiast of quality sound and different music genres. Learning to play guitar
 
-### 💻 Технологии
-- Слежу за новинками в мире технологий
-- Интересуюсь последними достижениями в сфере IT
-- Редко могу пописать код
-- Уважаю и практикую селфхостинг
+### 💻 Technology
+- Following the latest in technology
+- Interested in the latest IT achievements
+- Occasionally can write some code
+- Respect and practice self-hosting
 
+### 🚗 Cars
+- Passionate about automotive topics
+- Love driving
 
-### 🚗 Автомобили
-- Увлекаюсь автомобильной тематикой
-- Люблю ездить на машине
+### ✈️ Travel
+- Love discovering new places
+- Interested in different cultures
+- Collecting experiences and sharing them
 
-### ✈️ Путешествия
-- Люблю открывать новые места
-- Интересуюсь различными культурами
-- Собираю впечатления и делюсь опытом
+### 🏃‍♂️ Sports and active lifestyle
+- Maintain a healthy lifestyle and have bad habits =)
+- Exercise to stay in shape
 
-### 🏃‍♂️ Спорт и активный образ жизни
-- Поддерживаю здоровый образ жизни и имею вредные привычки =)
-- Занимаюсь спортом для поддержания формы
+## Contacts
 
-## Контакты
-
-Всегда открыт к общению и обмену опытом:
+Always open to communication and sharing experiences:
 
 - 📧 Email: xim395@gmail.com
 - 🌐 GitHub: [xtoman](https://github.com/xtoman)
@@ -43,4 +43,4 @@ title: Обо мне
 
 ---
 
-*"Жизнь - это непрерывное обучение и открытие нового"*
+*"Life is continuous learning and discovering new things"*

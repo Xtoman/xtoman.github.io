@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: ru
 title: "Первое впечатление про Manus"
 date: 2025-04-07
 description: "Первый опыт использования Manus"

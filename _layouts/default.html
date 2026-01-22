@@ -1,10 +1,20 @@
+{% include i18n.html %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ current_lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% assign page_title = page.title %}
+    {% assign site_title = site.title %}
+    {% if current_lang == 'ru' and site.title_ru %}
+        {% assign site_title = site.title_ru %}
+    {% endif %}
+    <title>{% if page_title %}{{ page_title }} | {{ site_title }}{% else %}{{ site_title }}{% endif %}</title>
+    {% assign page_description = page.description | default: site.description %}
+    {% if current_lang == 'ru' and site.description_ru %}
+        {% assign page_description = page.description | default: site.description_ru %}
+    {% endif %}
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
@@ -49,30 +59,62 @@
 <body>
     <header>
         <div class="site-logo">
-            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+            {% assign logo_title = site.title %}
+            {% if current_lang == 'ru' and site.title_ru %}
+                {% assign logo_title = site.title_ru %}
+            {% endif %}
+            {% assign home_url = site.baseurl | append: '/' %}
+            {% if current_lang == 'ru' %}
+                {% assign home_url = site.baseurl | append: '/ru/' %}
+            {% endif %}
+            <a href="{{ home_url }}">{{ logo_title }}</a>
         </div>
         
         <div class="header-controls">
             <div id="search-container" class="header-search">
-                <form action="{{ site.baseurl }}/search/" method="get">
-                    <input type="text" id="search-input" name="q" placeholder="Поиск по сайту..." aria-label="Поиск">
+                <form action="{{ site.baseurl }}{% if current_lang == 'ru' %}/ru{% endif %}/search/" method="get">
+                    <input type="text" id="search-input" name="q" placeholder="{{ t.search.placeholder }}" aria-label="{{ t.search.label }}">
                 </form>
             </div>
-            <button id="search-toggle" class="icon-button" aria-label="Поиск">
+            <button id="search-toggle" class="icon-button" aria-label="{{ t.search.label }}">
                 <span class="material-icons">search</span>
             </button>
-            <button id="theme-toggle" class="icon-button" aria-label="Переключить тему">
+            <button id="theme-toggle" class="icon-button" aria-label="{{ t.theme.toggle }}">
                 <span class="material-icons">light_mode</span>
             </button>
-            <button id="menu-toggle" class="icon-button" aria-label="Меню">
+            {% assign other_lang = 'en' %}
+            {% assign other_lang_name = 'EN' %}
+            {% if current_lang == 'en' %}
+                {% assign other_lang = 'ru' %}
+                {% assign other_lang_name = 'RU' %}
+            {% endif %}
+            {% assign lang_switch_url = page.url %}
+            {% if current_lang == 'en' %}
+                {% assign lang_switch_url = '/ru' | append: page.url %}
+            {% else %}
+                {% assign lang_switch_url = page.url | remove_first: '/ru' %}
+                {% if lang_switch_url == '' %}
+                    {% assign lang_switch_url = '/' %}
+                {% endif %}
+            {% endif %}
+            <a href="{{ site.baseurl }}{{ lang_switch_url }}" class="lang-switch" aria-label="Switch to {{ other_lang_name }}">{{ other_lang_name }}</a>
+            <button id="menu-toggle" class="icon-button" aria-label="{{ t.menu.toggle }}">
                 <span class="material-icons">menu</span>
             </button>
         </div>
         
         <nav id="main-nav">
-            <a href="{{ site.baseurl }}/">Фотопроекты</a>
-            <a href="{{ site.baseurl }}/blog">Блог</a>
-            <a href="{{ site.baseurl }}/about">Об авторе</a>
+            {% assign nav_photoprojects = site.baseurl | append: '/' %}
+            {% assign nav_blog = site.baseurl | append: '/blog' %}
+            {% assign nav_about = site.baseurl | append: '/about' %}
+            {% if current_lang == 'ru' %}
+                {% assign nav_photoprojects = site.baseurl | append: '/ru/' %}
+                {% assign nav_blog = site.baseurl | append: '/ru/blog' %}
+                {% assign nav_about = site.baseurl | append: '/ru/about' %}
+            {% endif %}
+            <a href="{{ nav_photoprojects }}">{{ t.nav.photoprojects }}</a>
+            <a href="{{ nav_blog }}">{{ t.nav.blog }}</a>
+            <a href="{{ nav_about }}">{{ t.nav.about }}</a>
         </nav>
     </header>
 
@@ -81,7 +123,11 @@
     </main>
 
     <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        {% assign footer_title = site.title %}
+        {% if current_lang == 'ru' and site.title_ru %}
+            {% assign footer_title = site.title_ru %}
+        {% endif %}
+        <p>{{ t.footer.copyright }} {{ site.time | date: '%Y' }} {{ footer_title }}</p>
     </footer>
 
     <script>

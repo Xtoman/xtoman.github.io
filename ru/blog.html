@@ -1,15 +1,12 @@
 ---
 layout: default
-lang: en
-title: Blog
-description: Personal blog about technology, travel and self-development
+lang: ru
+title: Блог
+description: Личный блог о технологиях, путешествиях и саморазвитии
 ---
 {% include i18n.html %}
 <div class="posts">
-    {% assign posts_to_show = site.posts | where: "lang", current_lang %}
-    {% if current_lang == 'en' %}
-        {% assign posts_to_show = site.posts | where_exp: "post", "post.lang != 'ru'" %}
-    {% endif %}
+    {% assign posts_to_show = site.posts | where: "lang", "ru" %}
     {% for post in posts_to_show %}
     <article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
         <h2 itemprop="name headline">
@@ -17,11 +14,7 @@ description: Personal blog about technology, travel and self-development
         </h2>
         <div class="post-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
-                {% if current_lang == 'ru' %}
-                    {{ post.date | date: "%d.%m.%Y" }}
-                {% else %}
-                    {{ post.date | date: "%B %d, %Y" }}
-                {% endif %}
+                {{ post.date | date: "%d.%m.%Y" }}
             </time>
         </div>
         

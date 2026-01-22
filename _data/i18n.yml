@@ -1,0 +1,57 @@
+en:
+  nav:
+    photoprojects: "Photoprojects"
+    blog: "Blog"
+    about: "About"
+  search:
+    placeholder: "Search the site..."
+    label: "Search"
+  theme:
+    toggle: "Toggle theme"
+  menu:
+    toggle: "Menu"
+  common:
+    read_more: "Read more..."
+    tags: "Tags:"
+    previous: "Previous"
+    next: "Next"
+  photoprojects:
+    title: "Photoprojects"
+    description: "Documentary photoprojects<br>and visual stories"
+    empty: "No photoprojects added yet."
+  blog:
+    title: "Blog"
+    description: "Personal blog about technology, travel and self-development"
+  about:
+    title: "About me"
+  footer:
+    copyright: "©"
+
+ru:
+  nav:
+    photoprojects: "Фотопроекты"
+    blog: "Блог"
+    about: "Об авторе"
+  search:
+    placeholder: "Поиск по сайту..."
+    label: "Поиск"
+  theme:
+    toggle: "Переключить тему"
+  menu:
+    toggle: "Меню"
+  common:
+    read_more: "Читать далее..."
+    tags: "Теги:"
+    previous: "Предыдущая"
+    next: "Следующая"
+  photoprojects:
+    title: "Фотопроекты"
+    description: "Документальные фотопроекты<br>и визуальные истории"
+    empty: "Фотопроекты пока не добавлены."
+  blog:
+    title: "Блог"
+    description: "Личный блог о технологиях, путешествиях и саморазвитии"
+  about:
+    title: "Обо мне"
+  footer:
+    copyright: "©"
