@@ -331,6 +331,32 @@ figcaption {
     transform: rotate(30deg);
 }
 
+/* Переключатель языков */
+.lang-switch {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    height: 32px;
+}
+
+.lang-switch:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
 /* Медиа-запросы */
 @media (max-width: 768px) {
     header {
@@ -1512,6 +1538,14 @@ body.menu-open::after {
     .header-controls .icon-button {
         width: 36px;
         height: 36px;
+    }
+
+    .lang-switch {
+        padding: 4px 8px;
+        font-size: 12px;
+        min-width: 32px;
+        height: 28px;
+        margin: 0 4px;
     }
 }
 
