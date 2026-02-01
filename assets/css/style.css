@@ -1143,7 +1143,9 @@ body.menu-open::after {
     margin: 0 auto;
     padding: 2rem 1rem;
     overflow-x: hidden;
+    overflow-y: visible;
     box-sizing: border-box;
+    min-height: auto;
 }
 
 .photoproject-header {
@@ -1161,7 +1163,8 @@ body.menu-open::after {
     max-width: 100%;
     box-sizing: border-box;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
+    min-height: auto;
 }
 
 .photoproject-header h1 {
@@ -1180,6 +1183,8 @@ body.menu-open::after {
     min-width: 0;
     box-sizing: border-box;
     overflow: visible;
+    min-height: auto;
+    white-space: normal;
 }
 
 /* Отдельный блок для описания проекта */
@@ -1670,7 +1675,8 @@ body.menu-open::after {
         position: relative;
         z-index: 1;
         min-width: 0;
-        overflow: hidden;
+        overflow: visible;
+        min-height: auto;
     }
     
     .photoproject-header h1 {
@@ -1685,6 +1691,8 @@ body.menu-open::after {
         line-height: 1.3;
         min-width: 0;
         overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .photoproject-description-block {
@@ -1850,7 +1858,8 @@ body.menu-open::after {
         position: relative;
         z-index: 1;
         min-width: 0;
-        overflow: hidden;
+        overflow: visible;
+        min-height: auto;
     }
     
     .photoproject-header h1 {
@@ -1863,6 +1872,8 @@ body.menu-open::after {
         max-width: 100%;
         box-sizing: border-box;
         overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .photoproject-meta--stacked {
@@ -1912,7 +1923,8 @@ body.menu-open::after {
         position: relative;
         z-index: 1;
         min-width: 0;
-        overflow: hidden;
+        overflow: visible;
+        min-height: auto;
     }
     
     .photoproject-header h1 {
@@ -1927,6 +1939,8 @@ body.menu-open::after {
         line-height: 1.3;
         min-width: 0;
         overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .photoproject-description-block {
