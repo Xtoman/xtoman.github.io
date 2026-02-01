@@ -1265,6 +1265,7 @@ body.menu-open::after {
     overflow: visible;
     min-height: auto;
     white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 /* Отдельный блок для описания проекта */
@@ -1327,7 +1328,7 @@ body.menu-open::after {
     max-width: 100%;
     min-width: 0;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -1776,6 +1777,7 @@ body.menu-open::after {
     .photoproject-header h1 {
         font-size: clamp(1.8rem, 7vw, 2.2rem);
         word-break: break-word;
+        overflow-wrap: anywhere;
         hyphens: auto;
         width: 100%;
         max-width: 100%;
@@ -1824,7 +1826,7 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         word-break: break-word;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -2015,6 +2017,9 @@ body.menu-open::after {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        hyphens: auto;
         overflow: visible;
         min-height: auto;
         white-space: normal;
@@ -2036,7 +2041,7 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         word-break: break-word;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -2076,6 +2081,7 @@ body.menu-open::after {
     .photoproject-header h1 {
         font-size: clamp(1.5rem, 8vw, 1.9rem);
         word-break: break-word;
+        overflow-wrap: anywhere;
         hyphens: auto;
         width: 100%;
         max-width: 100%;
@@ -2127,7 +2133,7 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         word-break: break-word;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
         display: block;
         box-sizing: border-box;
         overflow: visible;
