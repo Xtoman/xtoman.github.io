@@ -1107,38 +1107,22 @@ body.menu-open::after {
 @media (max-width: 320px) {
     .photoprojects-page {
         padding: 0.75rem 0.4rem;
-        max-width: 100%;
     }
     
     .page-header {
         gap: 0.35rem;
         margin-bottom: 1rem;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
     }
     
     .page-header h1 {
         font-size: clamp(1.5rem, 11vw, 1.8rem);
-        min-width: 0;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
     
     .page-description {
         font-size: 0.75rem;
         line-height: 1.35;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
 }
 
