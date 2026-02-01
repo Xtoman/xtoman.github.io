@@ -41,6 +41,12 @@ body {
     padding: 0;
     color: var(--text-color);
     background: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* Универсальные правила для всех контейнеров контента */
+main, article, section, header, footer, div, p {
+    box-sizing: border-box;
 }
 
 /* Skip to content для доступности */
@@ -115,6 +121,10 @@ main {
     color: var(--primary-color);
 }
 
+/* ========================================
+   СТИЛИ ДЛЯ ПОСТОВ
+   ======================================== */
+
 .post-preview {
     background: var(--card-background);
     border-radius: 8px;
@@ -122,11 +132,12 @@ main {
     margin-bottom: 2rem;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.2s ease, background-color 0.3s ease;
-    overflow: visible;
-    min-height: auto;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
+    overflow: visible;
+    min-height: auto;
+    position: relative;
 }
 
 .post-preview:hover {
@@ -135,35 +146,53 @@ main {
 
 .post-preview h2 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     hyphens: auto;
     line-height: 1.3;
     min-width: 0;
-    box-sizing: border-box;
     overflow: visible;
-    min-height: auto;
     white-space: normal;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
 }
 
 .post-preview h2 a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .post-preview .post-date {
     color: var(--meta-color);
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 
 .post-excerpt {
     color: var(--text-color);
     line-height: 1.8;
     margin: 1.5rem 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
 }
 
 .read-more {
@@ -187,28 +216,50 @@ main {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
-    overflow: visible;
-    min-height: auto;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
+    overflow: visible;
+    min-height: auto;
+    position: relative;
 }
 
 .post h1 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
     font-size: clamp(2rem, 6vw, 2.5rem);
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     hyphens: auto;
     line-height: 1.3;
     min-width: 0;
-    box-sizing: border-box;
     overflow: visible;
-    min-height: auto;
     white-space: normal;
+}
+
+.post-meta {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.post-date {
+    color: var(--meta-color);
+    font-size: 0.95rem;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 
 footer {
@@ -938,13 +989,17 @@ body.menu-open::after {
     }
 }
 
+/* ========================================
+   СТИЛИ ДЛЯ СТРАНИЦ
+   ======================================== */
+
 .page-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 0.75rem;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
     padding: 0;
     border: none;
     width: 100%;
@@ -952,6 +1007,7 @@ body.menu-open::after {
     box-sizing: border-box;
     overflow: visible;
     min-height: auto;
+    position: relative;
 }
 
 .page-header h1 {
@@ -965,12 +1021,11 @@ body.menu-open::after {
     max-width: 100%;
     box-sizing: border-box;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     hyphens: auto;
     line-height: 1.3;
     min-width: 0;
     overflow: visible;
-    min-height: auto;
     white-space: normal;
 }
 
@@ -981,15 +1036,15 @@ body.menu-open::after {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    line-height: 1.6;
     padding: 0;
+    line-height: 1.6;
     text-align: left;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
     box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
     overflow: visible;
-    min-height: auto;
+    min-width: 0;
     white-space: normal;
 }
 
@@ -1008,98 +1063,44 @@ body.menu-open::after {
 @media (max-width: 480px) {
     .photoprojects-page {
         padding: 1.5rem 0.75rem;
-        max-width: 100%;
     }
     
     .page-header {
         gap: 0.5rem;
         margin-bottom: 1.5rem;
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        overflow: visible;
-        min-height: auto;
     }
     
     .page-header h1 {
         font-size: clamp(1.7rem, 9vw, 2.1rem);
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
     
     .page-description {
         font-size: 0.9rem;
         line-height: 1.5;
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
 }
 
 @media (max-width: 360px) {
     .photoprojects-page {
         padding: 1rem 0.5rem;
-        max-width: 100%;
     }
     
     .page-header {
         gap: 0.4rem;
         margin-bottom: 1.25rem;
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        overflow: visible;
-        min-height: auto;
     }
     
     .page-header h1 {
         font-size: clamp(1.6rem, 10vw, 1.9rem);
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
     
     .page-description {
         font-size: 0.8rem;
         line-height: 1.4;
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
 }
 
@@ -1215,15 +1216,21 @@ body.menu-open::after {
     font-style: italic;
 }
 
+/* ========================================
+   СТИЛИ ДЛЯ ФОТОПРОЕКТОВ
+   ======================================== */
+
 /* Страница отдельного фотопроекта */
 .photoproject {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: visible;
-    box-sizing: border-box;
-    min-height: auto;
+    position: relative;
 }
 
 .photoproject-header {
@@ -1231,7 +1238,7 @@ body.menu-open::after {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem 0;
     padding: 2rem;
     background: var(--light-gray);
     border-radius: 8px;
@@ -1256,16 +1263,14 @@ body.menu-open::after {
     letter-spacing: -0.02em;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     hyphens: auto;
     line-height: 1.3;
     min-width: 0;
-    box-sizing: border-box;
     overflow: visible;
-    min-height: auto;
     white-space: normal;
-    overflow-wrap: anywhere;
 }
 
 /* Отдельный блок для описания проекта */
@@ -1278,9 +1283,12 @@ body.menu-open::after {
     box-shadow: 0 2px 4px var(--shadow-color);
     box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
     position: relative;
     z-index: 2;
     clear: both;
+    overflow: visible;
+    min-height: auto;
 }
 
 .photoproject-description-text {
@@ -1288,21 +1296,28 @@ body.menu-open::after {
     color: var(--text-color);
     line-height: 1.9;
     margin: 0;
-    font-style: italic;
     padding: 0;
+    font-style: italic;
     text-align: left;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
     display: block;
     white-space: pre-line;
+    min-width: 0;
+    overflow: visible;
 }
 
 .photoproject-header .photoproject-meta {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
 }
+
 .photoproject-meta--stacked {
     display: flex;
     flex-direction: column;
@@ -1310,7 +1325,7 @@ body.menu-open::after {
     gap: 0.5rem;
     color: var(--meta-color);
     font-size: 0.95rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0 0;
     padding: 0;
     border-top: none;
     width: 100%;
@@ -1327,13 +1342,12 @@ body.menu-open::after {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    word-break: break-word;
-    overflow-wrap: anywhere;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
     overflow: visible;
-    min-height: auto;
     white-space: normal;
 }
 
@@ -1730,109 +1744,75 @@ body.menu-open::after {
         gap: 1.5rem;
     }
     
+    /* Посты */
+    .post-preview {
+        padding: 1.5rem;
+    }
+    
+    .post-preview h2 {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+        overflow-wrap: anywhere;
+    }
+    
+    .post {
+        padding: 1.5rem;
+    }
+    
+    .post h1 {
+        font-size: clamp(1.8rem, 7vw, 2rem);
+        overflow-wrap: anywhere;
+    }
+    
+    /* Страницы */
     .page-header {
-        gap: 0.65rem;
-        margin-bottom: 2.5rem;
-        overflow: visible;
-        min-height: auto;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
     }
     
     .page-header h1 {
         font-size: clamp(1.8rem, 8vw, 2.4rem);
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
     
     .page-description {
         font-size: 1rem;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        overflow-wrap: anywhere;
     }
     
+    /* Фотопроекты */
     .photoproject {
         padding: 1rem 0.75rem;
-        overflow-x: hidden;
-        overflow-y: visible;
     }
     
     .photoproject-header {
         padding: 1.5rem 1rem;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
         margin-bottom: 2rem;
-        gap: 1rem;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
+        gap: 0.75rem;
     }
     
     .photoproject-header h1 {
         font-size: clamp(1.8rem, 7vw, 2.2rem);
-        word-break: break-word;
         overflow-wrap: anywhere;
-        hyphens: auto;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        margin: 0 0 0.75rem 0;
-        padding: 0;
-        line-height: 1.3;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
     }
     
     .photoproject-description-block {
         margin: 0 auto 2rem;
         padding: 1.5rem;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-        clear: both;
     }
     
     .photoproject-description-text {
         font-size: 1rem;
         line-height: 1.7;
-        width: 100%;
-        box-sizing: border-box;
+        overflow-wrap: anywhere;
     }
     
     .photoproject-meta--stacked {
         margin-top: 0.5rem;
         gap: 0.5rem;
-        width: 100%;
-        max-width: 100%;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        padding: 0;
-        overflow: visible;
     }
     
     .photoproject-meta--stacked .photoproject-meta-item {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        word-break: break-word;
         overflow-wrap: anywhere;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
     }
     
     .photo-gallery {
@@ -1896,60 +1876,75 @@ body.menu-open::after {
         margin: 0.5rem;
     }
     
+    /* Посты */
     .post-preview {
-        padding: 1.5rem;
-        overflow: visible;
-        min-height: auto;
+        padding: 1.25rem;
     }
     
     .post-preview h2 {
-        font-size: clamp(1.5rem, 6vw, 1.8rem);
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        line-height: 1.3;
-        white-space: normal;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+        font-size: clamp(1.4rem, 7vw, 1.7rem);
+        overflow-wrap: anywhere;
     }
     
     .post {
-        padding: 1.5rem;
-        overflow: visible;
-        min-height: auto;
+        padding: 1.25rem;
     }
     
     .post h1 {
-        font-size: clamp(1.8rem, 7vw, 2rem);
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        line-height: 1.3;
-        white-space: normal;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+        font-size: clamp(1.7rem, 8vw, 1.9rem);
+        overflow-wrap: anywhere;
     }
     
+    /* Страницы */
     .page-header {
-        overflow: visible;
-        min-height: auto;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .page-header h1 {
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        white-space: normal;
-        overflow: visible;
-        min-height: auto;
+        font-size: clamp(1.7rem, 8vw, 2rem);
+        overflow-wrap: anywhere;
     }
     
     .page-description {
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+    
+    /* Фотопроекты */
+    .photoproject {
+        padding: 1rem 0.5rem;
+    }
+    
+    .photoproject-header {
+        padding: 1.25rem 0.75rem;
+        margin-bottom: 1.5rem;
+        gap: 0.75rem;
+    }
+    
+    .photoproject-header h1 {
+        font-size: clamp(1.7rem, 8vw, 2rem);
+        overflow-wrap: anywhere;
+    }
+    
+    .photoproject-description-block {
+        margin: 0 auto 1.5rem;
+        padding: 1.25rem;
+    }
+    
+    .photoproject-description-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+    
+    .photoproject-meta--stacked {
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .photoproject-meta--stacked .photoproject-meta-item {
+        overflow-wrap: anywhere;
     }
     
     nav a {
@@ -1968,93 +1963,8 @@ body.menu-open::after {
         font-size: 0.9rem;
     }
     
-    .page-description {
-        font-size: 1rem;
-        max-width: 100%;
-        padding: 0 1.25rem;
-        margin: 1rem auto 0;
-        text-align: center;
-    }
-    
-    .photoproject-description-block {
-        margin: 0 auto 2rem;
-        padding: 1.25rem;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-        clear: both;
-    }
-    
-    .photoproject-description-text {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .photoproject-header {
-        padding: 1.5rem 0.75rem;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
-    }
-    
-    .photoproject-header h1 {
-        margin: 0 0 0.75rem 0;
-        padding: 0;
-        font-size: clamp(1.7rem, 8vw, 2rem);
-        line-height: 1.3;
-        min-width: 0;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        word-break: break-word;
-        overflow-wrap: anywhere;
-        hyphens: auto;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
-    }
-    
-    .photoproject-meta--stacked {
-        margin-top: 0.5rem;
-        padding: 0;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        width: 100%;
-        max-width: 100%;
-        overflow: visible;
-    }
-    
-    .photoproject-meta--stacked .photoproject-meta-item {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        word-break: break-word;
-        overflow-wrap: anywhere;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
-    }
-    
     .photo-gallery {
         margin-top: 2rem;
-        position: relative;
-        z-index: 1;
-        clear: both;
     }
 }
 
@@ -2064,88 +1974,80 @@ body.menu-open::after {
         padding: 1rem 0.5rem;
     }
     
+    /* Посты */
+    .post-preview {
+        padding: 1rem;
+    }
+    
+    .post-preview h2 {
+        font-size: clamp(1.3rem, 8vw, 1.6rem);
+        overflow-wrap: anywhere;
+    }
+    
+    .post {
+        padding: 1rem;
+    }
+    
+    .post h1 {
+        font-size: clamp(1.6rem, 9vw, 1.8rem);
+        overflow-wrap: anywhere;
+    }
+    
+    /* Страницы */
+    .page-header {
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(1.6rem, 9vw, 1.9rem);
+        overflow-wrap: anywhere;
+    }
+    
+    .page-description {
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+    
+    /* Фотопроекты */
+    .photoproject {
+        padding: 0.75rem 0.5rem;
+    }
+    
     .photoproject-header {
         padding: 1rem 0.75rem;
-        margin-bottom: 1.5rem;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+        margin-bottom: 1.25rem;
         gap: 0.75rem;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
     }
     
     .photoproject-header h1 {
         font-size: clamp(1.5rem, 8vw, 1.9rem);
-        word-break: break-word;
         overflow-wrap: anywhere;
-        hyphens: auto;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        margin: 0 0 0.75rem 0;
-        padding: 0;
-        line-height: 1.3;
-        min-width: 0;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
     }
     
     .photoproject-description-block {
-        margin: 0 auto 1.5rem;
+        margin: 0 auto 1.25rem;
         padding: 1rem;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-        clear: both;
     }
     
     .photoproject-description-text {
         font-size: 0.95rem;
         line-height: 1.6;
-        width: 100%;
-        box-sizing: border-box;
+        overflow-wrap: anywhere;
     }
     
     .photoproject-meta--stacked {
         margin-top: 0.5rem;
         gap: 0.5rem;
         font-size: 0.9rem;
-        position: relative;
-        z-index: 1;
-        min-width: 0;
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        overflow: visible;
     }
     
     .photoproject-meta--stacked .photoproject-meta-item {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        word-break: break-word;
         overflow-wrap: anywhere;
-        display: block;
-        box-sizing: border-box;
-        overflow: visible;
-        min-height: auto;
-        white-space: normal;
     }
     
     .photo-gallery {
         margin-top: 1.5rem;
-        position: relative;
-        z-index: 1;
-        clear: both;
     }
 }
 
