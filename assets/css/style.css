@@ -1007,7 +1007,9 @@ body.menu-open::after {
     box-sizing: border-box;
     overflow: visible;
     min-height: auto;
+    height: auto;
     position: relative;
+    flex-shrink: 0;
 }
 
 .page-header h1 {
@@ -1027,6 +1029,8 @@ body.menu-open::after {
     min-width: 0;
     overflow: visible;
     white-space: normal;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .page-description {
@@ -1046,6 +1050,8 @@ body.menu-open::after {
     overflow: visible;
     min-width: 0;
     white-space: normal;
+    height: auto;
+    flex-shrink: 0;
 }
 
 /* br в описании автоматически создает перенос строки */
@@ -1236,6 +1242,8 @@ body.menu-open::after {
     min-width: 0;
     overflow: visible;
     min-height: auto;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .photoproject-header h1 {
@@ -1255,6 +1263,8 @@ body.menu-open::after {
     min-width: 0;
     overflow: visible;
     white-space: normal;
+    height: auto;
+    flex-shrink: 0;
 }
 
 /* Отдельный блок для описания проекта */
@@ -1319,6 +1329,8 @@ body.menu-open::after {
     z-index: 1;
     min-width: 0;
     overflow: visible;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .photoproject-meta--stacked .photoproject-meta-item {
@@ -1333,6 +1345,8 @@ body.menu-open::after {
     overflow-wrap: anywhere;
     overflow: visible;
     white-space: normal;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .photoproject-meta--stacked .photoproject-meta-item + .photoproject-meta-item {
