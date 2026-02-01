@@ -122,6 +122,11 @@ main {
     margin-bottom: 2rem;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.2s ease, background-color 0.3s ease;
+    overflow: visible;
+    min-height: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .post-preview:hover {
@@ -131,6 +136,17 @@ main {
 .post-preview h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.3;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    min-height: auto;
+    white-space: normal;
 }
 
 .post-preview h2 a {
@@ -171,12 +187,28 @@ main {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
+    overflow: visible;
+    min-height: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .post h1 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    width: 100%;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.3;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    min-height: auto;
+    white-space: normal;
 }
 
 footer {
@@ -918,16 +950,28 @@ body.menu-open::after {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    overflow: visible;
+    min-height: auto;
 }
 
 .page-header h1 {
     font-size: clamp(2rem, 6vw, 3rem);
     color: var(--heading-color);
     margin: 0 0 0.5rem 0;
+    padding: 0;
     font-weight: 300;
     letter-spacing: -0.02em;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.3;
+    min-width: 0;
+    overflow: visible;
+    min-height: auto;
+    white-space: normal;
 }
 
 .page-description {
@@ -935,6 +979,7 @@ body.menu-open::after {
     font-size: 1.05rem;
     font-style: italic;
     width: 100%;
+    max-width: 100%;
     margin: 0;
     line-height: 1.6;
     padding: 0;
@@ -943,7 +988,9 @@ body.menu-open::after {
     overflow-wrap: break-word;
     hyphens: auto;
     box-sizing: border-box;
-    max-width: 100%;
+    overflow: visible;
+    min-height: auto;
+    white-space: normal;
 }
 
 /* br в описании автоматически создает перенос строки */
@@ -972,6 +1019,8 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
+        overflow: visible;
+        min-height: auto;
     }
     
     .page-header h1 {
@@ -980,6 +1029,12 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .page-description {
@@ -993,6 +1048,9 @@ body.menu-open::after {
         word-break: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
 }
 
@@ -1010,6 +1068,8 @@ body.menu-open::after {
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
+        overflow: visible;
+        min-height: auto;
     }
     
     .page-header h1 {
@@ -1019,6 +1079,11 @@ body.menu-open::after {
         min-width: 0;
         box-sizing: border-box;
         word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .page-description {
@@ -1032,6 +1097,9 @@ body.menu-open::after {
         word-break: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
 }
 
@@ -1045,21 +1113,31 @@ body.menu-open::after {
         gap: 0.35rem;
         margin-bottom: 1rem;
         min-width: 0;
+        overflow: visible;
+        min-height: auto;
     }
     
     .page-header h1 {
         font-size: clamp(1.5rem, 11vw, 1.8rem);
         min-width: 0;
         word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .page-description {
         font-size: 0.75rem;
         line-height: 1.35;
-        word-break: break-all;
-        overflow-wrap: anywhere;
+        word-break: break-word;
+        overflow-wrap: break-word;
         hyphens: auto;
         min-width: 0;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
 }
 
@@ -1804,10 +1882,58 @@ body.menu-open::after {
     
     .post-preview {
         padding: 1.5rem;
+        overflow: visible;
+        min-height: auto;
+    }
+    
+    .post-preview h2 {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.3;
+        white-space: normal;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .post {
+        padding: 1.5rem;
+        overflow: visible;
+        min-height: auto;
     }
     
     .post h1 {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 7vw, 2rem);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.3;
+        white-space: normal;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .page-header {
+        overflow: visible;
+        min-height: auto;
+    }
+    
+    .page-header h1 {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        white-space: normal;
+        overflow: visible;
+        min-height: auto;
+    }
+    
+    .page-description {
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     nav a {
