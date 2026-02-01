@@ -1730,19 +1730,31 @@ body.menu-open::after {
     .page-header {
         gap: 0.65rem;
         margin-bottom: 2.5rem;
+        overflow: visible;
+        min-height: auto;
     }
     
     .page-header h1 {
         font-size: clamp(1.8rem, 8vw, 2.4rem);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .page-description {
         font-size: 1rem;
+        overflow: visible;
+        min-height: auto;
+        white-space: normal;
     }
     
     .photoproject {
         padding: 1rem 0.75rem;
         overflow-x: hidden;
+        overflow-y: visible;
     }
     
     .photoproject-header {
