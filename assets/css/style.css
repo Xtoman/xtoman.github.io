@@ -1168,23 +1168,33 @@ body.menu-open::after {
     white-space: normal;
 }
 
-.photoproject-description {
+/* Отдельный блок для описания проекта */
+.photoproject-description-block {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.photoproject-description-text {
     font-size: 1.1rem;
     color: var(--text-color);
-    line-height: 1.8;
-    max-width: 100%;
-    margin: 1rem 0;
+    line-height: 1.9;
+    margin: 0;
     font-style: italic;
     padding: 0;
     text-align: left;
-    word-break: normal;
-    hyphens: manual;
-    word-wrap: break-word;
+    word-break: break-word;
     overflow-wrap: break-word;
+    hyphens: auto;
     box-sizing: border-box;
     width: 100%;
     display: block;
-    overflow: visible;
+    white-space: pre-line;
 }
 
 .photoproject-header .photoproject-meta {
@@ -1632,22 +1642,19 @@ body.menu-open::after {
         margin-bottom: 0.5rem;
     }
     
-    .photoproject-description {
-        font-size: 1rem;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+    .photoproject-description-block {
+        margin: 0 auto 2rem;
+        padding: 1.5rem;
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
-        padding: 0;
-        margin: 1rem 0;
+    }
+    
+    .photoproject-description-text {
+        font-size: 1rem;
         line-height: 1.7;
-        display: block;
-        overflow: visible;
-        min-height: auto;
-        visibility: visible;
-        opacity: 1;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .photoproject-meta--stacked {
@@ -1745,19 +1752,19 @@ body.menu-open::after {
         text-align: center;
     }
     
-    .photoproject-description {
-        font-size: 1.05rem;
-        padding: 0;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+    .photoproject-description-block {
+        margin: 0 auto 2rem;
+        padding: 1.25rem;
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
+    }
+    
+    .photoproject-description-text {
+        font-size: 1.05rem;
         line-height: 1.7;
-        margin: 1rem 0;
-        display: block;
-        overflow: visible;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .photoproject-header {
@@ -1809,20 +1816,19 @@ body.menu-open::after {
         margin-bottom: 0.5rem;
     }
     
-    .photoproject-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        word-break: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+    .photoproject-description-block {
+        margin: 0 auto 1.5rem;
+        padding: 1rem;
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
-        padding: 0;
-        margin: 0.75rem 0;
-        display: block;
-        overflow: visible;
-        min-height: auto;
+    }
+    
+    .photoproject-description-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .photoproject-meta--stacked {

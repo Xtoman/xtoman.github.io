@@ -5,9 +5,6 @@ layout: default
 <article class="photoproject" itemscope itemtype="http://schema.org/ImageGallery">
     <header class="photoproject-header">
         <h1 itemprop="name">{{ page.title }}</h1>
-        {% if page.description %}
-        <p class="photoproject-description">{{ page.description }}</p>
-        {% endif %}
         <div class="photoproject-meta photoproject-meta--stacked">
             {% if page.date %}
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="photoproject-meta-item">
@@ -19,6 +16,12 @@ layout: default
             {% endif %}
         </div>
     </header>
+    
+    {% if page.description %}
+    <div class="photoproject-description-block">
+        <p class="photoproject-description-text">{{ page.description }}</p>
+    </div>
+    {% endif %}
     
     <div class="photoproject-content" itemprop="description">
         {{ content }}
