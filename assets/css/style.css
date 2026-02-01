@@ -112,6 +112,9 @@ main {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: visible;
+    min-height: auto;
+    height: auto;
 }
 
 .site-title {
@@ -1221,6 +1224,8 @@ body.menu-open::after {
     overflow-x: hidden;
     overflow-y: visible;
     position: relative;
+    min-height: auto;
+    height: auto;
 }
 
 .photoproject-header {
