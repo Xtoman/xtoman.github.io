@@ -1232,8 +1232,10 @@ body.menu-open::after {
     align-items: flex-start;
     text-align: left;
     margin-bottom: 3rem;
-    padding: 0 1rem 2rem;
-    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
     gap: 0.75rem;
     position: relative;
     z-index: 1;
@@ -1758,7 +1760,7 @@ body.menu-open::after {
     }
     
     .photoproject-header {
-        padding: 0 0.5rem 1.5rem;
+        padding: 1.5rem 1rem;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -1991,7 +1993,7 @@ body.menu-open::after {
     }
     
     .photoproject-header {
-        padding: 0 0.75rem 1.5rem;
+        padding: 1.5rem 0.75rem;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -2058,7 +2060,7 @@ body.menu-open::after {
     }
     
     .photoproject-header {
-        padding: 0 0.5rem 1rem;
+        padding: 1rem 0.75rem;
         margin-bottom: 1.5rem;
         width: 100%;
         max-width: 100%;
