@@ -1155,6 +1155,10 @@ body.menu-open::after {
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
     gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .photoproject-header h1 {
@@ -1178,6 +1182,9 @@ body.menu-open::after {
     box-shadow: 0 2px 4px var(--shadow-color);
     box-sizing: border-box;
     width: 100%;
+    position: relative;
+    z-index: 2;
+    clear: both;
 }
 
 .photoproject-description-text {
@@ -1212,6 +1219,8 @@ body.menu-open::after {
     border-top: none;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
 .photoproject-meta--stacked .photoproject-meta-item {
@@ -1229,6 +1238,9 @@ body.menu-open::after {
     font-size: 1.1rem;
     line-height: 1.9;
     color: var(--text-color);
+    position: relative;
+    z-index: 1;
+    clear: both;
 }
 
 /* Галерея фотографий */
@@ -1237,6 +1249,9 @@ body.menu-open::after {
     grid-template-columns: 1fr;
     gap: 3rem;
     margin: 4rem 0;
+    position: relative;
+    z-index: 1;
+    clear: both;
 }
 
 .photo-item {
@@ -1244,6 +1259,8 @@ body.menu-open::after {
     position: relative;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    z-index: 1;
+    clear: both;
 }
 
 .photo-item:hover {
@@ -1630,6 +1647,8 @@ body.menu-open::after {
         margin-bottom: 2rem;
         padding-bottom: 1.5rem;
         gap: 1rem;
+        position: relative;
+        z-index: 1;
     }
     
     .photoproject-header h1 {
@@ -1648,6 +1667,9 @@ body.menu-open::after {
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        clear: both;
     }
     
     .photoproject-description-text {
@@ -1661,10 +1683,16 @@ body.menu-open::after {
         margin-top: 1rem;
         gap: 0.5rem;
         width: 100%;
+        position: relative;
+        z-index: 1;
     }
     
     .photo-gallery {
         gap: 2rem;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+        clear: both;
     }
     
     .photoproject-navigation {
@@ -1758,6 +1786,9 @@ body.menu-open::after {
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        clear: both;
     }
     
     .photoproject-description-text {
@@ -1775,6 +1806,8 @@ body.menu-open::after {
         gap: 1rem;
         margin-bottom: 2rem;
         padding-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
     }
     
     .photoproject-header h1 {
@@ -1783,15 +1816,20 @@ body.menu-open::after {
     
     .photoproject-meta--stacked {
         margin-top: 1rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .photo-gallery {
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+        clear: both;
     }
 }
 
 /* Медиа-запрос для очень маленьких мобильных устройств */
 @media (max-width: 480px) {
-    .photoproject {
-        padding: 1.5rem 0.75rem;
-    }
-    
     .photoproject {
         padding: 1rem 0.5rem;
     }
@@ -1804,6 +1842,8 @@ body.menu-open::after {
         max-width: 100%;
         box-sizing: border-box;
         gap: 0.75rem;
+        position: relative;
+        z-index: 1;
     }
     
     .photoproject-header h1 {
@@ -1822,6 +1862,9 @@ body.menu-open::after {
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        clear: both;
     }
     
     .photoproject-description-text {
@@ -1835,11 +1878,20 @@ body.menu-open::after {
         margin-top: 0.75rem;
         gap: 0.4rem;
         font-size: 0.9rem;
+        position: relative;
+        z-index: 1;
     }
     
     .photoproject-meta--stacked .photoproject-meta-item {
         margin: 0;
         padding: 0;
+    }
+    
+    .photo-gallery {
+        margin-top: 1.5rem;
+        position: relative;
+        z-index: 1;
+        clear: both;
     }
 }
 
