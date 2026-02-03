@@ -1,8 +1,6 @@
 # Основные настройки сайта
 title: "Maxim Zinchenko"
-title_ru: "Максим Зинченко"
 description: "Personal blog about technology, travel and journey"
-description_ru: "Личный блог о технологиях, путешествиях и пути"
 baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
 url: "https://xtoman.ru"  # укажите ваш домен здесь
 
@@ -14,11 +12,6 @@ author:
 # Настройки пагинации
 paginate: 5
 paginate_path: "/page/:num/"
-
-# Настройки языков
-languages: ["en", "ru"]
-default_lang: "en"
-exclude_from_localization: ["photoprojects"]
 
 # Настройки SEO
 lang: en

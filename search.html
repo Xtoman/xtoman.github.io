@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Поиск
+title: Search
 permalink: /search/
 ---
 
 <div class="search-container">
-  <h1>Поиск по сайту</h1>
+  <h1>Search the site</h1>
   
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Введите запрос..." autocomplete="off">
-    <button id="search-button">Найти</button>
+    <input type="text" id="search-input" placeholder="Enter your query..." autocomplete="off">
+    <button id="search-button">Search</button>
   </div>
   
   <div id="search-results" class="search-results"></div>
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Отображаем результаты
     if (results.length > 0) {
-      let html = `<p>Найдено результатов: ${results.length}</p><ul class="search-results-list">`;
+      let html = `<p>Found ${results.length} result(s)</p><ul class="search-results-list">`;
       
       results.forEach(item => {
         // Получаем контекст для найденного текста
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '</ul>';
       searchResults.innerHTML = html;
     } else {
-      searchResults.innerHTML = '<p>По вашему запросу ничего не найдено.</p>';
+      searchResults.innerHTML = '<p>No results found for your query.</p>';
     }
   }
 });

@@ -48,7 +48,7 @@ layout: default
     </div>
     {% else %}
     <div class="empty-gallery">
-        <p>Фотографии пока не добавлены в этот проект.</p>
+        <p>No photos in this project yet.</p>
     </div>
     {% endif %}
     
@@ -73,7 +73,7 @@ layout: default
             <span></span>
         {% endif %}
         
-        <a href="{{ site.baseurl }}{% if current_lang == 'ru' %}/ru{% endif %}/photoprojects/" class="all-projects">{{ t.photoprojects.all_projects }}</a>
+        <a href="{{ site.baseurl }}/" class="all-projects">{{ t.photoprojects.all_projects }}</a>
         
         {% if next_index < total_projects %}
             {% assign next_project = sorted_projects[next_index] %}
@@ -86,9 +86,9 @@ layout: default
 
 <!-- Lightbox для полноэкранного просмотра -->
 <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Закрыть">&times;</button>
-    <button class="lightbox-prev" aria-label="Предыдущее изображение">&laquo;</button>
-    <button class="lightbox-next" aria-label="Следующее изображение">&raquo;</button>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image">&laquo;</button>
+    <button class="lightbox-next" aria-label="Next image">&raquo;</button>
     <div class="lightbox-content">
         <img src="" alt="" id="lightbox-image">
         <div class="lightbox-caption" id="lightbox-caption"></div>

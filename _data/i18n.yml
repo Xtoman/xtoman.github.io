@@ -28,34 +28,3 @@ en:
     title: "About me"
   footer:
     copyright: "©"
-
-ru:
-  nav:
-    photoprojects: "Фотопроекты"
-    blog: "Блог"
-    about: "Об авторе"
-  search:
-    placeholder: "Поиск по сайту..."
-    label: "Поиск"
-  theme:
-    toggle: "Переключить тему"
-  menu:
-    toggle: "Меню"
-  common:
-    read_more: "Читать далее..."
-    tags: "Теги:"
-    previous: "Предыдущая"
-    next: "Следующая"
-    skip_to_content: "Перейти к содержимому"
-  photoprojects:
-    title: "Фотопроекты"
-    description: "Документальные фотопроекты<br>и визуальные истории"
-    empty: "Фотопроекты пока не добавлены."
-    all_projects: "Все проекты"
-  blog:
-    title: "Блог"
-    description: "Личный блог о технологиях, путешествиях и саморазвитии"
-  about:
-    title: "Обо мне"
-  footer:
-    copyright: "©"

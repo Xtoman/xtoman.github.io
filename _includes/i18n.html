@@ -1,16 +1,3 @@
-{% comment %}
-  Определяем текущий язык страницы
-  Если страница имеет lang в front matter, используем его
-  Иначе используем язык из URL или дефолтный
-{% endcomment %}
-{% assign current_lang = page.lang | default: layout.lang %}
-{% if current_lang == nil or current_lang == '' %}
-  {% if page.url contains '/ru/' %}
-    {% assign current_lang = 'ru' %}
-  {% else %}
-    {% assign current_lang = site.default_lang | default: 'en' %}
-  {% endif %}
-{% endif %}
-
-{% comment %} Получаем переводы для текущего языка {% endcomment %}
-{% assign t = site.data.i18n[current_lang] %}
+{% comment %} Сайт на одном языке (английский). Переводы из _data/i18n.yml, ключ en. {% endcomment %}
+{% assign current_lang = 'en' %}
+{% assign t = site.data.i18n.en %}
