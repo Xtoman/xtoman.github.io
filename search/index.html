@@ -2,9 +2,6 @@
 
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,39 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    
-    <title>Поиск | Maxim Zinchenko</title>
-    
+    <title>Search | Maxim Zinchenko</title>
     
     <meta name="description" content="Personal blog about technology, travel and journey">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://xtoman.ru/search/">
-    <meta property="og:title" content="Поиск">
+    <meta property="og:title" content="Search">
     <meta property="og:description" content="Personal blog about technology, travel and journey">
     <meta property="og:image" content="https://xtoman.ru/assets/images/default-og.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Поиск">
+    <meta name="twitter:title" content="Search">
     <meta name="twitter:description" content="Personal blog about technology, travel and journey">
     <meta name="twitter:image" content="https://xtoman.ru/assets/images/default-og.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://xtoman.ru/search/">
-    <!-- Hreflang: альтернативные языковые версии -->
-    
-
-
-
-
-
-
-  <link rel="alternate" hreflang="en" href="https://xtoman.ru/search/">
-  <link rel="alternate" hreflang="x-default" href="https://xtoman.ru/search/">
-
-
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -73,10 +56,6 @@
     <a href="#main-content" class="skip-to-content">Skip to content</a>
     <header>
         <div class="site-logo">
-            
-            
-            
-            
             <a href="/">Maxim Zinchenko</a>
         </div>
         
@@ -92,22 +71,12 @@
             <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
                 <span class="material-icons">light_mode</span>
             </button>
-            
-            
-            
-            
-            
-            <a href="/ru/search/" class="lang-switch" hreflang="ru" rel="alternate" aria-label="Switch to RU">RU</a>
             <button id="menu-toggle" class="icon-button" aria-label="Menu">
                 <span class="material-icons">menu</span>
             </button>
         </div>
         
         <nav id="main-nav">
-            
-            
-            
-            
             <a href="/">Photoprojects</a>
             <a href="/blog">Blog</a>
             <a href="/about">About</a>
@@ -116,11 +85,11 @@
 
     <main id="main-content">
         <div class="search-container">
-  <h1>Поиск по сайту</h1>
+  <h1>Search the site</h1>
   
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Введите запрос..." autocomplete="off">
-    <button id="search-button">Найти</button>
+    <input type="text" id="search-input" placeholder="Enter your query..." autocomplete="off">
+    <button id="search-button">Search</button>
   </div>
   
   <div id="search-results" class="search-results"></div>
@@ -187,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Отображаем результаты
     if (results.length > 0) {
-      let html = `<p>Найдено результатов: ${results.length}</p><ul class="search-results-list">`;
+      let html = `<p>Found ${results.length} result(s)</p><ul class="search-results-list">`;
       
       results.forEach(item => {
         // Получаем контекст для найденного текста
@@ -219,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '</ul>';
       searchResults.innerHTML = html;
     } else {
-      searchResults.innerHTML = '<p>По вашему запросу ничего не найдено.</p>';
+      searchResults.innerHTML = '<p>No results found for your query.</p>';
     }
   }
 });
@@ -310,8 +279,6 @@ mark {
     </main>
 
     <footer>
-        
-        
         <p>© 2026 Maxim Zinchenko</p>
     </footer>
 
