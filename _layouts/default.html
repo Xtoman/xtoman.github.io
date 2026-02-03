@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include i18n.html %}
     {% assign page_title = page.title %}
     {% assign site_title = site.title %}
     {% if current_lang == 'ru' and site.title_ru %}
@@ -15,8 +14,24 @@
     {% if current_lang == 'ru' and site.description_ru %}
         {% assign page_description = page.description | default: site.description_ru %}
     {% endif %}
-    {% include head-meta.html %}
-    {% include json-ld.html %}
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}/assets/images/posts/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/images/default-og.jpg{% endif %}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}/assets/images/posts/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/images/default-og.jpg{% endif %}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
@@ -83,7 +98,7 @@
                     {% assign lang_switch_url = '/' %}
                 {% endif %}
             {% endif %}
-            <a href="{{ site.baseurl }}{{ lang_switch_url }}" class="lang-switch" hreflang="{{ other_lang }}" rel="alternate" aria-label="Switch to {{ other_lang_name }}">{{ other_lang_name }}</a>
+            <a href="{{ site.baseurl }}{{ lang_switch_url }}" class="lang-switch" aria-label="Switch to {{ other_lang_name }}">{{ other_lang_name }}</a>
             <button id="menu-toggle" class="icon-button" aria-label="{{ t.menu.toggle }}">
                 <span class="material-icons">menu</span>
             </button>
