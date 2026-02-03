@@ -1,6 +1,6 @@
 en:
   nav:
-    photoprojects: "Photoprojects"
+    photoprojects: "Projects"
     blog: "Blog"
     about: "About"
   search:
@@ -17,14 +17,14 @@ en:
     next: "Next"
     skip_to_content: "Skip to content"
   photoprojects:
-    title: "Photoprojects"
-    description: "Documentary photoprojects<br>and visual stories"
-    empty: "No photoprojects added yet."
+    title: "Projects"
+    description: "Documentary projects<br>and visual stories"
+    empty: "No projects added yet."
     all_projects: "All projects"
   blog:
     title: "Blog"
     description: "Personal blog about technology, travel and self-development"
   about:
-    title: "About me"
+    title: "About"
   footer:
     copyright: "©"

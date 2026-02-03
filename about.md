@@ -1,10 +1,9 @@
 ---
 layout: default
-lang: en
-title: About me
+title: About
 ---
 
-# About me
+# About
 
 Hello! I'm an enthusiastic person with a wide range of interests and a short attention span, so I often change my focus areas. This has led me to develop surface-level knowledge about various hobbies and fields of activity. I enjoy exploring new things and constantly learning something interesting.
 
