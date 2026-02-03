@@ -20,21 +20,11 @@ description: Документальные фотопроекты и визуал
                 {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
                 {% if project.cover_image %}
                 <div class="photoproject-cover">
-                    <img 
-                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.cover_image }}" 
-                        alt="{{ project.title }}"
-                        loading="lazy"
-                        itemprop="image"
-                    >
+                    {% include optimized-image.html src="/assets/images/photoprojects/{{ project_folder }}/{{ project.cover_image }}" alt="{{ project.title }}" class="photoproject-cover-img" %}
                 </div>
                 {% elsif project.images and project.images.size > 0 %}
                 <div class="photoproject-cover">
-                    <img 
-                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.images[0].path }}" 
-                        alt="{{ project.title }}"
-                        loading="lazy"
-                        itemprop="image"
-                    >
+                    {% include optimized-image.html src="/assets/images/photoprojects/{{ project_folder }}/{{ project.images[0].path }}" alt="{{ project.title }}" class="photoproject-cover-img" itemprop="image" %}
                 </div>
                 {% endif %}
                 

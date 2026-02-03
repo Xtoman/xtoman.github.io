@@ -33,13 +33,7 @@ layout: default
         <figure class="photo-item" data-index="{{ forloop.index0 }}">
             {% assign project_folder = page.slug | default: page.path %}
             {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
-            <img 
-                src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
-                alt="{{ image.caption | default: page.title }}"
-                loading="lazy"
-                class="gallery-image"
-                data-src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}"
-            >
+            {% include optimized-image.html src="/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" alt="{{ image.caption | default: page.title }}" class="gallery-image" %}
             {% if image.caption %}
             <figcaption class="photo-caption">{{ image.caption }}</figcaption>
             {% endif %}

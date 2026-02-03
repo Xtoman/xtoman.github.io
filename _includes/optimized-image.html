@@ -1,0 +1,48 @@
+{% comment %}
+  Оптимизированное изображение: lazy-loading, width/height (уменьшают CLS), опционально WebP и 2x.
+  Параметры:
+  - src (обязательный) — URL или путь к изображению
+  - alt (обязательный) — описание
+  - width, height (опционально) — размеры в пикселях
+  - class (опционально) — CSS-класс
+  - loading (опционально) — lazy | eager, по умолчанию lazy
+  - webp_src (опционально) — путь к WebP-версии для <picture>
+  - img_2x (опционально) — путь к 2x для srcset
+  - itemprop (опционально) — schema.org itemprop, например image
+{% endcomment %}
+{% unless include.src contains 'http' or include.src contains '//' %}
+  {% assign img_src = site.baseurl | append: include.src %}
+{% else %}
+  {% assign img_src = include.src %}
+{% endunless %}
+{% assign img_loading = include.loading | default: 'lazy' %}
+{% assign img_class = include.class | default: '' %}
+
+{% if include.webp_src %}
+  {% assign webp_src = include.webp_src %}
+  {% if webp_src contains 'http' == false %}
+    {% assign webp_src = site.baseurl | append: webp_src %}
+  {% endif %}
+<picture>
+  <source type="image/webp" srcset="{{ webp_src }}">
+<img src="{{ img_src }}"
+     alt="{{ include.alt }}"
+     {% if include.width %}width="{{ include.width }}"{% endif %}
+     {% if include.height %}height="{{ include.height }}"{% endif %}
+     loading="{{ img_loading }}"
+     {% if img_class != '' %}class="{{ img_class }}"{% endif %}
+     {% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}
+     {% if include.img_2x %}srcset="{{ img_src }} 1x, {{ site.baseurl }}{{ include.img_2x }} 2x"{% endif %}
+     decoding="async">
+</picture>
+{% else %}
+<img src="{{ img_src }}"
+     alt="{{ include.alt }}"
+     {% if include.width %}width="{{ include.width }}"{% endif %}
+     {% if include.height %}height="{{ include.height }}"{% endif %}
+     loading="{{ img_loading }}"
+     {% if img_class != '' %}class="{{ img_class }}"{% endif %}
+     {% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}
+     {% if include.img_2x %}srcset="{{ img_src }} 1x, {{ site.baseurl }}{{ include.img_2x }} 2x"{% endif %}
+     decoding="async">
+{% endif %}
