@@ -31,7 +31,8 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-    
+    <!-- Hreflang: альтернативные языковые версии -->
+    {% include hreflang.html %}
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
@@ -98,7 +99,7 @@
                     {% assign lang_switch_url = '/' %}
                 {% endif %}
             {% endif %}
-            <a href="{{ site.baseurl }}{{ lang_switch_url }}" class="lang-switch" aria-label="Switch to {{ other_lang_name }}">{{ other_lang_name }}</a>
+            <a href="{{ site.baseurl }}{{ lang_switch_url }}" class="lang-switch" hreflang="{{ other_lang }}" rel="alternate" aria-label="Switch to {{ other_lang_name }}">{{ other_lang_name }}</a>
             <button id="menu-toggle" class="icon-button" aria-label="{{ t.menu.toggle }}">
                 <span class="material-icons">menu</span>
             </button>

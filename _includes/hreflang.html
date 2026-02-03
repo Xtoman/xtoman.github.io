@@ -1,0 +1,30 @@
+{% comment %}
+  Hreflang: альтернативные языковые версии для поисковиков и браузеров.
+  Требует: include i18n.html до этого include.
+  Страницы с двумя версиями: главная (/ и /ru/), блог (/blog и /ru/blog), обо мне (/about и /ru/about).
+{% endcomment %}
+{% assign base = site.url | append: site.baseurl %}
+{% assign is_localized = false %}
+{% if page.url == '/' or page.url == '/index.html' or page.url == '/blog' or page.url == '/blog/' or page.url == '/about' or page.url == '/about/' %}
+  {% assign is_localized = true %}
+{% endif %}
+{% if page.url == '/ru/' or page.url == '/ru/index.html' or page.url == '/ru/blog' or page.url == '/ru/blog/' or page.url == '/ru/about' or page.url == '/ru/about/' %}
+  {% assign is_localized = true %}
+{% endif %}
+
+{% if is_localized %}
+  {% if page.url contains '/ru' %}
+    {% assign url_en = page.url | remove_first: '/ru' %}
+    {% if url_en == '' %}{% assign url_en = '/' %}{% endif %}
+    {% assign url_ru = page.url %}
+  {% else %}
+    {% assign url_en = page.url %}
+    {% assign url_ru = '/ru' | append: page.url %}
+  {% endif %}
+  <link rel="alternate" hreflang="en" href="{{ base }}{{ url_en }}">
+  <link rel="alternate" hreflang="ru" href="{{ base }}{{ url_ru }}">
+  <link rel="alternate" hreflang="x-default" href="{{ base }}{{ url_en }}">
+{% else %}
+  <link rel="alternate" hreflang="{{ current_lang }}" href="{{ base }}{{ page.url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ base }}{{ page.url }}">
+{% endif %}
