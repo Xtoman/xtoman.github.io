@@ -32,6 +32,12 @@ Hello! I'm an enthusiastic person with a wide range of interests and a short att
 - Maintain a healthy lifestyle and have bad habits =)
 - Exercise to stay in shape
 
+## Places I've been
+
+<div class="map-embed">
+  <iframe src="https://www.google.com/maps/d/embed?mid=1P6IMx_dBMIl9B8npNMdqRJTZyIWjo60&ehbc=2E312F&noprof=1" width="640" height="480" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
 ## Contacts
 
 Always open to communication and sharing experiences:
