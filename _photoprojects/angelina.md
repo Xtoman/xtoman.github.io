@@ -11,15 +11,12 @@ images:
     caption: ""
   - path: "02.jpg"
     caption: ""
-  - path: "03.jpg"
-    caption: ""
   - path: "04.jpg"
     caption: ""
   - path: "05.jpg"
     caption: ""
   - path: "06.jpg"
-    caption: ""  
-  ---
-
-
-
+    caption: ""
+  - path: "07.jpg"
+    caption: ""
+---

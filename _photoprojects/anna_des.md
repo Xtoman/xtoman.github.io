@@ -18,8 +18,5 @@ images:
   - path: "05.jpg"
     caption: ""
   - path: "06.jpg"
-    caption: ""  
-  ---
-
-
-
+    caption: ""
+---
