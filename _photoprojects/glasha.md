@@ -4,7 +4,7 @@ title: "Glasha"
 description: ""
 date: 2026-02-07
 location: "Москва, Россия"
-published: true
+published: false
 cover_image: "glasha_01.jpg"
 images:
   - path: "glasha_01.jpg"

@@ -4,7 +4,7 @@ title: "Angelina"
 description: ""
 date: 2026-03-06
 location: "Москва, Россия"
-published: true
+published: false
 cover_image: "01.jpg"
 images:
   - path: "01.jpg"

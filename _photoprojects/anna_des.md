@@ -4,7 +4,7 @@ title: "Anna"
 description: ""
 date: 2026-02-28
 location: "Москва, Россия"
-published: true
+published: false
 cover_image: "01.jpg"
 images:
   - path: "01.jpg"

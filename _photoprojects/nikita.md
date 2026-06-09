@@ -4,7 +4,7 @@ title: "Nikita"
 description: ""
 date: 2026-03-14
 location: "Москва, Россия"
-published: true
+published: false
 cover_image: "nikita_01.jpg"
 images:
   - path: "nikita_01.jpg"
@@ -19,5 +19,6 @@ images:
     caption: ""
   - path: "nikita_06.jpg"
     caption: ""
-  
+  - path: "nikita_07.jpg"
+    caption: ""
 ---
