@@ -1,0 +1,87 @@
+{% assign json_site_url = site.url | append: site.baseurl %}
+{% assign json_author_name = site.author.name | default: site.title %}
+{% assign json_og_image = site.url | append: site.baseurl | append: '/assets/images/default-og.jpg' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ json_author_name | jsonify }},
+  "alternateName": [
+    {{ site.author.name_en | default: site.title | jsonify }},
+    "Зинченко Максим"
+  ],
+  "jobTitle": {{ site.author.job_title | default: "Фотограф" | jsonify }},
+  "url": {{ json_site_url | jsonify }},
+  "image": {{ json_og_image | jsonify }},
+  "email": {{ site.author.email | jsonify }},
+  "sameAs": [
+    {{ site.author.github | jsonify }},
+    {{ site.author.telegram | jsonify }}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title_ru | default: site.title | jsonify }},
+  "alternateName": {{ site.title | jsonify }},
+  "url": {{ json_site_url | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "inLanguage": ["ru", "en"],
+  "author": {
+    "@type": "Person",
+    "name": {{ json_author_name | jsonify }},
+    "alternateName": "Зинченко Максим"
+  }
+}
+</script>
+
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ json_author_name | jsonify }},
+    "alternateName": "Зинченко Максим"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ json_author_name | jsonify }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ json_site_url }}{{ page.url }}"
+  },
+  "url": "{{ json_site_url }}{{ page.url }}",
+  "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: page.description | default: site.description | jsonify }}
+  {% if page.image %}
+  ,"image": "{{ json_site_url }}/assets/images/posts/{{ page.image }}"
+  {% endif %}
+}
+</script>
+{% endif %}
+
+{% if page.layout == 'photoproject' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }},
+  "url": "{{ json_site_url }}{{ page.url }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ json_author_name | jsonify }},
+    "alternateName": "Зинченко Максим"
+  }
+}
+</script>
+{% endif %}

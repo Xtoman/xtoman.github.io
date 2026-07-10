@@ -17,8 +17,9 @@ en:
     next: "Next"
     skip_to_content: "Skip to content"
   photoprojects:
-    title: "Projects"
-    description: "Documentary projects<br>and visual stories"
+    title: "Максим Зинченко"
+    subtitle: "документальный фотограф"
+    description: "Фотопроекты, портреты<br>и визуальные истории"
     empty: "No projects added yet."
     all_projects: "All projects"
   blog:

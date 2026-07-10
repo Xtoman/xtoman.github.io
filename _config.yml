@@ -1,20 +1,29 @@
 # Основные настройки сайта
 title: "Maxim Zinchenko"
-description: "Personal blog about technology, travel and journey"
+title_ru: "Максим Зинченко"
+description: "Максим Зинченко — документальный фотограф. Портфолио, фотопроекты и блог о путешествиях и технологиях."
 baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
 url: "https://xtoman.ru"  # укажите ваш домен здесь
 
 # Настройки автора
 author:
-  name: "Maxim Lloyd"
+  name: "Максим Зинченко"
+  name_en: "Maxim Zinchenko"
+  job_title: "Фотограф"
+  job_title_en: "Photographer"
   email: "xim395@gmail.com"
+  github: "https://github.com/xtoman"
+  telegram: "https://t.me/xtoman"
+
+# Google Search Console: вставьте код верификации после регистрации сайта
+# google_site_verification: "ваш-код-из-search-console"
 
 # Настройки пагинации
 paginate: 5
 paginate_path: "/page/:num/"
 
 # Настройки SEO
-lang: en
+lang: ru
 timezone: Europe/Moscow
 
 # Настройки постов
@@ -42,6 +51,8 @@ exclude:
   - README.md
   - GITHUB_SETUP.md
   - PHOTOPROJECTS_GUIDE.md
+  - TESTING.md
+  - TELEGRAM_SETUP.md
   - _photoprojects/README.md
   - _photoprojects/example-project.md
 

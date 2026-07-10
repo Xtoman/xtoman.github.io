@@ -1,46 +1,46 @@
 ---
 layout: default
-title: About
+title: Обо мне
+description: Максим Зинченко — документальный фотограф, блогер и энтузиаст технологий, путешествий и музыки.
 ---
 
-# About
+# Максим Зинченко
 
-Hello! I'm an enthusiastic person with a wide range of interests and a short attention span, so I often change my focus areas. This has led me to develop surface-level knowledge about various hobbies and fields of activity. I enjoy exploring new things and constantly learning something interesting.
+Я — **Максим Зинченко**, документальный **фотограф**. На этом сайте собраны мои фотопроекты, портреты и визуальные истории, а также блог о путешествиях, технологиях и том, что меня вдохновляет.
 
-## My interests
+## Мои интересы
 
-### 🎨 Art and media
-- **Photography**: I love capturing life moments through the camera lens
-- **Music**: An enthusiast of quality sound and different music genres. Learning to play guitar
+### 🎨 Искусство и медиа
+- **Фотография**: документальная съёмка, портреты, визуальные истории
+- **Музыка**: увлекаюсь качественным звуком и разными жанрами, учусь играть на гитаре
 
-### 💻 Technology
-- Following the latest in technology
-- Interested in the latest IT achievements
-- Occasionally can write some code
-- Respect and practice self-hosting
+### 💻 Технологии
+- Слежу за новинками в IT
+- Иногда пишу код
+- Уважаю и практикую self-hosting
 
-### 🚗 Cars
-- Passionate about automotive topics
-- Love driving
+### 🚗 Автомобили
+- Увлекаюсь автомобильной тематикой
+- Люблю водить
 
-### ✈️ Travel
-- Love discovering new places
-- Interested in different cultures
-- Collecting experiences and sharing them
+### ✈️ Путешествия
+- Люблю открывать новые места
+- Интересуюсь разными культурами
+- Собираю впечатления и делюсь ими
 
-### 🏃‍♂️ Sports and active lifestyle
-- Maintain a healthy lifestyle and have bad habits =)
-- Exercise to stay in shape
+### 🏃‍♂️ Спорт и активный образ жизни
+- Стараюсь вести здоровый образ жизни (но с вредными привычками =)
+- Тренируюсь, чтобы быть в форме
 
-## Places I've been
+## Места, где я побывал
 
 <div class="map-embed">
   <iframe src="https://www.google.com/maps/d/embed?mid=1P6IMx_dBMIl9B8npNMdqRJTZyIWjo60&ehbc=2E312F&noprof=1" width="640" height="480" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-## Contacts
+## Контакты
 
-Always open to communication and sharing experiences:
+Всегда открыт к общению и обмену опытом:
 
 - 📧 Email: xim395@gmail.com
 - 🌐 GitHub: [xtoman](https://github.com/xtoman)
@@ -48,4 +48,4 @@ Always open to communication and sharing experiences:
 
 ---
 
-*"Life is continuous learning and discovering new things"*
+*"Жизнь — это непрерывное обучение и открытие нового"*
