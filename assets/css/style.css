@@ -1036,6 +1036,16 @@ body.menu-open::after {
     flex-shrink: 0;
 }
 
+.page-subtitle {
+    color: var(--meta-color);
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    width: 100%;
+}
+
 .page-description {
     color: var(--meta-color);
     font-size: 1.05rem;
