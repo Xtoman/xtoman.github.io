@@ -28,6 +28,9 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    {% if page.url contains '/page/' or page.url == '/search/' %}
+    <meta name="robots" content="noindex, follow">
+    {% endif %}
     {% if site.google_site_verification %}
     <meta name="google-site-verification" content="{{ site.google_site_verification }}">
     {% endif %}
