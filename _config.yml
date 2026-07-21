@@ -2,6 +2,7 @@
 title: "Maxim Zinchenko"
 title_ru: "Максим Зинченко"
 description: "Максим Зинченко — документальный фотограф. Портфолио, фотопроекты и блог о путешествиях и технологиях."
+description_en: "Maksim Zinchenko — documentary photographer. Portfolio, photo projects and blog about travel and technology."
 baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
 url: "https://xtoman.ru"  # укажите ваш домен здесь
 
@@ -9,8 +10,13 @@ url: "https://xtoman.ru"  # укажите ваш домен здесь
 author:
   name: "Максим Зинченко"
   name_en: "Maxim Zinchenko"
+  name_alt: "Maksim Zinchenko"
   job_title: "Фотограф"
   job_title_en: "Photographer"
+  alternate_names:
+    - "Maxim Zinchenko"
+    - "Maksim Zinchenko"
+    - "Зинченко Максим"
   email: "xim395@gmail.com"
   github: "https://github.com/xtoman"
   telegram: "https://t.me/xtoman"

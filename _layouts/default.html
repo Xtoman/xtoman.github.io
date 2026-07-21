@@ -9,13 +9,15 @@
     <title>{% if page_title %}{{ page_title }} | {{ site.author.name_en | default: site_title }}{% else %}{{ site.title_ru | default: site_title }} — {{ site.author.job_title | default: "фотограф" }}{% endif %}</title>
     {% assign page_description = page.description | default: site.description %}
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
-    <meta name="author" content="{{ site.author.name }}, {{ site.author.name_en | default: site.title }}">
+    <meta name="author" content="{{ site.author.name }}, {{ site.author.name_en | default: site.title }}, {{ site.author.name_alt | default: 'Maksim Zinchenko' }}">
+    <meta name="keywords" content="Максим Зинченко, Зинченко Максим, Maxim Zinchenko, Maksim Zinchenko, фотограф, photographer, documentary photographer">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title_ru | default: site.title }}">
     <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title_ru | default: site.title }} — {{ site.author.job_title | default: 'фотограф' }}{% endif %}">
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
     <meta property="og:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}/assets/images/posts/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/images/default-og.jpg{% endif %}">

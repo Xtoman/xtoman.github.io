@@ -1,6 +1,7 @@
 {% assign json_site_url = site.url | append: site.baseurl %}
 {% assign json_author_name = site.author.name | default: site.title %}
 {% assign json_og_image = site.url | append: site.baseurl | append: '/assets/images/default-og.jpg' %}
+{% assign json_author_alt = site.author.name_alt | default: "Maksim Zinchenko" %}
 
 <script type="application/ld+json">
 {
@@ -9,9 +10,10 @@
   "name": {{ json_author_name | jsonify }},
   "alternateName": [
     {{ site.author.name_en | default: site.title | jsonify }},
+    {{ json_author_alt | jsonify }},
     "Зинченко Максим"
   ],
-  "jobTitle": {{ site.author.job_title | default: "Фотограф" | jsonify }},
+  "jobTitle": [{{ site.author.job_title | default: "Фотограф" | jsonify }}, {{ site.author.job_title_en | default: "Photographer" | jsonify }}],
   "url": {{ json_site_url | jsonify }},
   "image": {{ json_og_image | jsonify }},
   "email": {{ site.author.email | jsonify }},
@@ -27,14 +29,23 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": {{ site.title_ru | default: site.title | jsonify }},
-  "alternateName": {{ site.title | jsonify }},
+  "alternateName": [
+    {{ site.title | jsonify }},
+    {{ json_author_alt | jsonify }},
+    "Maksim Zinchenko Photographer"
+  ],
   "url": {{ json_site_url | jsonify }},
   "description": {{ site.description | jsonify }},
   "inLanguage": ["ru", "en"],
   "author": {
     "@type": "Person",
     "name": {{ json_author_name | jsonify }},
-    "alternateName": "Зинченко Максим"
+    "alternateName": [
+      {{ site.author.name_en | default: site.title | jsonify }},
+      {{ json_author_alt | jsonify }},
+      "Зинченко Максим"
+    ],
+    "jobTitle": {{ site.author.job_title_en | default: "Photographer" | jsonify }}
   }
 }
 </script>
@@ -50,7 +61,7 @@
   "author": {
     "@type": "Person",
     "name": {{ json_author_name | jsonify }},
-    "alternateName": "Зинченко Максим"
+    "alternateName": [{{ site.author.name_en | default: site.title | jsonify }}, {{ json_author_alt | jsonify }}]
   },
   "publisher": {
     "@type": "Person",
@@ -80,7 +91,7 @@
   "author": {
     "@type": "Person",
     "name": {{ json_author_name | jsonify }},
-    "alternateName": "Зинченко Максим"
+    "alternateName": [{{ site.author.name_en | default: site.title | jsonify }}, {{ json_author_alt | jsonify }}]
   }
 }
 </script>
