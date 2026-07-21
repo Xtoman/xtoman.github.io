@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xtoman.ru/sitemap.xml 
+Disallow: /page/
+Disallow: /search/
+Disallow: /TELEGRAM_SETUP/
+Disallow: /TESTING/
+
+Sitemap: https://xtoman.ru/sitemap.xml
