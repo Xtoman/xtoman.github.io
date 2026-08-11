@@ -1425,6 +1425,17 @@ body.menu-open::after {
     line-height: 1.6;
 }
 
+.photo-caption .caption-en {
+    display: block;
+}
+
+.photo-caption .caption-ru {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
 /* Lightbox для полноэкранного просмотра */
 .lightbox {
     display: none;
@@ -1471,6 +1482,17 @@ body.menu-open::after {
     max-width: 800px;
     line-height: 1.6;
     font-style: italic;
+}
+
+.lightbox-caption .caption-en {
+    display: block;
+}
+
+.lightbox-caption .caption-ru {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
 }
 
 .lightbox-close,
