@@ -1,8 +1,8 @@
 # Основные настройки сайта
 title: "Maxim Zinchenko"
 title_ru: "Максим Зинченко"
-description: "Максим Зинченко — документальный фотограф. Портфолио, фотопроекты и блог о путешествиях и технологиях."
-description_en: "Maksim Zinchenko — documentary photographer. Portfolio, photo projects and blog about travel and technology."
+description: "Maksim Zinchenko — documentary photographer. Portfolio, photo projects and blog about travel and technology."
+description_ru: "Максим Зинченко — документальный фотограф. Портфолио, фотопроекты и блог о путешествиях и технологиях."
 baseurl: ""  # если сайт размещен в подкаталоге, укажите путь здесь
 url: "https://xtoman.ru"  # укажите ваш домен здесь
 
@@ -29,7 +29,7 @@ paginate: 5
 paginate_path: "/page/:num/"
 
 # Настройки SEO
-lang: ru
+lang: en
 timezone: Europe/Moscow
 
 # Настройки постов

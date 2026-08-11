@@ -1,189 +1,189 @@
 ---
 layout: post
-lang: ru
-title: "Создание современного блога с помощью Jekyll и Cursor"
+lang: en
+title: "Building a Modern Blog with Jekyll and Cursor"
 date: 2025-03-10
-description: "Подробное руководство по созданию современного блога с использованием Jekyll, GitHub Pages и Cursor. Разбор ключевых возможностей и преимуществ выбранного стека технологий."
+description: "A detailed guide to building a modern blog with Jekyll, GitHub Pages, and Cursor. A breakdown of key features and the advantages of the chosen tech stack."
 image: "2025-03-10-creating-blog-with-cursor/preview.jpg"
 tags: [Jekyll, GitHub Pages, Cursor, Web Development]
 ---
 
-В этой статье я расскажу о процессе создания современного блога с использованием Jekyll и Cursor. Мы рассмотрим все ключевые особенности, технические решения и преимущества выбранного стека технологий.
+In this article, I'll walk through the process of building a modern blog with Jekyll and Cursor. We'll cover all the key features, technical decisions, and advantages of the chosen tech stack.
 
-## Почему Jekyll?
+## Why Jekyll?
 
-Jekyll - это генератор статических сайтов, который превращает текстовые файлы в красивый веб-сайт. Вот его основные преимущества:
+Jekyll is a static site generator that turns text files into a polished website. Here are its main advantages:
 
-1. **Простота** - не нужна база данных или сложная серверная инфраструктура
-2. **Скорость** - статические файлы загружаются максимально быстро
-3. **Безопасность** - нет уязвимостей, характерных для динамических сайтов
-4. **Бесплатный хостинг** - работает на GitHub Pages
-5. **Markdown** - простой и удобный формат для написания контента
+1. **Simplicity** — no database or complex server infrastructure required
+2. **Speed** — static files load as fast as possible
+3. **Security** — none of the vulnerabilities typical of dynamic sites
+4. **Free hosting** — runs on GitHub Pages
+5. **Markdown** — a simple, convenient format for writing content
 
-## Ключевые возможности блога
+## Key Blog Features
 
-### 1. Адаптивный дизайн
+### 1. Responsive Design
 
-Блог адаптирован под все устройства:
-- Корректное отображение на мобильных устройствах
-- Оптимизированная навигация
-- Масштабируемые изображения
-- Читаемые шрифты на любых экранах
+The blog is adapted for all devices:
+- Proper display on mobile devices
+- Optimized navigation
+- Scalable images
+- Readable fonts on any screen
 
-### 2. Темная тема
+### 2. Dark Theme
 
-Реализована поддержка светлой и темной темы:
-- Автоматическое определение системных настроек
-- Сохранение выбора пользователя
-- Плавные переходы между темами
-- Оптимизированные цветовые схемы
+Support for light and dark themes is implemented:
+- Automatic detection of system preferences
+- Saving the user's choice
+- Smooth transitions between themes
+- Optimized color schemes
 
-### 3. Умный поиск
+### 3. Smart Search
 
-Встроенный поиск по содержимому:
-- Мгновенный поиск без перезагрузки страницы
-- Поиск по заголовкам и содержимому
-- Подсветка результатов
-- Контекстные сниппеты в результатах
+Built-in content search:
+- Instant search without page reload
+- Search by titles and content
+- Highlighted results
+- Contextual snippets in results
 
-### 4. SEO-оптимизация
+### 4. SEO Optimization
 
-Блог оптимизирован для поисковых систем:
-- Правильная структура заголовков
-- Open Graph метатеги для социальных сетей
-- Автоматическая генерация sitemap
-- Оптимизированные URL-адреса
-- Поддержка канонических URL
+The blog is optimized for search engines:
+- Proper heading structure
+- Open Graph meta tags for social networks
+- Automatic sitemap generation
+- Optimized URLs
+- Canonical URL support
 
-### 5. Оптимизация изображений
+### 5. Image Optimization
 
-Продуманная работа с изображениями:
-- Автоматическое масштабирование
-- Ленивая загрузка
-- Поддержка подписей
-- Оптимизированные превью для соцсетей
+Thoughtful image handling:
+- Automatic scaling
+- Lazy loading
+- Caption support
+- Optimized previews for social media
 
-## Техническая реализация
+## Technical Implementation
 
-### Структура проекта
+### Project Structure
 
 ```
-├── _posts/                 # Директория с постами
-├── _layouts/              # Шаблоны страниц
-├── assets/               # Статические файлы
-│   ├── css/            # Стили
-│   └── images/        # Изображения
-├── _config.yml         # Конфигурация Jekyll
-└── README.md          # Документация
+├── _posts/                 # Posts directory
+├── _layouts/              # Page templates
+├── assets/               # Static files
+│   ├── css/            # Styles
+│   └── images/        # Images
+├── _config.yml         # Jekyll configuration
+└── README.md          # Documentation
 ```
 
-### Система сборки
+### Build System
 
-Jekyll автоматически собирает сайт из:
-- Markdown-файлов с контентом
-- HTML-шаблонов страниц
-- CSS-стилей
-- Статических ресурсов
+Jekyll automatically builds the site from:
+- Markdown content files
+- HTML page templates
+- CSS styles
+- Static assets
 
-### Работа с контентом
+### Working with Content
 
-Каждый пост - это Markdown-файл с frontmatter:
+Each post is a Markdown file with front matter:
 
 ```yaml
 ---
 layout: post
-title: "Заголовок поста"
+title: "Post Title"
 date: YYYY-MM-DD
-author: "Имя автора"
-description: "Описание для SEO"
-image: "путь/к/превью.jpg"
-tags: [тег1, тег2]
+author: "Author Name"
+description: "Description for SEO"
+image: "path/to/preview.jpg"
+tags: [tag1, tag2]
 ---
 ```
 
-## Преимущества выбранного подхода
+## Advantages of the Chosen Approach
 
-1. **Скорость разработки**
-   - Быстрое прототипирование с Cursor
-   - Готовые решения Jekyll
-   - Простая интеграция с GitHub Pages
+1. **Development Speed**
+   - Rapid prototyping with Cursor
+   - Jekyll's ready-made solutions
+   - Simple integration with GitHub Pages
 
-2. **Производительность**
-   - Статический контент
-   - Оптимизированные ресурсы
-   - Быстрая загрузка страниц
+2. **Performance**
+   - Static content
+   - Optimized assets
+   - Fast page loading
 
-3. **Масштабируемость**
-   - Легко добавлять новый функционал
-   - Простое управление контентом
-   - Гибкая система шаблонов
+3. **Scalability**
+   - Easy to add new functionality
+   - Simple content management
+   - Flexible template system
 
-4. **Экономичность**
-   - Бесплатный хостинг
-   - Минимальные затраты на обслуживание
-   - Нет необходимости в сервере
+4. **Cost Efficiency**
+   - Free hosting
+   - Minimal maintenance costs
+   - No server required
 
-## Процесс публикации
+## Publishing Process
 
-1. Создаем новый пост в формате Markdown
-2. Добавляем необходимые метаданные
-3. Коммитим изменения в репозиторий
-4. GitHub Pages автоматически собирает и публикует сайт
+1. Create a new post in Markdown format
+2. Add the necessary metadata
+3. Commit changes to the repository
+4. GitHub Pages automatically builds and publishes the site
 
-## Дальнейшее развитие
+## Future Development
 
-Планируются следующие улучшения:
-- Система комментариев
-- Интеграция с социальными сетями
-- Улучшенная система тегов
-- Автоматическое оглавление для длинных постов
-- Дополнительные темы оформления
+The following improvements are planned:
+- Comment system
+- Social media integration
+- Improved tag system
+- Automatic table of contents for long posts
+- Additional themes
 
-## Последние улучшения блога
+## Recent Blog Improvements
 
-За последнее время было внесено множество улучшений, направленных на повышение удобства использования и улучшение пользовательского опыта:
+Many improvements have been made recently to enhance usability and improve the user experience:
 
-### 1. Модернизация мобильного интерфейса
+### 1. Mobile Interface Modernization
 
-- **Компактная шапка**: Все элементы управления (поиск, переключение темы, меню) размещены в одну линию с выравниванием по правому краю.
-- **Оптимизированные размеры**: Кнопки имеют оптимальный размер для тапа (36px) с уменьшенными иконками (20px).
-- **Адаптивный логотип**: Автоматическое усечение длинных названий с использованием text-overflow: ellipsis.
+- **Compact header**: All controls (search, theme toggle, menu) are placed on one line, aligned to the right.
+- **Optimized sizes**: Buttons have an optimal tap size (36px) with smaller icons (20px).
+- **Responsive logo**: Long titles are automatically truncated using text-overflow: ellipsis.
 
-### 2. Улучшенная система навигации
+### 2. Improved Navigation System
 
-- **Боковое меню**: Меню выезжает справа на десктопах (300px ширины) и сверху вниз на мобильных устройствах (полноэкранное).
-- **Умное поведение**: Автоматическое закрытие при изменении размера экрана, клике по ссылке или нажатии Escape.
-- **Блокировка прокрутки**: При открытом меню основной контент блокируется для предотвращения случайной прокрутки.
+- **Side menu**: The menu slides in from the right on desktops (300px wide) and from top to bottom on mobile (full screen).
+- **Smart behavior**: Automatically closes on screen resize, link click, or Escape key press.
+- **Scroll lock**: When the menu is open, the main content is locked to prevent accidental scrolling.
 
-### 3. Интеллектуальный поиск
+### 3. Intelligent Search
 
-- **Адаптивная поисковая строка**: На десктопах выезжает слева, на мобильных устройствах раскрывается сверху.
-- **Визуальная обратная связь**: Кнопка закрытия, визуальный фокус при активации.
-- **Высокий приоритет**: Поисковая строка всегда отображается поверх других элементов (z-index: 1005).
+- **Adaptive search bar**: Slides in from the left on desktops, expands from the top on mobile.
+- **Visual feedback**: Close button, visual focus on activation.
+- **High priority**: The search bar always displays above other elements (z-index: 1005).
 
-### 4. Технические решения сложных проблем
+### 4. Technical Solutions to Complex Problems
 
-- **Проблема перекрытия элементов**: Решена с помощью системы z-index-ов (1001 для шапки, 1005 для поиска), чтобы кнопки не перекрывали появляющиеся элементы.
-- **Конфликты стилей**: Исключены дублирующиеся и конфликтующие медиа-запросы путем логической реорганизации CSS.
-- **Управление состоянием**: Реализована система зависимостей между элементами (закрытие меню при активации поиска и наоборот).
-- **Визуальное затемнение**: При открытом меню фон затемняется с помощью псевдоэлемента ::after и pointer-events для блокировки взаимодействия.
+- **Element overlap issue**: Resolved with a z-index system (1001 for the header, 1005 for search) so buttons don't overlap appearing elements.
+- **Style conflicts**: Duplicate and conflicting media queries were eliminated through logical CSS reorganization.
+- **State management**: A dependency system between elements was implemented (closing the menu when search is activated and vice versa).
+- **Visual dimming**: When the menu is open, the background is dimmed using a ::after pseudo-element and pointer-events to block interaction.
 
-### 5. Анимации и визуальные эффекты
+### 5. Animations and Visual Effects
 
-- **Плавные переходы**: Все интерактивные элементы имеют плавные анимации (transform, opacity) с timing-function: ease.
-- **Последовательное появление**: Элементы меню появляются поочередно с задержкой (animation-delay), создавая эффект каскада.
-- **Обратная связь**: Все кнопки имеют эффекты при наведении и нажатии для лучшего визуального отклика.
+- **Smooth transitions**: All interactive elements have smooth animations (transform, opacity) with timing-function: ease.
+- **Sequential appearance**: Menu items appear one after another with a delay (animation-delay), creating a cascade effect.
+- **Feedback**: All buttons have hover and press effects for better visual response.
 
-### 6. Кросс-браузерная совместимость
+### 6. Cross-Browser Compatibility
 
-- **Вендорные префиксы**: Использованы там, где необходимо, для поддержки старых браузеров.
-- **CSS-переменные**: Применены для гибкой системы тем с использованием [data-theme="dark"].
-- **FlexBox**: Используется для создания адаптивных макетов вместо устаревших методов позиционирования.
+- **Vendor prefixes**: Used where necessary to support older browsers.
+- **CSS variables**: Applied for a flexible theme system using [data-theme="dark"].
+- **FlexBox**: Used to create responsive layouts instead of outdated positioning methods.
 
-Все эти улучшения были реализованы с учетом лучших практик веб-разработки, с фокусом на доступность, производительность и семантическую верстку.
+All these improvements were implemented following web development best practices, with a focus on accessibility, performance, and semantic markup.
 
-## Заключение
+## Conclusion
 
-Jekyll в сочетании с GitHub Pages и Cursor предоставляет мощный и гибкий инструментарий для создания современных блогов. Этот подход обеспечивает отличный баланс между функциональностью, производительностью и простотой обслуживания.
+Jekyll combined with GitHub Pages and Cursor provides a powerful and flexible toolkit for building modern blogs. This approach offers an excellent balance between functionality, performance, and ease of maintenance.
 
-Весь код блога открыт и доступен на GitHub, что позволяет использовать его как основу для своих проектов или изучения современных веб-технологий. 
+The entire blog code is open and available on GitHub, so you can use it as a foundation for your own projects or for learning modern web technologies.

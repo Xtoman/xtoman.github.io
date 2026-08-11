@@ -3,7 +3,7 @@ layout: photoproject
 title: "Portraits"
 description: ""
 date: 2026-03-14
-location: "Москва, Россия"
+location: "Moscow, Russia"
 published: true
 cover_image: "glasha_01.jpg"
 images:

@@ -3,13 +3,14 @@ layout: default
 title: Search
 permalink: /search/
 ---
+{% include i18n.html %}
 
 <div class="search-container">
-  <h1>Search the site</h1>
+  <h1>{{ t.search.title }}</h1>
   
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Enter your query..." autocomplete="off">
-    <button id="search-button">Search</button>
+    <input type="text" id="search-input" placeholder="{{ t.search.input_placeholder }}" autocomplete="off">
+    <button id="search-button">{{ t.search.button }}</button>
   </div>
   
   <div id="search-results" class="search-results"></div>
@@ -17,32 +18,32 @@ permalink: /search/
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Загружаем данные поиска
+  const i18n = {
+    found: {{ t.search.found | jsonify }},
+    result: {{ t.search.result | jsonify }},
+    results: {{ t.search.results | jsonify }},
+    noResults: {{ t.search.no_results | jsonify }}
+  };
+
   let searchData;
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
   const searchResults = document.getElementById('search-results');
   
-  // Загружаем JSON с данными
   fetch('{{ site.baseurl }}/search.json')
     .then(response => response.json())
     .then(data => {
       searchData = data;
       
-      // Автоматический поиск при вводе
       searchInput.addEventListener('input', performSearch);
-      
-      // Поиск по кнопке
       searchButton.addEventListener('click', performSearch);
       
-      // Поиск по Enter
       searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
           performSearch();
         }
       });
       
-      // Проверяем URL на наличие параметра q
       const urlParams = new URLSearchParams(window.location.search);
       const query = urlParams.get('q');
       if (query) {
@@ -54,18 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
   function performSearch() {
     const query = searchInput.value.toLowerCase().trim();
     
-    // Если запрос пустой, очищаем результаты
     if (!query) {
       searchResults.innerHTML = '';
       return;
     }
     
-    // Обновляем URL
     const url = new URL(window.location);
     url.searchParams.set('q', query);
     window.history.pushState({}, '', url);
     
-    // Ищем совпадения
     const results = searchData.filter(item => {
       const titleMatch = item.title.toLowerCase().includes(query);
       const contentMatch = item.content.toLowerCase().includes(query);
@@ -74,12 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return titleMatch || contentMatch || tagsMatch;
     });
     
-    // Отображаем результаты
     if (results.length > 0) {
-      let html = `<p>Found ${results.length} result(s)</p><ul class="search-results-list">`;
+      const resultLabel = results.length === 1 ? i18n.result : i18n.results;
+      let html = `<p>${i18n.found} ${results.length} ${resultLabel}</p><ul class="search-results-list">`;
       
       results.forEach(item => {
-        // Получаем контекст для найденного текста
         let context = '';
         if (item.content.toLowerCase().includes(query)) {
           const position = item.content.toLowerCase().indexOf(query);
@@ -87,11 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
           const end = Math.min(item.content.length, position + 100);
           context = item.content.substring(start, end);
           
-          // Выделяем найденный текст
           const regex = new RegExp(`(${query})`, 'gi');
           context = context.replace(regex, '<mark>$1</mark>');
           
-          // Добавляем многоточие, если обрезали текст
           if (start > 0) context = '...' + context;
           if (end < item.content.length) context += '...';
         }
@@ -108,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '</ul>';
       searchResults.innerHTML = html;
     } else {
-      searchResults.innerHTML = '<p>No results found for your query.</p>';
+      searchResults.innerHTML = `<p>${i18n.noResults}</p>`;
     }
   }
 });
@@ -195,4 +190,4 @@ mark {
     border-radius: 4px;
   }
 }
-</style> 
+</style>

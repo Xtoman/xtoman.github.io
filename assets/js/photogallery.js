@@ -35,7 +35,7 @@
                     src: img.getAttribute('data-src') || img.getAttribute('src'),
                     alt: img.getAttribute('alt') || ''
                 });
-                captions.push(caption ? caption.textContent.trim() : '');
+                captions.push(caption ? caption.innerHTML.trim() : '');
                 
                 // Добавляем обработчик клика
                 img.addEventListener('click', () => openLightbox(index));
@@ -69,7 +69,7 @@
         if (images[currentIndex]) {
             lightboxImage.src = images[currentIndex].src;
             lightboxImage.alt = images[currentIndex].alt;
-            lightboxCaption.textContent = captions[currentIndex] || '';
+            lightboxCaption.innerHTML = captions[currentIndex] || '';
         }
     }
     

@@ -1,25 +1,25 @@
 ---
 layout: post
-lang: ru
-title: "Первое впечатление про Manus"
+lang: en
+title: "First Impressions of Manus"
 date: 2025-04-07
-description: "Первый опыт использования Manus"
+description: "First experience using Manus"
 image:
 tags: [Llm]
 ---
-# Первый опыт использования LLM Manus
+# First Experience Using LLM Manus
 
-Около месяца назад я подал заявку на участие в тестировании **LLM Manus**, и сегодня наконец получил инвайт. На бесплатном тарифе пользователю предоставляется **1000 токенов** для генерации контента.
+About a month ago I applied to participate in testing **LLM Manus**, and today I finally got an invite. On the free tier, users get **1000 tokens** for content generation.
 
-Мой первый промт выглядел так:
+My first prompt looked like this:
 
-> *"Я с родителем хотел бы полететь в Турцию из Москвы на пляжный отдых с 23 мая по 26-27. Насколько это хорошая идея? Предложи варианты отдыха с хорошими отелями, ценой не более 250 тысяч рублей суммарно. В отели должны быть включены алкогольные напитки."*
+> *"I'd like to fly to Turkey from Moscow with a parent for a beach vacation from May 23 to May 26–27. How good an idea is that? Suggest vacation options with good hotels, total price no more than 250 thousand rubles. Hotels should include alcoholic drinks."*
 
-Manus потратил **587 токенов** и в ответ сгенерировал полноценный **веб-сайт с рекомендациями**, который доступен по ссылке:  
+Manus spent **587 tokens** and in response generated a full **website with recommendations**, available at:  
 👉 [https://pqvilppj.manus.space/](https://pqvilppj.manus.space/)
 
-Впечатления — смешанные. С одной стороны, сам факт генерации структурированной страницы с текстом и визуальной составляющей выглядит свежо и удобно. С другой — **модель допустила несколько фактических ошибок**:
-- У самого дорогого отеля в списке **не частный пляж**, как указано;
-- Указанная **звездность некоторых отелей не соответствует действительности**.
+My impressions are mixed. On one hand, the fact that it generated a structured page with text and visuals feels fresh and convenient. On the other — **the model made several factual errors**:
+- The most expensive hotel on the list **does not have a private beach**, as stated;
+- The **star ratings of some hotels don't match reality**.
 
-Тем не менее, эксперимент выглядит многообещающим. Буду тестировать дальше и смотреть, как развивается платформа.
+Still, the experiment looks promising. I'll keep testing and see how the platform develops.

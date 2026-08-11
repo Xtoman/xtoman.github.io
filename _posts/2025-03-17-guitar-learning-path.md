@@ -1,83 +1,83 @@
 ---
 layout: post
-lang: ru
-title: "Роудмап изучения игры на гитаре или как быстро научиться играть"
+lang: en
+title: "A Guitar Learning Roadmap, or How to Learn to Play Fast"
 date: 2025-03-17
-description: "Пошаговый план развития гитариста и его навыков, составленный нейросетью с примерами и упражнениями"
+description: "A step-by-step plan for developing as a guitarist, compiled with AI assistance, with examples and exercises"
 image:
-tags: [Гитара]
+tags: [Guitar]
 ---
-# Мастерство игры на гитаре в 1/10 от обычного времени
+# Guitar Mastery in 1/10 the Usual Time
 
-## Цель
-Овладеть игрой на гитаре на уровне уверенного исполнителя за короткий срок, фокусируясь на практике с высокой отдачей.
+## Goal
+Reach a confident performer level on guitar in a short time by focusing on high-yield practice.
 
-## Принципы обучения
-1. **Минимум теории, максимум практики** – учим только то, что можно сразу применить.
-2. **Разделение навыков** – игра = моторика + ритм + аккорды + теория. Каждую часть развиваем отдельно.
-3. **Методика 80/20** – осваиваем 20% приемов, дающих 80% результата.
-4. **Играть с музыкой** – практиковаться под метроном и минусовки.
-5. **Четкий тайм-менеджмент** – структурированные короткие сессии.
-
----
-
-## План обучения
-
-### 1. Неделя 1: Базовый контроль над гитарой
-- **День 1-2:** Основные аккорды: C, G, D, Am, Em.
-  - **Пример прогрессии:** G → D → Em → C (используется в тысячах песен).
-- **День 3-4:** Чередование аккордов с простыми ритмическими рисунками.
-  - **Бой "четверками"**: ↓ ↓ ↓ ↓
-- **День 5-6:** Игра под метроном (40-60 bpm → 80 bpm).
-  - **Упражнение:** Играй аккорды ровно по щелчку метронома.
-- **День 7:** Первая простая песня ("Knockin' on Heaven’s Door").
-
-### 2. Неделя 2: Развитие скорости и чистоты звука
-- **День 8-9:** Бой "шестерка".
-  - **Схема:** ↓ ↓↑ ↑ ↓↑
-- **День 10-11:** Перебор (PIMA - классическая схема).
-  - **PIMA:** Большой палец (P), указательный (I), средний (M), безымянный (A).
-  - **Пример:** "Nothing Else Matters" (Metallica).
-- **День 12-13:** Баррэ (F и Bm, тренировка без звона).
-- **День 14:** Вторая песня ("Wonderwall" - Em7, G, Dsus4, A7sus4).
-
-### 3. Неделя 3: Динамика и вариативность
-- **День 15-16:** Рифы и power chords.
-  - **Пример:** "Smoke on the Water" (Deep Purple).
-- **День 17-18:** Легкие соло.
-  - **Пример:** Начало "Nothing Else Matters".
-- **День 19-20:** Открытые строи и альтернативные аккорды.
-- **День 21:** Импровизация по пентатонике (см. раздел "Пентатоника").
-
-### 4. Неделя 4: Продвинутая игра
-- **День 22-23:** Бенд, вибрато, легато (см. раздел "Дополнительные техники").
-- **День 24-25:** Арпеджио и фингерстайл.
-  - **Пример:** "Tears in Heaven" (Eric Clapton).
-- **День 26-27:** Репетиция полного набора техник.
-- **День 28:** Первая сложная песня ("Hotel California" - Eagles).
+## Learning Principles
+1. **Minimum theory, maximum practice** — learn only what you can apply right away.
+2. **Skill separation** — playing = motor skills + rhythm + chords + theory. Develop each part separately.
+3. **80/20 method** — master the 20% of techniques that deliver 80% of the results.
+4. **Play with music** — practice with a metronome and backing tracks.
+5. **Clear time management** — structured, short sessions.
 
 ---
 
-## Практические упражнения
+## Learning Plan
 
-### Разминка (5 минут перед каждой сессией)
-1. **Хроматическая гамма:** играем 1-2-3-4 по всем струнам.
-2. **Альтернативный штрих:** чередуем удары медиатором вверх-вниз.
-3. **Растяжка пальцев:** поочередно ставим пальцы на 5-6-7-8 лады.
+### 1. Week 1: Basic Control of the Guitar
+- **Days 1–2:** Basic chords: C, G, D, Am, Em.
+  - **Example progression:** G → D → Em → C (used in thousands of songs).
+- **Days 3–4:** Chord changes with simple strumming patterns.
+  - **Quarter-note strumming**: ↓ ↓ ↓ ↓
+- **Days 5–6:** Playing with a metronome (40–60 bpm → 80 bpm).
+  - **Exercise:** Play chords exactly on the metronome click.
+- **Day 7:** First simple song ("Knockin' on Heaven's Door").
 
-### Основные упражнения
-1. **Смена аккордов:** 4 удара на аккорд → 2 удара → 1 удар.
-2. **Ритмика:** Игра в разных темпах (замедление и ускорение).
-3. **Минусовки:** Подключение к Guitar Pro или YouTube.
+### 2. Week 2: Developing Speed and Clean Tone
+- **Days 8–9:** Sixteenth-note strumming pattern.
+  - **Pattern:** ↓ ↓↑ ↑ ↓↑
+- **Days 10–11:** Fingerpicking (PIMA — classic pattern).
+  - **PIMA:** Thumb (P), index (I), middle (M), ring (A).
+  - **Example:** "Nothing Else Matters" (Metallica).
+- **Days 12–13:** Barre chords (F and Bm, practice without buzzing).
+- **Day 14:** Second song ("Wonderwall" — Em7, G, Dsus4, A7sus4).
+
+### 3. Week 3: Dynamics and Variety
+- **Days 15–16:** Riffs and power chords.
+  - **Example:** "Smoke on the Water" (Deep Purple).
+- **Days 17–18:** Easy solos.
+  - **Example:** The opening of "Nothing Else Matters".
+- **Days 19–20:** Open tunings and alternate chords.
+- **Day 21:** Improvisation with the pentatonic scale (see the "Pentatonic" section).
+
+### 4. Week 4: Advanced Playing
+- **Days 22–23:** Bends, vibrato, legato (see the "Additional Techniques" section).
+- **Days 24–25:** Arpeggios and fingerstyle.
+  - **Example:** "Tears in Heaven" (Eric Clapton).
+- **Days 26–27:** Rehearsal of the full technique set.
+- **Day 28:** First complex song ("Hotel California" — Eagles).
 
 ---
 
-## Дополнительные техники
+## Practical Exercises
 
-### **Пентатоника ля-минор**
-Пентатоника - это 5-нотная гамма, удобная для импровизации.
+### Warm-up (5 minutes before each session)
+1. **Chromatic scale:** play 1-2-3-4 across all strings.
+2. **Alternate picking:** alternate up and down strokes with the pick.
+3. **Finger stretching:** place fingers one at a time on frets 5-6-7-8.
 
-**Ам-форма (5 лад)**:
+### Core Exercises
+1. **Chord changes:** 4 strums per chord → 2 strums → 1 strum.
+2. **Rhythm:** Play at different tempos (slow down and speed up).
+3. **Backing tracks:** Use Guitar Pro or YouTube.
+
+---
+
+## Additional Techniques
+
+### **A Minor Pentatonic**
+The pentatonic scale is a 5-note scale that's convenient for improvisation.
+
+**Am shape (5th fret)**:
 
 e |----------------5--8--|  
 B |------------5--8------|  
@@ -86,23 +86,23 @@ D |----5--7--------------|
 A |----5--7--------------|  
 E |----5--8--------------|
 
-- Используется в блюзе, роке и металле.
-- Играй по порядку и придумывай свои риффы.
+- Used in blues, rock, and metal.
+- Play through it in order and come up with your own riffs.
 
-### **Бенд, вибрато, легато**
-- **Бенд** – подтягивание струны вверх, чтобы изменить высоту звука.
-  - Пример: Играй 7-й лад на 3-й струне и подтяни вверх.
-- **Вибрато** – качание ноты вверх-вниз для красивого звучания.
-  - Пример: Зажми 8-й лад и покачивай струну.
-- **Легато (Hammer-on и Pull-off)** – переходы без удара медиатором.
-  - Пример:  
-e |------5h7------| (Hammer-on: ударь по 7-му ладу, не дергая медиатором)  
-e |------7p5------| (Pull-off: убери палец с 7-го, оставив 5-й)
+### **Bend, Vibrato, Legato**
+- **Bend** — pushing the string upward to change the pitch.
+  - Example: Play the 7th fret on the 3rd string and bend upward.
+- **Vibrato** — rocking the note up and down for a richer sound.
+  - Example: Hold the 8th fret and wiggle the string.
+- **Legato (Hammer-on and Pull-off)** — transitions without picking.
+  - Example:  
+e |------5h7------| (Hammer-on: fret the 7th without picking again)  
+e |------7p5------| (Pull-off: lift the finger from the 7th, leaving the 5th)
 
 
-### **Арпеджио**
-- Арпеджио – это перебор нот аккорда.
-- **Пример:** Арпеджио C:  
+### **Arpeggio**
+- An arpeggio is playing the notes of a chord one at a time.
+- **Example:** C major arpeggio:  
 e |------0--------|  
 B |----1---1------|  
 G |--0-------0----|  
@@ -110,74 +110,73 @@ D |------------2--|
 A |----------3----|  
 E |---------------| 
 
-- **Используется в:** классической музыке, балладах, фингерстайле.
+- **Used in:** classical music, ballads, fingerstyle.
 
 ---
 
-## Контроль прогресса
-- Записывать видео раз в неделю и анализировать.
-- Проверять скорость смены аккордов.
-- Оценивать чистоту звука.
+## Progress Tracking
+- Record video once a week and review it.
+- Check chord change speed.
+- Evaluate tone clarity.
 
 ---
 
-## Итог
-Через месяц ты будешь уверенно играть популярные песни, освоишь базовые техники и будешь готов к сложным аранжировкам.
+## Summary
+After a month, you'll be able to play popular songs confidently, master basic techniques, and be ready for more complex arrangements.
 
-### Советы
-1. Не заучивай – понимай, что и зачем делаешь.
-2. Разнообразь упражнения, чтобы не терять мотивацию.
-3. Не пропускай дни – 20 минут ежедневно лучше, чем 3 часа раз в неделю.
+### Tips
+1. Don't memorize blindly — understand what you're doing and why.
+2. Vary your exercises so you don't lose motivation.
+3. Don't skip days — 20 minutes daily is better than 3 hours once a week.
 
-**Удачи в освоении гитары!**
+**Good luck learning guitar!**
 
-# Полезные ссылки для изучения игры на гитаре
+# Useful Links for Learning Guitar
 
-## 🎸 Обучающие ресурсы
-- **Justin Guitar** – бесплатные уроки от профессионального преподавателя:  
+## 🎸 Learning Resources
+- **Justin Guitar** — free lessons from a professional teacher:  
   [https://www.justinguitar.com](https://www.justinguitar.com)  
-- **Fender Play** – структурированные уроки от Fender:  
+- **Fender Play** — structured lessons from Fender:  
   [https://www.fender.com/play](https://www.fender.com/play)  
-- **GuitarLessons.com** – удобные видеоуроки с практическими упражнениями:  
+- **GuitarLessons.com** — convenient video lessons with practical exercises:  
   [https://www.guitarlessons.com](https://www.guitarlessons.com)  
-- **Guitar Tricks** – курс с обучением от основ до сложных приемов:  
+- **Guitar Tricks** — a course from basics to advanced techniques:  
   [https://www.guitartricks.com](https://www.guitartricks.com)  
 
-## 🎼 Онлайн-табулатуры и минусовки
-- **Ultimate Guitar** – крупнейшая база аккордов и табов:  
+## 🎼 Online Tabs and Backing Tracks
+- **Ultimate Guitar** — the largest database of chords and tabs:  
   [https://www.ultimate-guitar.com](https://www.ultimate-guitar.com)  
-- **Songsterr** – интерактивные табы с возможностью прослушивания:  
+- **Songsterr** — interactive tabs with playback:  
   [https://www.songsterr.com](https://www.songsterr.com)  
-- **Backing Track Library** – минусовки для практики:  
+- **Backing Track Library** — backing tracks for practice:  
   [https://www.guitarbackingtrack.com](https://www.guitarbackingtrack.com)  
 
-## ⏱ Инструменты и метрономы
-- **Online Metronome** – бесплатный онлайн-метроном:  
+## ⏱ Tools and Metronomes
+- **Online Metronome** — free online metronome:  
   [https://www.metronomeonline.com](https://www.metronomeonline.com)  
-- **Guitar Tuna** – удобный тюнер для настройки гитары:  
+- **Guitar Tuna** — convenient tuner for guitar:  
   [https://yousician.com/guitartuna](https://yousician.com/guitartuna)  
-- **Soundslice** – интерактивные ноты и табы с возможностью замедления темпа:  
+- **Soundslice** — interactive sheet music and tabs with tempo control:  
   [https://www.soundslice.com](https://www.soundslice.com)  
 
-## 🎵 Гаммы, арпеджио и техника
-- **Guitar Scales** – генератор гамм с диаграммами грифа:  
+## 🎵 Scales, Arpeggios, and Technique
+- **Guitar Scales** — scale generator with fretboard diagrams:  
   [https://www.fretjam.com/guitar-scales.html](https://www.fretjam.com/guitar-scales.html)  
-- **Cyberfret** – библиотека упражнений и техник:  
+- **Cyberfret** — library of exercises and techniques:  
   [https://www.cyberfret.com](https://www.cyberfret.com)  
-- **TrueFire** – курсы от известных гитаристов:  
+- **TrueFire** — courses from well-known guitarists:  
   [https://www.truefire.com](https://www.truefire.com)  
 
-## 📺 YouTube-каналы с уроками
-- **Marty Music** – уроки популярных песен и техник:  
+## 📺 YouTube Channels with Lessons
+- **Marty Music** — lessons on popular songs and techniques:  
   [https://www.youtube.com/c/MartyMusic](https://www.youtube.com/c/MartyMusic)  
-- **Paul Davids** – разборы техник, музыкальная теория:  
+- **Paul Davids** — technique breakdowns, music theory:  
   [https://www.youtube.com/c/PaulDavids](https://www.youtube.com/c/PaulDavids)  
-- **Rick Beato** – глубокие разборы музыки и композиции:  
+- **Rick Beato** — deep dives into music and composition:  
   [https://www.youtube.com/c/RickBeato](https://www.youtube.com/c/RickBeato)  
-- **Famous Guitar Riffs** – плейлист с риффами и соло:  
+- **Famous Guitar Riffs** — playlist of riffs and solos:  
   [https://www.youtube.com/playlist?list=PLJVEh6WgRzm6qxrrEnuwXZ0SpbCP2lbiX](https://www.youtube.com/playlist?list=PLJVEh6WgRzm6qxrrEnuwXZ0SpbCP2lbiX)  
 
 ---
 
-Эти ресурсы помогут тебе быстро освоить гитару и перейти к продвинутым техникам. Если нужны более узконаправленные ссылки (например, по определенному стилю музыки), пиши! 🎶
-
+These resources will help you learn guitar quickly and move on to advanced techniques. If you need more specialized links (for a particular music style, for example), let me know! 🎶

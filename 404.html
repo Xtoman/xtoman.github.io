@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Страница не найдена
+title: Page not found
 permalink: /404.html
 ---
+{% include i18n.html %}
 
 <div class="error-page">
   <h1>404</h1>
-  <h2>Страница не найдена</h2>
-  <p>Извините, запрашиваемая страница не существует или была перемещена.</p>
-  <a href="{{ site.baseurl }}/" class="home-button">Вернуться на главную</a>
+  <h2>{{ t.error.heading }}</h2>
+  <p>{{ t.error.message }}</p>
+  <a href="{{ site.baseurl }}/" class="home-button">{{ t.common.back_home }}</a>
 </div>
 
 <style>

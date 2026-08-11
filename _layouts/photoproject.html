@@ -35,20 +35,27 @@ layout: default
             {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
             <img 
                 src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
-                alt="{{ image.caption | default: page.title }}"
+                alt="{{ image.caption_en | default: image.caption | default: page.title }}"
                 loading="lazy"
                 class="gallery-image"
                 data-src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}"
             >
-            {% if image.caption %}
-            <figcaption class="photo-caption">{{ image.caption }}</figcaption>
+            {% if image.caption_en or image.caption %}
+            <figcaption class="photo-caption">
+                {% if image.caption_en %}
+                <span class="caption-en">{{ image.caption_en }}</span>
+                {% if image.caption_ru %}<span class="caption-ru">{{ image.caption_ru }}</span>{% endif %}
+                {% else %}
+                {{ image.caption }}
+                {% endif %}
+            </figcaption>
             {% endif %}
         </figure>
         {% endfor %}
     </div>
     {% else %}
     <div class="empty-gallery">
-        <p>No photos in this project yet.</p>
+        <p>{{ t.photoprojects.no_photos }}</p>
     </div>
     {% endif %}
     

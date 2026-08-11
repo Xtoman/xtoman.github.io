@@ -1,53 +1,51 @@
 ---
 layout: default
-title: Обо мне
-description: Максим Зинченко (Maksim Zinchenko) — документальный фотограф / documentary photographer. Блог о технологиях, путешествиях и музыке.
+title: About
+description: Maxim Zinchenko (Maksim Zinchenko) — documentary photographer. Blog about technology, travel and music.
 ---
 
-# Максим Зинченко
+# Maxim Zinchenko
 
-Я — **Максим Зинченко**, документальный **фотограф**. На этом сайте собраны мои фотопроекты, портреты и визуальные истории, а также блог о путешествиях, технологиях и том, что меня вдохновляет. Код и проекты — на [GitHub](https://github.com/xtoman).
+I'm **Maxim Zinchenko**, a documentary **photographer**. This site brings together my photo projects, portraits, and visual stories, along with a blog about travel, technology, and things that inspire me. Code and side projects are on [GitHub](https://github.com/xtoman).
 
-*In English: **Maksim Zinchenko**, documentary **photographer**.*
+## Interests
 
-## Мои интересы
+### Art & media
+- **Photography**: documentary work, portraits, visual stories
+- **Music**: quality sound across genres, learning to play guitar
 
-### 🎨 Искусство и медиа
-- **Фотография**: документальная съёмка, портреты, визуальные истории
-- **Музыка**: увлекаюсь качественным звуком и разными жанрами, учусь играть на гитаре
+### Technology
+- Following IT news and trends
+- Writing code occasionally
+- Self-hosting enthusiast
 
-### 💻 Технологии
-- Слежу за новинками в IT
-- Иногда пишу код
-- Уважаю и практикую self-hosting
+### Cars
+- Interested in automotive culture
+- Enjoy driving
 
-### 🚗 Автомобили
-- Увлекаюсь автомобильной тематикой
-- Люблю водить
+### Travel
+- Discovering new places
+- Exploring different cultures
+- Collecting impressions and sharing them
 
-### ✈️ Путешествия
-- Люблю открывать новые места
-- Интересуюсь разными культурами
-- Собираю впечатления и делюсь ими
+### Sports & active lifestyle
+- Trying to stay healthy (with a few bad habits)
+- Training to stay in shape
 
-### 🏃‍♂️ Спорт и активный образ жизни
-- Стараюсь вести здоровый образ жизни (но с вредными привычками =)
-- Тренируюсь, чтобы быть в форме
-
-## Места, где я побывал
+## Places I've been
 
 <div class="map-embed">
   <iframe src="https://www.google.com/maps/d/embed?mid=1P6IMx_dBMIl9B8npNMdqRJTZyIWjo60&ehbc=2E312F&noprof=1" width="640" height="480" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-## Контакты
+## Contact
 
-Всегда открыт к общению и обмену опытом:
+Always open to conversation and sharing experiences:
 
-- 📧 Email: xim395@gmail.com
-- 🌐 GitHub: [xtoman](https://github.com/xtoman)
-- 📱 Telegram: [@xtoman](https://t.me/xtoman)
+- Email: xim395@gmail.com
+- GitHub: [xtoman](https://github.com/xtoman)
+- Telegram: [@xtoman](https://t.me/xtoman)
 
 ---
 
-*"Жизнь — это непрерывное обучение и открытие нового"*
+*"Life is continuous learning and discovery"*

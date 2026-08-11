@@ -2,10 +2,18 @@ en:
   nav:
     photoprojects: "Projects"
     blog: "Blog"
+    bio: "Bio"
     about: "About"
   search:
     placeholder: "Search the site..."
     label: "Search"
+    title: "Search the site"
+    input_placeholder: "Enter your query..."
+    button: "Search"
+    found: "Found"
+    result: "result"
+    results: "results"
+    no_results: "No results found for your query."
   theme:
     toggle: "Toggle theme"
   menu:
@@ -16,15 +24,23 @@ en:
     previous: "Previous"
     next: "Next"
     skip_to_content: "Skip to content"
+    back_home: "Back to home"
   photoprojects:
     title: "Projects"
     description: "Documentary projects<br>and visual stories"
     empty: "No projects added yet."
     all_projects: "All projects"
+    no_photos: "No photos in this project yet."
   blog:
     title: "Blog"
     description: "Personal blog about technology, travel and self-development"
   about:
     title: "About"
+  bio:
+    title: "Bio"
   footer:
     copyright: "©"
+  error:
+    title: "Page not found"
+    heading: "Page not found"
+    message: "Sorry, the page you requested does not exist or has been moved."

@@ -1,54 +1,54 @@
 ---
 layout: post
-lang: ru
-title: "Как я доверил свой код ИИ, или История одного эксперимента с Cursor"
+lang: en
+title: "How I Trusted My Code to AI, or the Story of One Experiment with Cursor"
 date: 2025-03-07
 ---
 
-Привет, друзья! Сегодня расскажу вам забавную историю о том, как я решил попробовать что-то новенькое в разработке. Знаете эти моменты, когда думаешь "а что, если..."? Вот у меня был именно такой.
+Hey friends! Today I'll tell you a fun story about how I decided to try something new in development. You know those moments when you think "what if..."? That's exactly what I had.
 
-## Знакомьтесь, мой новый "напарник"
+## Meet My New "Partner"
 
-Итак, я решил создать приложение для управления расписанием. Обычно я бы даже не взялся за такую задачу - всё-таки я не программист. Но тут увидел рекламу Cursor - редактора кода со встроенным ИИ, который обещал помочь даже новичкам. Решил рискнуть и попробовать.
+So, I decided to build a schedule management app. Normally I wouldn't even take on a task like that — after all, I'm not a programmer. But then I saw an ad for Cursor — a code editor with built-in AI that promised to help even beginners. I decided to take a risk and give it a shot.
 
-## Первые шаги и первые впечатления
+## First Steps and First Impressions
 
-Начали мы с того, что я просто описал словами, чего хочу: "Сделай простое приложение для управления расписанием". Cursor предложил использовать React и какой-то Material-UI (честно говоря, я не особо понимал, что это, но звучало солидно). 
+We started with me simply describing in words what I wanted: "Make a simple schedule management app." Cursor suggested using React and some Material-UI (honestly, I didn't really understand what that was, but it sounded solid).
 
 ```javascript
-// Мой первый React-компонент (спасибо, Cursor!)
+// My first React component (thanks, Cursor!)
 function App() {
   return (
     <div className="app">
-      <h1>Моё расписание</h1>
-      {/* Cursor сказал, что здесь будет таблица */}
+      <h1>My Schedule</h1>
+      {/* Cursor said there would be a table here */}
     </div>
   );
 }
 ```
 
-## Забавные моменты
+## Funny Moments
 
-Общение с ИИ оказалось интереснее, чем я думал. Я просто писал свои пожелания обычными словами: "сделай кнопку покрасивее", "добавь возможность сохранять расписание", "почему оно не работает?" - и Cursor терпеливо предлагал решения. Иногда приходилось просить объяснить попроще, что именно он предлагает сделать.
+Talking to the AI turned out to be more interesting than I thought. I just wrote my wishes in plain language: "make the button prettier," "add the ability to save the schedule," "why isn't it working?" — and Cursor patiently offered solutions. Sometimes I had to ask for a simpler explanation of what exactly it was proposing.
 
-## Неожиданные открытия
+## Unexpected Discoveries
 
-Знаете, что самое удивительное? Cursor реально помог мне создать работающее приложение, хотя я практически не знаю код. Он:
-- Объяснял простыми словами, что делает каждая часть кода
-- Предлагал готовые решения типовых задач
-- Исправлял мои ошибки (а их было немало!)
+You know what's most surprising? Cursor actually helped me build a working app, even though I barely know any code. It:
+- Explained in simple terms what each part of the code does
+- Offered ready-made solutions for typical tasks
+- Fixed my mistakes (and there were plenty!)
 
-## Что получилось в итоге
+## What We Ended Up With
 
-После нескольких дней экспериментов у нас получилось что-то работающее. Вот основная часть приложения:
+After a few days of experimenting, we had something that actually worked. Here's the main part of the app:
 
 ```javascript
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 
-// Честно говоря, я не очень понимаю, что тут происходит,
-// но Cursor сказал, что это нужно для красивого интерфейса
+// Honestly, I don't really understand what's going on here,
+// but Cursor said it's needed for a nice interface
 const theme = createTheme();
 
 function App() {
@@ -68,17 +68,17 @@ function App() {
 }
 ```
 
-## Чему я научился
+## What I Learned
 
-- Оказывается, создавать простые приложения можно даже без глубоких знаний программирования
-- ИИ может быть отличным помощником, если чётко объяснять ему свои желания
-- Не нужно бояться экспериментировать с новыми технологиями
+- Turns out you can build simple apps even without deep programming knowledge
+- AI can be a great helper if you clearly explain what you want
+- There's no need to be afraid of experimenting with new technologies
 
-## Планы на будущее
+## Plans for the Future
 
-Теперь, когда у меня появился такой помощник, я планирую создать ещё несколько простых приложений для себя. Может быть, даже начну потихоньку разбираться в том, как это всё работает изнутри.
+Now that I have this kind of helper, I'm planning to build a few more simple apps for myself. Maybe I'll even start slowly figuring out how it all works under the hood.
 
 P.S.
-Если вы, как и я, далеки от программирования, но хотите попробовать создать что-то своё - попробуйте Cursor! Это не так страшно, как кажется. В худшем случае потратите пару вечеров, в лучшем - создадите что-то полезное.
+If you, like me, are far from programming but want to try building something of your own — give Cursor a shot! It's not as scary as it seems. Worst case, you spend a couple of evenings; best case, you create something useful.
 
-*Дата: когда-то в эпоху восстания машин*
+*Date: sometime in the age of machine uprising*

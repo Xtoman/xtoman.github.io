@@ -1,46 +1,46 @@
 ---
 layout: post
-lang: ru
-title: "Кроличья нора звука: что такое Hi-Fi внутриканальные наушники и почему я снова трачу деньги"
+lang: en
+title: "Down the Sound Rabbit Hole: What Hi-Fi IEMs Are and Why I'm Spending Money Again"
 date: 2025-04-25
-description: "Узнайте, что такое Hi-Fi и Hi-End внутриканальные наушники, как выбрать правильные амбюшуры, кабель и цифровой плеер. Личный опыт и советы новичкам в мире качественного звука."
+description: "Learn what Hi-Fi and Hi-End in-ear monitors are, how to choose the right ear tips, cable, and digital player. Personal experience and tips for newcomers to quality audio."
 image:
-tags: [Звук]
+tags: [Audio]
 ---
-## Предисловие
+## Preface
 
-Этот блог я завел именно для того, чтобы фиксировать свои постоянно меняющиеся интересы. Настало время поговорить про хай-фай, внутриканальные наушники и цифровые плееры. Попробую собрать в один текст всё, что узнал за последние полторы недели, хотя признаюсь сразу: структурировать это непросто.
+I started this blog specifically to document my constantly shifting interests. It's time to talk about hi-fi, in-ear monitors, and digital audio players. I'll try to gather everything I've learned over the past week and a half into one piece, though I'll admit upfront: structuring this isn't easy.
 
-### Немного истории
-Раньше я активно пользовался внутриканальными наушниками и хорошо запомнил модель **Sennheiser CX 300-II**. Брал их несколько раз, так как кабели периодически умирали, но звук нравился стабильно.
+### A Bit of History
+I used to rely heavily on in-ear headphones and still remember the **Sennheiser CX 300-II** well. I bought them several times because the cables kept dying, but I consistently liked the sound.
 
-Потом наступила эпоха TWS-наушников. Я успел походить с **Marshall Major II**, **AirPods 2**, **AirPods Pro**, а последние два года со мной неизменно **AirPods Pro 2**. Очень ценю их за шумодав и испытываю боль, если забываю дома перед поездкой в метро.
+Then came the era of TWS earbuds. I went through **Marshall Major II**, **AirPods 2**, **AirPods Pro**, and for the last two years **AirPods Pro 2** have been my constant companions. I really value their noise cancellation and feel genuine pain if I forget them at home before a subway ride.
 
-Однако спокойная жизнь — не для меня. Гитары, которые хотел, уже куплены, и наступило время нового увлечения — хай-фай внутриканальных наушников.
+But a quiet life isn't for me. The guitars I wanted are already bought, and it's time for a new obsession — hi-fi in-ear monitors.
 
-### Hi-Fi и Hi-End: что это за звери?
-Стоимость таких наушников начинается от $10 и заканчивается где-то в стратосфере, куда лучше даже не смотреть. В основном их производят китайские компании, активно продавая на Aliexpress, Taobao и других площадках.
+### Hi-Fi and Hi-End: What Are These Beasts?
+These headphones start at around $10 and end somewhere in the stratosphere that's better not to look at. Mostly they're made by Chinese companies, actively sold on Aliexpress, Taobao, and other platforms.
 
-Количество конструкций буквально зашкаливает: внутри может быть как один драйвер, так и множество, причем разных конструкций (динамические, арматурные, планарные), разных частот, размеров и функций. То же самое касается форм, размеров и расцветок.
+The number of designs is literally off the charts: inside there can be a single driver or many, of different types (dynamic, balanced armature, planar), different frequencies, sizes, and functions. The same goes for shapes, sizes, and colors.
 
-Добавим сюда разнообразие АЧХ (амплитудно-частотная характеристика): нейтральные, U-образные, U Warm и Harman (это специальный эталон, разработанный Harman International, он считается близким к идеальному звучанию и подходит большинству слушателей).
+Add to that the variety of frequency response curves: neutral, U-shaped, U Warm, and Harman (a special reference developed by Harman International, considered close to ideal sound and suitable for most listeners).
 
-Кажется, разобрались? А вот и нет.
+Think we've got it figured out? Not quite.
 
-### Амбюшуры и их важность
-Купив наушники, вы получите в комплекте стандартные амбюшуры. Но «истинные ценители» уверенно скажут вам, что их надо менять — на пенные, силиконовые, с узким или широким каналом, в форме пули или прямые. И они действительно влияют на звук: низкие частоты могут стать глубже, высокие чище, звуковая сцена шире. Амбюшуры — это практически ещё один инструмент тонкой настройки вашего звука.
+### Ear Tips and Why They Matter
+When you buy headphones, you get standard ear tips in the box. But "true connoisseurs" will confidently tell you to swap them — for foam, silicone, narrow or wide bore, bullet-shaped or straight. And they really do affect the sound: lows can get deeper, highs cleaner, the soundstage wider. Ear tips are practically another tool for fine-tuning your sound.
 
-### Кабель — еще одна пропасть
-У всех хороших внутриканальных наушников кабель съемный. Это значит, открывается целый новый мир трат и экспериментов: разные коннекторы (самый распространённый — 2-pin 0.78mm), различные материалы проводов (медь, серебро, посеребрённая медь, безкислородная медь) и количество жил (2, 4, 8 и даже 16). Вся эта магия обещает повлиять на звук, хотя скептиков это может только рассмешить.
+### The Cable — Another Rabbit Hole
+All good IEMs have detachable cables. That means a whole new world of spending and experimentation opens up: different connectors (the most common is 2-pin 0.78mm), various wire materials (copper, silver, silver-plated copper, oxygen-free copper), and different strand counts (2, 4, 8, and even 16). All this magic is supposed to affect the sound, though skeptics might only find it amusing.
 
-### А куда их подключать?
-Теперь перейдём к источнику звука. Телефон с 3,5 мм разъемом, проводной или беспроводной ЦАП, или даже отдельный цифровой плеер? Лично я выбрал отдельный плеер, так как внезапно увидел Fiio Snowsky Mini, который выглядит буквально как маленькая аудиокассета. Плеер простой, стриминга нет — только старая добрая флешка с flac-файлами. Последний раз песни я скачивал году так в 2013. Кто-нибудь вообще помнит Зайцев.нет?
+### And What Do You Plug Them Into?
+Now let's move on to the source. A phone with a 3.5 mm jack, a wired or wireless DAC, or even a dedicated digital audio player? I personally chose a standalone player, because I suddenly spotted the Fiio Snowsky Mini, which literally looks like a tiny cassette tape. The player is simple — no streaming, just the good old flash drive with FLAC files. The last time I downloaded songs was probably around 2013. Does anyone even remember Zaycev.net?
 
-К слову, сегодня музыку во flac можно найти не только на торрентах, но и в Telegram-каналах, а ещё существует загадочный Soulseek — старейшая peer-to-peer сеть, до сих пор живая и полная редкой музыки.
+By the way, today you can find music in FLAC not only on torrents but also in Telegram channels, and there's the mysterious Soulseek — an old peer-to-peer network that's still alive and full of rare music.
 
-Среди более продвинутых современных плееров на слуху **Hiby R4** и **Fiio JM21**. Оба устройства работают на Android, поддерживают стриминговые сервисы и могут использоваться как проводной ЦАП для компьютера. Они также умеют Bluetooth с передачей звука в высоком качестве, поддерживают различные кодеки (LDAC, aptX и т.д.) и имеют балансные выходы, что уже совсем другая история.
+Among more advanced modern players, the **Hiby R4** and **Fiio JM21** are well known. Both run Android, support streaming services, and can be used as a wired DAC for a computer. They also support Bluetooth with high-quality audio transmission, various codecs (LDAC, aptX, etc.), and balanced outputs — which is a whole different story.
 
-### Что дальше?
-Пока что я уже заказал некоторый набор разнообразного железа и мучительно жду его прибытия. Буду пробовать, слушать и пытаться понять: есть ли в этом всём действительно смысл или AirPods Pro 2 и Spotify — всё, что нужно нормальному человеку? А весь хай-фай можно оставить любителям золотых подставок для аудиокабелей.
+### What's Next?
+For now, I've already ordered a set of assorted gear and am anxiously waiting for it to arrive. I'll try things out, listen, and attempt to understand: is there really any point to all this, or are AirPods Pro 2 and Spotify all a normal person needs? And can all of hi-fi be left to people who buy gold stands for audio cables.
 
-Продолжение следует!
+To be continued!

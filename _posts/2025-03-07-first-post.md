@@ -1,27 +1,27 @@
 ---
 layout: post
-lang: ru
-title: "Год в спортзале: что изменилось?"
+lang: en
+title: "A Year at the Gym: What Changed?"
 date: 2025-03-07
 ---
 
-Ровно год назад я впервые попал в спортзал. На тот момент мне было 26 лет и такому решению способствовали два момента – цифра на весах после новогодних праздников и 26 лет праздной жизни напугала меня (при росте 188, весы показали 88 кг) и отваливающаяся спина тоже не радовала.
+Exactly a year ago, I stepped into a gym for the first time. I was 26 at the time, and two things pushed me toward that decision — the number on the scale after the New Year holidays and 26 years of a sedentary lifestyle scared me (at 188 cm tall, the scale showed 88 kg), and my back falling apart wasn't exactly a joy either.
 
 
-Причиной таких проблем стал образ жизни в офисе в режиме 5/2 на протяжении последних 8 лет. Пришла идея что-то с этим делать, иначе к 30 годам в зеркале я увижу того человека, которым бы не хотелось становиться. А, ну и еще удачно прилетела скидка на вступительный взнос в спортзал.
+The root cause was an office lifestyle, 5/2, for the last 8 years. I got the idea that something had to change, otherwise by 30 I'd look in the mirror and see someone I didn't want to become. Oh, and a discount on the gym signup fee landed at just the right time.
 
-Начался путь, к моему счастью, с вопросом – «а как какать?» Я быстро разобрался благодаря групповым ознакомительным тренировкам в зале и первой бесплатной индивидуальной тренировке с тренером. Немного YouTube, общение с людьми, которые давно занимаются, – и вот я уже не хожу по залу с потерянным видом и полным непониманием. Успех чё. Тренер, которая проводила ознакомительную тренировку, в процессе предложила свои услуги, и я согласился. До сих пор с ней занимаюсь в объеме 5 занятий в месяц – и на это есть причина: тренер чётко услышала мой запрос – больная спина, лишний вес, и все наши занятия направлены именно на это. Остальное время занимаюсь самостоятельно – получается по 2–3 тренировки в неделю.
+The journey, thankfully, started with the question — "but how do you poop?" I figured it out quickly thanks to group intro sessions at the gym and my first free one-on-one session with a trainer. A bit of YouTube, talking to people who'd been at it for a while — and suddenly I wasn't wandering around the gym looking lost and completely clueless. Success, lol. The trainer who ran the intro session offered her services along the way, and I said yes. I'm still training with her — 5 sessions a month — and there's a reason: she really heard my request — bad back, extra weight — and all our sessions are aimed at exactly that. The rest of the time I train on my own — about 2–3 workouts a week.
 
-Тренировка начинается с 20 минут на дорожке в интервальном режиме (бег, шаг, бег и т.д.) с разными темпами и углами наклона. Далее короткая разминка, и начинаются силовые упражнения на всё тело – кажется, это называется full body. Соответственно, за следующий час я успеваю сделать два упражнения на спину, два на грудь, 2–4 на руки с плечами, два на ноги и завершаю всё это одним упражнением на пресс. Программа не меняется, но упражнения отличаются в зависимости от загруженности тренажёров, акцентов в прошлом занятии и т.п.
+A workout starts with 20 minutes on the treadmill in interval mode (run, walk, run, etc.) at different paces and inclines. Then a short warm-up, and the strength work begins — full body, I think that's what it's called. So over the next hour I manage two back exercises, two chest, 2–4 for arms and shoulders, two for legs, and I wrap it all up with one ab exercise. The program doesn't change, but the exercises vary depending on how busy the machines are, what we focused on last session, and so on.
 
-## Что изменилось за год?
+## What Changed Over the Year?
 
-**Вес.** Максимальная радость. К сентябрю вес планомерно снижался и составил 76,5 кг. Далее – небольшой набор до 79 кг и опять падение до 76 кг. Однако февраль не прошёл незамеченным, и сейчас вес — 81 кг. К лету обещаю себе скинуть =). В любом случае колебания в этих пределах мне комфортны – по большей части мне нравится, как выглядит тело, и ещё я могу сожрать что-то максимально калорийное и не страдать (главное потом отработать).
+**Weight.** Maximum joy. By September my weight had steadily dropped to 76.5 kg. Then a small gain up to 79 kg and another drop to 76 kg. February didn't go unnoticed though, and right now I'm at 81 kg. I promise myself I'll shed it by summer =). Either way, fluctuations in this range feel fine — for the most part I like how my body looks, and I can still devour something maximally caloric without suffering (the main thing is to work it off afterward).
 
-**Спина.** Проблема полностью не ушла: если я проведу целый день на ногах, поясница будет отваливаться, но не так сильно, как раньше. В любом случае стало легче, а останавливаться рано – да и не хочется.
+**Back.** The problem hasn't fully gone away: if I spend a whole day on my feet, my lower back will give out, but not as badly as before. Either way it's gotten easier, and it's too early to stop — plus I don't want to.
 
-В заметке опущены моменты с питанием, КБЖУ и спортпитом. Всё это было и что-то осталось, но пока не хочется это расписывать.
+I've left out nutrition, macros, and supplements. All of that was part of the picture and some of it stuck around, but I don't feel like writing it all out yet.
 
-Вместо вывода – какая-то физическая нагрузка тебе нужна (спасибо, кэп!). Телу лучше, кукуха ваще радостная, и что-то типо дисциплины получается. Нраица, продолжаем!
+Instead of a conclusion — you need some kind of physical activity (thanks, Captain Obvious!). Your body feels better, your head is way happier, and you kind of develop discipline. I like it, let's keep going!
 
 

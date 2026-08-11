@@ -4,7 +4,7 @@ title: "Разное снятое"
 description: "Это я снимал когда-то"
 date: 2025-11-12
 location: "Москва, Россия"
-published: true
+published: false
 cover_image: "cover.jpg"
 images:
   - path: "image1.jpg"
