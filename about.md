@@ -10,7 +10,7 @@ I'm **Maxim Zinchenko**, a documentary **photographer**. This site brings togeth
 
 ## Awards
 
-- Nominee, FIPA 12th edition
+- Nominee, Fine Art Photography Awards (FAPA), 12th edition
 
 ## Exhibitions
 
