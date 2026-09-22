@@ -8,6 +8,14 @@ description: Maxim Zinchenko (Maksim Zinchenko) — documentary photographer. Bl
 
 I'm **Maxim Zinchenko**, a documentary **photographer**. This site brings together my photo projects, portraits, and visual stories, along with a blog about travel, technology, and things that inspire me. Code and side projects are on [GitHub](https://github.com/xtoman).
 
+## Awards
+
+- Nominee, FIPA 12th edition
+
+## Exhibitions
+
+- URBAN Exhibits 2026 — URBAN Photo Awards, Trieste Airport Summer Edition, Ronchi dei Legionari, Italy
+
 ## Interests
 
 ### Art & media

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bio
-description: Maxim Zinchenko — documentary photographer based in Moscow. Street photography, portraits, and visual stories from Armenia, Uzbekistan, and Russia.
+description: Maxim Zinchenko — documentary photographer based in Moscow. Nominee, FIPA 12th edition. URBAN Exhibits 2026. Street photography, portraits, and visual stories from Armenia, Uzbekistan, and Russia.
 ---
 
 # Bio
@@ -10,7 +10,15 @@ description: Maxim Zinchenko — documentary photographer based in Moscow. Stree
 
 He shoots primarily on film and digital, working in a candid, observational style. Recent projects include street scenes from Yerevan, daily life in Bukhara and Samarkand, and a conceptual series on Soviet-era toys reimagined through the lens of artificial intelligence.
 
-His photographs have been published on personal projects and shared across social platforms. He is open to collaborations, commissions, and editorial assignments.
+His photographs have been published on personal projects and shared across social platforms. In 2026 he was nominated at FIPA, 12th edition, and his work was shown as part of URBAN Exhibits 2026. He is open to collaborations, commissions, and editorial assignments.
+
+## Awards
+
+- Nominee, FIPA 12th edition
+
+## Exhibitions
+
+- URBAN Exhibits 2026 — URBAN Photo Awards, Trieste Airport Summer Edition, Ronchi dei Legionari, Italy
 
 ## Selected work
 
