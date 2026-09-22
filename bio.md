@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Bio
-description: Maxim Zinchenko — documentary photographer based in Moscow. Nominee, Fine Art Photography Awards (FAPA), 12th edition. URBAN Exhibits 2026. Street photography, portraits, and visual stories from Armenia, Uzbekistan, and Russia.
+description: Maxim Zinchenko is a documentary photographer based in Moscow. His practice engages with memory, trauma, coming of age, vulnerability, and the urban environment. Nominee, Fine Art Photography Awards (FAPA), 12th edition. URBAN Exhibits 2026.
 ---
 
 # Bio
 
-**Maxim Zinchenko** is a documentary photographer based in Moscow, Russia. His work focuses on everyday life — the small gestures, routines, and encounters that reveal how people live in cities and on the streets.
+**Maxim Zinchenko** is a documentary photographer based in Moscow. He was born and raised in Budyonnovsk, Stavropol Krai. His practice engages with memory, experiences of trauma, coming of age, vulnerability, and the urban environment.
 
-He shoots primarily on film and digital, working in a candid, observational style. Recent projects include street scenes from Yerevan, daily life in Bukhara and Samarkand, and a conceptual series on Soviet-era toys reimagined through the lens of artificial intelligence.
+Zinchenko works with digital medium-format and 35 mm film photography. His first completed project examines memory and its relationship to personal traumatic experience. He is currently developing his documentary language and exploring photography as a way of observing people and the environments that shape their lives.
 
-His photographs have been published on personal projects and shared across social platforms. In 2026 he was nominated at the Fine Art Photography Awards (FAPA), 12th edition, and his work was shown as part of URBAN Exhibits 2026. He is open to collaborations, commissions, and editorial assignments.
+Zinchenko holds a degree in Social Work and a master’s degree in Youth Work Organisation from institutions in Moscow. He is currently studying at the Docdocdoc School of Contemporary Photography. Two of his works were presented in the **URBAN Exhibits 2026** exhibition.
 
 ## Awards
 
