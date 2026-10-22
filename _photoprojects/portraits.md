@@ -2,7 +2,7 @@
 layout: photoproject
 title: "Portraits"
 description: ""
-date: 2026-03-14
+date: 2026-10-22
 location: "Moscow, Russia"
 published: true
 cover_image: "glasha_01.jpg"
@@ -78,5 +78,19 @@ images:
   - path: "nikita_06.jpg"
     caption: ""
   - path: "nikita_07.jpg"
+    caption: ""
+  - path: "L1007861.jpg"
+    caption: ""
+  - path: "L1007956.jpg"
+    caption: ""
+  - path: "L1007962.jpg"
+    caption: ""
+  - path: "L1007964.jpg"
+    caption: ""
+  - path: "L1007987.jpg"
+    caption: ""
+  - path: "L1008059.jpg"
+    caption: ""
+  - path: "L1008062.jpg"
     caption: ""
 ---
