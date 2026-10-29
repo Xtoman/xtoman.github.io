@@ -4,30 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% assign page_title = page.title %}
-    {% assign site_title = site.title %}
-    <title>{% if page_title %}{{ page_title }} | {{ site.author.name_en | default: site_title }}{% else %}{{ site.author.name_en | default: site_title }} — {{ site.author.job_title_en | default: "Photographer" }}{% endif %}</title>
-    {% assign page_description = page.description | default: site.description %}
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
-    <meta name="author" content="{{ site.author.name }}, {{ site.author.name_en | default: site.title }}, {{ site.author.name_alt | default: 'Maksim Zinchenko' }}">
-    <meta name="keywords" content="Maxim Zinchenko, Maksim Zinchenko, Максим Зинченко, photographer, documentary photographer, фотограф">
-    
+    {% assign site_name = site.author.name_en | default: site.title %}
+    {% if page.url == '/' or page.title == nil %}
+        {% assign full_title = page.title | default: site_name %}
+        {% assign share_title = full_title %}
+    {% else %}
+        {% assign full_title = page.title | append: ' | ' | append: site_name %}
+        {% assign share_title = page.title %}
+    {% endif %}
+    <title>{{ full_title | escape }}</title>
+    {% comment %} Явный description из front matter важнее автоматического excerpt {% endcomment %}
+    {% assign page_description = page.description | strip_html | strip_newlines | strip %}
+    {% if page_description == "" %}
+        {% assign page_description = page.excerpt | strip_html | normalize_whitespace | strip %}
+    {% endif %}
+    {% if page_description == "" %}
+        {% assign page_description = site.description %}
+    {% endif %}
+    {% assign page_description = page_description | normalize_whitespace | truncate: 160 %}
+    {% if page.layout == 'photoproject' and page.cover_image %}
+        {% assign og_folder = page.path | split: '/' | last | replace: '.md', '' %}
+        {% assign og_file = page.cover_thumb | default: page.cover_image %}
+        {% assign og_image = '/assets/images/photoprojects/' | append: og_folder | append: '/' | append: og_file %}
+    {% elsif page.image and page.image != "" %}
+        {% assign og_image = '/assets/images/posts/' | append: page.image %}
+    {% else %}
+        {% assign og_image = '/assets/images/default-og.jpg' %}
+    {% endif %}
+    {% assign og_image = site.url | append: site.baseurl | append: og_image %}
+    <meta name="description" content="{{ page_description | escape }}">
+    <meta name="author" content="{{ site.author.name_en | default: site.title }}">
+    <script>
+        // Тема применяется до отрисовки, чтобы не было вспышки светлой темы
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (!theme) theme = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-    <meta property="og:site_name" content="{{ site.author.name_en | default: site.title }}">
+    <meta property="og:site_name" content="{{ site_name }}">
     <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="ru_RU">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.author.name_en | default: site.title }} — {{ site.author.job_title_en | default: 'Photographer' }}{% endif %}">
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
-    <meta property="og:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}/assets/images/posts/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/images/default-og.jpg{% endif %}">
-    
+    <meta property="og:title" content="{{ share_title | escape }}">
+    <meta property="og:description" content="{{ page_description | escape }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:image:alt" content="{{ share_title | escape }}">
+    {% if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% for tag in page.tags %}<meta property="article:tag" content="{{ tag | escape }}">
+    {% endfor %}
+    {% endif %}
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.author.name_en | default: site.title }} — {{ site.author.job_title_en | default: 'Photographer' }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page_description }}{% endif %}">
-    <meta name="twitter:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}/assets/images/posts/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/images/default-og.jpg{% endif %}">
-    
+    <meta name="twitter:title" content="{{ share_title | escape }}">
+    <meta name="twitter:description" content="{{ page_description | escape }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
     {% if page.url contains '/page/' or page.url == '/search/' %}
@@ -43,6 +80,8 @@
     {% include json-ld.html %}
     
     <!-- Material Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- Yandex.Metrika counter -->
@@ -72,7 +111,7 @@
         <div class="header-controls">
             <div id="search-container" class="header-search">
                 <form action="{{ site.baseurl }}/search/" method="get">
-                    <input type="text" id="search-input" name="q" placeholder="{{ t.search.placeholder }}" aria-label="{{ t.search.label }}">
+                    <input type="text" id="header-search-input" name="q" placeholder="{{ t.search.placeholder }}" aria-label="{{ t.search.label }}">
                 </form>
             </div>
             <button id="search-toggle" class="icon-button" aria-label="{{ t.search.label }}">
@@ -104,41 +143,35 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM fully loaded');
             
-            // Инициализация темы
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            // Тема уже выставлена скриптом в <head>
+            const savedTheme = document.documentElement.getAttribute('data-theme') || 'light';
             
             // Переключатель темы
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = themeToggle.querySelector('.material-icons');
             
-            console.log('Theme toggle:', themeToggle);
             
             themeIcon.textContent = savedTheme === 'light' ? 'dark_mode' : 'light_mode';
             
             themeToggle.addEventListener('click', () => {
-                console.log('Theme toggle clicked');
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
                 document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
+                try { localStorage.setItem('theme', newTheme); } catch (e) {}
                 themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
             });
 
             // Поиск
             const searchToggle = document.getElementById('search-toggle');
             const searchContainer = document.getElementById('search-container');
-            const searchInput = document.getElementById('search-input');
+            const searchInput = document.getElementById('header-search-input');
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
             const body = document.body;
             
-            console.log('Search toggle:', searchToggle);
 
             searchToggle.addEventListener('click', (e) => {
-                console.log('Search toggle clicked');
                 e.stopPropagation();
                 
                 // Закрываем меню, если оно открыто
@@ -167,13 +200,11 @@
             }
 
             // Мобильное меню
-            console.log('Menu toggle:', menuToggle);
 
             if (menuToggle) {
                 const menuIcon = menuToggle.querySelector('.material-icons');
                 
                 menuToggle.addEventListener('click', function(e) {
-                    console.log('Menu toggle clicked');
                     e.preventDefault();
                     e.stopPropagation();
                     
@@ -194,7 +225,6 @@
                         body.style.overflow = '';
                     }
                     
-                    console.log('Nav active:', mainNav.classList.contains('nav-active'));
                 });
             }
 

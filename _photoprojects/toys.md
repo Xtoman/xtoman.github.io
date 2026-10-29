@@ -6,6 +6,7 @@ date: 2026-02-01
 location: "Moscow, Russia"
 published: true
 cover_image: "01.jpg"
+cover_thumb: "cover-thumb.jpg"
 images:
   - path: "01.jpg"
     caption_en: "Tender scarcity: a toy that was cherished, though made of the simplest plastic."

@@ -19,10 +19,11 @@ description: Maxim Zinchenko (Maksim Zinchenko) — documentary photographer. Ph
                 {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
                 {% if project.cover_image %}
                 <div class="photoproject-cover">
-                    <img 
-                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.cover_image }}" 
+                    <img
+                        src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ project.cover_thumb | default: project.cover_image }}"
                         alt="{{ project.title }}"
-                        loading="lazy"
+                        {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
+                        decoding="async"
                         itemprop="image"
                     >
                 </div>

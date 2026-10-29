@@ -22,7 +22,7 @@ description: Personal blog about technology, travel and self-development
         </div>
         
         <div class="post-excerpt" itemprop="description">
-            {{ post.content | strip_html | truncatewords: 50 }}
+            {% if post.description and post.description != "" %}{{ post.description }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}
         </div>
         
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more" aria-label="{{ t.common.read_more }} {{ post.title }}">{{ t.common.read_more }}</a>

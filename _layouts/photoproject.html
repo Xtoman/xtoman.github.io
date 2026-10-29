@@ -35,8 +35,9 @@ layout: default
             {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
             <img 
                 src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
-                alt="{{ image.caption_en | default: image.caption | default: page.title }}"
-                loading="lazy"
+                alt="{{ image.caption_en | default: image.caption | default: page.title | strip_html | escape }}"
+                {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
+                decoding="async"
                 class="gallery-image"
                 data-src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}"
             >

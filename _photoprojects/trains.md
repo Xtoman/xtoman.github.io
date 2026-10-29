@@ -5,6 +5,7 @@ description: "Work in progress."
 date: 2026-10-29
 published: true
 cover_image: "trains_020.jpg"
+cover_thumb: "cover-thumb.jpg"
 images:
   - path: "trains_036.jpg"
     caption: ""

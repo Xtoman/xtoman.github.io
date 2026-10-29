@@ -76,7 +76,8 @@
     "@id": "{{ json_site_url }}{{ page.url }}"
   },
   "url": "{{ json_site_url }}{{ page.url }}",
-  "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: page.description | default: site.description | jsonify }}
+  "description": {{ page_description | jsonify }},
+  "inLanguage": "en"
   {% if page.image %}
   ,"image": "{{ json_site_url }}/assets/images/posts/{{ page.image }}"
   {% endif %}
@@ -90,8 +91,11 @@
   "@context": "https://schema.org",
   "@type": "ImageGallery",
   "name": {{ page.title | jsonify }},
-  "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }},
+  "description": {{ page_description | jsonify }},
   "url": "{{ json_site_url }}{{ page.url }}",
+  "image": {{ og_image | jsonify }},
+  {% if page.date %}"datePublished": "{{ page.date | date_to_xmlschema }}",{% endif %}
+  {% if page.location %}"contentLocation": { "@type": "Place", "name": {{ page.location | jsonify }} },{% endif %}
   "author": {
     "@type": "Person",
     "name": {{ json_author_name | jsonify }},

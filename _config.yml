@@ -24,10 +24,6 @@ author:
 # Google Search Console: вставьте код верификации после регистрации сайта
 # google_site_verification: "ваш-код-из-search-console"
 
-# Настройки пагинации
-paginate: 5
-paginate_path: "/page/:num/"
-
 # Настройки SEO
 lang: en
 timezone: Europe/Moscow
@@ -45,8 +41,6 @@ collections:
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
 
 # Исключения из сборки
 exclude:
@@ -61,6 +55,8 @@ exclude:
   - TELEGRAM_SETUP.md
   - _photoprojects/README.md
   - _photoprojects/example-project.md
+  - test_telegram.py
+  - css/
 
 # Настройки сборки
 markdown: kramdown

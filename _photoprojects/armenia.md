@@ -6,6 +6,7 @@ date: 2026-07-01
 location: "Yerevan, Armenia"
 published: true
 cover_image: "02.jpeg"
+cover_thumb: "cover-thumb.jpg"
 images:
   - path: "01.jpeg"
     caption_en: "A girl feeds a cat in the courtyard near the Blue Mosque. Yerevan has many cats, and people often feed them."

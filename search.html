@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
           const end = Math.min(item.content.length, position + 100);
           context = item.content.substring(start, end);
           
-          const regex = new RegExp(`(${query})`, 'gi');
+          const escapedQuery = query.replace(/[.*+?^$(){}|[\]\\]/g, '\\$&');
+          const regex = new RegExp('(' + escapedQuery + ')', 'gi');
           context = context.replace(regex, '<mark>$1</mark>');
           
           if (start > 0) context = '...' + context;

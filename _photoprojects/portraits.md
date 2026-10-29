@@ -6,6 +6,7 @@ date: 2026-10-22
 location: "Moscow, Russia"
 published: true
 cover_image: "glasha_01.jpg"
+cover_thumb: "cover-thumb.jpg"
 images:
   - path: "glasha_01.jpg"
     caption: ""
