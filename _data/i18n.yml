@@ -27,7 +27,7 @@ en:
     back_home: "Back to home"
   photoprojects:
     title: "Projects"
-    description: "Documentary projects<br>and visual stories"
+    description: "Photo projects<br>and visual stories"
     empty: "No projects added yet."
     all_projects: "All projects"
     no_photos: "No photos in this project yet."
