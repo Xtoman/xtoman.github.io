@@ -1,11 +1,12 @@
 ---
 layout: photoproject
 title: "From the Train Window"
-description: "Work in progress."
+description: "Landscapes seen from the train window. A work in progress."
 date: 2026-10-29
 published: true
 cover_image: "trains_020.jpg"
 cover_thumb: "cover-thumb.jpg"
+web_images: true
 images:
   - path: "trains_036.jpg"
     caption: ""

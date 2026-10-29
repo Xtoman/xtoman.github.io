@@ -33,8 +33,9 @@ layout: default
         <figure class="photo-item" data-index="{{ forloop.index0 }}">
             {% assign project_folder = page.slug | default: page.path %}
             {% assign project_folder = project_folder | split: '/' | last | replace: '.md', '' %}
-            <img 
-                src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{{ image.path }}" 
+            {% comment %} web_images: true — в галерее облегчённые копии из web/, оригинал открывается в lightbox {% endcomment %}
+            <img
+                src="{{ site.baseurl }}/assets/images/photoprojects/{{ project_folder }}/{% if page.web_images %}web/{% endif %}{{ image.path }}"
                 alt="{{ image.caption_en | default: image.caption | default: page.title | strip_html | escape }}"
                 {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
                 decoding="async"

@@ -1,7 +1,7 @@
 ---
 layout: photoproject
 title: "Portraits"
-description: ""
+description: "A portrait series photographed in Moscow."
 date: 2026-10-22
 location: "Moscow, Russia"
 published: true

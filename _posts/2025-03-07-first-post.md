@@ -3,6 +3,8 @@ layout: post
 lang: en
 title: "A Year at the Gym: What Changed?"
 date: 2025-03-07
+description: "One year at the gym after eight years of office life: why I started at 26, what changed in my body and mood, and why some physical activity is a must."
+tags: [Fitness]
 ---
 
 Exactly a year ago, I stepped into a gym for the first time. I was 26 at the time, and two things pushed me toward that decision — the number on the scale after the New Year holidays and 26 years of a sedentary lifestyle scared me (at 188 cm tall, the scale showed 88 kg), and my back falling apart wasn't exactly a joy either.

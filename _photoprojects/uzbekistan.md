@@ -7,6 +7,7 @@ location: "Bukhara and Samarkand, Uzbekistan"
 published: true
 cover_image: "01.JPEG"
 cover_thumb: "cover-thumb.jpg"
+web_images: true
 images:
   - path: "01.JPEG"
     caption_en: "Wings of childhood. The breeding of decorative Uzbek pigeons owes much to the Emir of Bukhara's collection — he brought pigeons with clipped legs and long beaks from Iran and other Asian countries. After his overthrow, some birds ended up with pigeon breeders in Samarkand and Namangan. Today they draw the attention of children and tourists."

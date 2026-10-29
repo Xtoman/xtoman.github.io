@@ -3,6 +3,8 @@ layout: post
 lang: en
 title: "How I Trusted My Code to AI, or the Story of One Experiment with Cursor"
 date: 2025-03-07
+description: "How a non-programmer built a schedule management app with the Cursor AI editor: first steps, funny moments, unexpected discoveries and lessons learned."
+tags: [Cursor, AI]
 ---
 
 Hey friends! Today I'll tell you a fun story about how I decided to try something new in development. You know those moments when you think "what if..."? That's exactly what I had.

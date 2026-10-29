@@ -46,6 +46,23 @@ assets/images/photoprojects/my-project/
   └── image3.jpg
 ```
 
+### Шаг 3а: Сделайте облегчённые копии для сайта
+
+Оригиналы по 3000 px весят несколько мегабайт, поэтому на главной и в галерее показываются уменьшенные копии, а оригинал открывается в полноэкранном просмотре:
+
+```bash
+cd assets/images/photoprojects/my-project
+sips -s format jpeg -s formatOptions 78 -Z 1200 cover.jpg --out cover-thumb.jpg
+mkdir -p web && for f in *.jpg; do [ "$f" = cover-thumb.jpg ] || sips -s format jpeg -s formatOptions 80 -Z 2000 "$f" --out "web/$f"; done
+```
+
+И добавьте в front matter:
+
+```yaml
+cover_thumb: "cover-thumb.jpg"  # превью обложки для главной и соцсетей
+web_images: true                # галерея берёт фото из папки web/
+```
+
 ### Шаг 4: Заполните front matter
 
 Откройте файл проекта и заполните YAML front matter:
