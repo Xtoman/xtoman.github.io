@@ -5,7 +5,7 @@
   <link href="https://xtoman.ru/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://xtoman.ru/" rel="alternate" type="text/html"/>
   <id>https://xtoman.ru/</id>
-  <updated>2026-10-29T14:08:02+03:00</updated>
+  <updated>2026-11-06T17:15:05+03:00</updated>
   <author>
     <name>Maxim Zinchenko</name>
   </author>
@@ -69,6 +69,18 @@
     <updated>2026-10-29T00:00:00+03:00</updated>
     <category term="Photo projects"/>
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://xtoman.ru/assets/images/photoprojects/trains/cover-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;Landscapes seen from the train window. A work in progress.</summary>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Street</title>
+    <link href="https://xtoman.ru/photoprojects/street/" rel="alternate" type="text/html"/>
+    <id>https://xtoman.ru/photoprojects/street/</id>
+    <published>2026-11-06T00:00:00+03:00</published>
+    <updated>2026-11-06T00:00:00+03:00</updated>
+    <category term="Photo projects"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://xtoman.ru/assets/images/photoprojects/street/cover-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;Street photography.</summary>
   </entry>
   
   
