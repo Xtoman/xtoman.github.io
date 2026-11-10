@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bio
-description: Maxim Zinchenko is a documentary photographer based in Moscow. His practice engages with memory, trauma, coming of age, vulnerability, and the urban environment. Nominee, Fine Art Photography Awards (FAPA), 12th edition. URBAN Exhibits 2026.
+description: Maxim Zinchenko is a documentary photographer based in Moscow. His practice engages with memory, trauma, coming of age, vulnerability, and the urban environment. Nominee, Fine Art Photography Awards (FAPA), 12th edition. URBAN Exhibits: Unveiling the City (Trieste Airport and ITIS, 2026).
 ---
 
 # Bio
@@ -10,7 +10,7 @@ description: Maxim Zinchenko is a documentary photographer based in Moscow. His 
 
 Zinchenko works with digital medium-format and 35 mm film photography. His first completed project examines memory and its relationship to personal traumatic experience. He is currently developing his documentary language and exploring photography as a way of observing people and the environments that shape their lives.
 
-Zinchenko holds a degree in Social Work and a master’s degree in Youth Work Organisation from institutions in Moscow. He is currently studying at the Docdocdoc School of Contemporary Photography. Two of his works were presented in the **URBAN Exhibits 2026** exhibition.
+Zinchenko holds a degree in Social Work and a master’s degree in Youth Work Organisation from institutions in Moscow. He is currently studying at the Docdocdoc School of Contemporary Photography. In 2026 his work was presented twice in the **URBAN Exhibits: Unveiling the City** exhibition — at the Trieste Airport Exhibition Area and at ITIS, Trieste.
 
 ## Awards
 
@@ -18,7 +18,8 @@ Zinchenko holds a degree in Social Work and a master’s degree in Youth Work Or
 
 ## Exhibitions
 
-- URBAN Exhibits 2026 — URBAN Photo Awards, Trieste Airport Summer Edition, Ronchi dei Legionari, Italy
+- URBAN Exhibits: Unveiling the City — URBAN Photo Awards, ITIS, Trieste, Italy, 2026
+- URBAN Exhibits: Unveiling the City — URBAN Photo Awards, Trieste Airport, Exhibition Area (Summer Edition), Ronchi dei Legionari, Italy, 2026
 
 ## Selected work
 

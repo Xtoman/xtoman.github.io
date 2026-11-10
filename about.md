@@ -14,7 +14,8 @@ I'm **Maxim Zinchenko**, a documentary **photographer**. This site brings togeth
 
 ## Exhibitions
 
-- URBAN Exhibits 2026 — URBAN Photo Awards, Trieste Airport Summer Edition, Ronchi dei Legionari, Italy
+- URBAN Exhibits: Unveiling the City — URBAN Photo Awards, ITIS, Trieste, Italy, 2026
+- URBAN Exhibits: Unveiling the City — URBAN Photo Awards, Trieste Airport, Exhibition Area (Summer Edition), Ronchi dei Legionari, Italy, 2026
 
 ## Interests
 
