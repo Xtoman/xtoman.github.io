@@ -594,16 +594,39 @@
         render();
     }
 
+    // HEIC/HEIF decoder (libheif, ~3 MB) is fetched only when a file needs it
+    var heicUrl = new URL('../lib/heic-to/heic-to.js', document.currentScript.src).href, heicPromise = null;
+    function loadHeicDecoder() {
+        if (!heicPromise) {
+            heicPromise = new Promise(function (resolve, reject) {
+                var s = document.createElement('script');
+                s.src = heicUrl;
+                s.onload = function () { window.HeicTo ? resolve(window.HeicTo) : reject(new Error('HEIF decoder missing')); };
+                s.onerror = function () { heicPromise = null; reject(new Error('HEIF decoder failed to load')); };
+                document.head.appendChild(s);
+            });
+        }
+        return heicPromise;
+    }
+
     async function loadFile(file) {
         if (!file) return;
+        var bmp = null;
         try {
-            var bmp = await createImageBitmap(file);
-            if (bitmap && bitmap.close) bitmap.close();
-            bitmap = bmp;
+            bmp = await createImageBitmap(file);
         } catch (e) {
-            setStatus('This file could not be opened as an image.');
-            return;
+            // not a format the browser reads natively: try it as HEIC/HEIF (phone cameras)
+            try {
+                setStatus('Decoding HEIF…');
+                var heicTo = await loadHeicDecoder();
+                bmp = await heicTo({ blob: file, type: 'bitmap' });
+            } catch (e2) {
+                setStatus('This file could not be opened as an image.');
+                return;
+            }
         }
+        if (bitmap && bitmap.close) bitmap.close();
+        bitmap = bmp;
         fileName = (file.name || 'image').replace(/\.[^.]+$/, '') || 'image';
         drop.hidden = true; canvas.hidden = false;
         saveBtns.forEach(function (b) { b.disabled = false; });
