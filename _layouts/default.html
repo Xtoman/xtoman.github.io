@@ -132,7 +132,7 @@
         </nav>
     </header>
 
-    <main id="main-content"{% if page.url == "/" %} class="main--wide"{% elsif page.layout == "photoproject" %} class="main--gallery"{% endif %}>
+    <main id="main-content"{% if page.url == "/" %} class="main--wide"{% elsif page.wide %} class="main--wide"{% elsif page.layout == "photoproject" %} class="main--gallery"{% endif %}>
         {{ content }}
     </main>
 

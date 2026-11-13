@@ -1,0 +1,66 @@
+---
+layout: default
+title: Glitch
+description: Browser tool for real image glitches — databending through audio effects, corrupted JPEG streams, broken PNG filters and misread raw data. Nothing is uploaded.
+permalink: /glitch/
+wide: true
+---
+<link rel="stylesheet" href="{{ '/assets/css/glitch.css' | relative_url }}">
+
+<div class="glitch-page">
+    <header class="page-header">
+        <h1>Glitch</h1>
+        <p class="page-description">Real glitches only: the image data is actually damaged and then read back. Nothing leaves your browser.</p>
+    </header>
+
+    <div class="glitch-app" id="glitch-app">
+        <section class="glitch-stage" aria-label="Preview">
+            <label class="glitch-drop" id="glitch-drop">
+                <input type="file" id="glitch-file" accept="image/*" hidden>
+                <span class="glitch-drop-title">Drop an image here</span>
+                <span class="glitch-drop-hint">or click to choose a file · you can also paste from the clipboard</span>
+            </label>
+            <canvas id="glitch-canvas" hidden></canvas>
+            <p class="glitch-status" id="glitch-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <aside class="glitch-panel" aria-label="Controls">
+            <div class="glitch-toolbar">
+                <button type="button" class="glitch-btn" id="glitch-open">Open image</button>
+                <button type="button" class="glitch-btn" id="glitch-compare" disabled title="Hold to see the original">Original</button>
+                <button type="button" class="glitch-btn" id="glitch-save-jpg" disabled>Save JPEG</button>
+                <button type="button" class="glitch-btn glitch-btn--primary" id="glitch-save" disabled>Save PNG</button>
+            </div>
+
+            <label class="glitch-field glitch-field--inline">
+                <span>Working size</span>
+                <select id="glitch-size">
+                    <option value="800">800 px</option>
+                    <option value="1600" selected>1600 px</option>
+                    <option value="2400">2400 px</option>
+                    <option value="4000">4000 px (slow)</option>
+                </select>
+            </label>
+
+            <div class="glitch-chain" id="glitch-chain"></div>
+
+            <div class="glitch-add">
+                <span class="glitch-add-label">Add a step</span>
+                <div class="glitch-add-buttons" id="glitch-add"></div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="glitch-about">
+        <h2>How it works</h2>
+        <ul>
+            <li><strong>Audio</strong> — the raw pixel bytes are treated as a sound recording, run through an audio effect (echo, reverb, phaser, wah…) and written back as pixels. The same trick as importing an image into an audio editor.</li>
+            <li><strong>JPEG</strong> — the image is saved as a real JPEG, random bytes of the compressed stream or its quantization tables are overwritten, and the browser's decoder shows whatever it can still read.</li>
+            <li><strong>PNG filters</strong> — scanlines are run through PNG prediction filters, the filtered data is damaged, then decoded. Each filter spreads the damage in its own way.</li>
+            <li><strong>Raw misread</strong> — the pixel data is intact, but read with the wrong width, offset or channel layout, as if the file header lied.</li>
+        </ul>
+        <p>Steps run top to bottom, each one feeding the next. Results depend on the working size, because the data itself changes.</p>
+    </section>
+</div>
+
+<script src="{{ '/assets/js/glitch.js' | relative_url }}" defer></script>
