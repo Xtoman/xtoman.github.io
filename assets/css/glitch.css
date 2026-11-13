@@ -1,0 +1,290 @@
+/* Glitch tool (/glitch/) */
+.glitch-app {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.glitch-stage {
+    position: sticky;
+    top: 1rem;
+    min-width: 0;
+}
+
+.glitch-drop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 420px;
+    padding: 2rem;
+    box-sizing: border-box;
+    border: 1px dashed var(--meta-color);
+    background: var(--light-gray);
+    color: var(--text-color);
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.glitch-drop:hover,
+.glitch-app.is-dragover .glitch-drop {
+    border-color: var(--heading-color);
+}
+
+.glitch-app.is-dragover #glitch-canvas {
+    outline: 2px dashed var(--heading-color);
+    outline-offset: 4px;
+}
+
+.glitch-drop-title {
+    font-size: 1.25rem;
+    color: var(--heading-color);
+}
+
+.glitch-drop-hint {
+    font-size: 0.85rem;
+    color: var(--meta-color);
+    line-height: 1.5;
+}
+
+#glitch-canvas {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 4rem);
+    margin: 0 auto;
+    background: var(--light-gray);
+}
+
+#glitch-canvas[hidden],
+.glitch-drop[hidden] {
+    display: none;
+}
+
+.glitch-status {
+    min-height: 1.4em;
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--meta-color);
+    text-align: center;
+}
+
+.glitch-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.glitch-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.glitch-btn {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    background: var(--card-background);
+    color: var(--heading-color);
+    font: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s ease, opacity 0.15s ease;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.glitch-btn:hover:not(:disabled) {
+    border-color: var(--heading-color);
+}
+
+.glitch-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.glitch-btn--primary {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--accent-contrast);
+}
+
+.glitch-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0;
+}
+
+.glitch-field--inline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.glitch-field-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.glitch-field-value {
+    color: var(--meta-color);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.glitch-panel select {
+    max-width: 100%;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    background: var(--card-background);
+    color: var(--heading-color);
+    font: inherit;
+}
+
+.glitch-panel input[type="range"] {
+    width: 100%;
+    margin: 0;
+    accent-color: var(--heading-color);
+}
+
+.glitch-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.glitch-chain:empty::before {
+    content: "No steps yet — add one below.";
+    color: var(--meta-color);
+}
+
+.glitch-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    background: var(--card-background);
+}
+
+.glitch-card.is-off .glitch-card-body {
+    opacity: 0.4;
+}
+
+.glitch-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.glitch-card-title {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    font-weight: 600;
+    color: var(--heading-color);
+    cursor: pointer;
+}
+
+.glitch-card-title input {
+    margin: 0;
+    accent-color: var(--heading-color);
+}
+
+.glitch-icon-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 1px solid transparent;
+    background: none;
+    color: var(--meta-color);
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.glitch-icon-btn:hover:not(:disabled) {
+    color: var(--heading-color);
+    border-color: var(--border-color);
+}
+
+.glitch-icon-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.glitch-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.glitch-card-error {
+    margin: 0;
+    color: #c0392b;
+    font-size: 0.8rem;
+}
+
+.glitch-add {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.glitch-add-label {
+    color: var(--meta-color);
+}
+
+.glitch-add-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.glitch-about {
+    max-width: 760px;
+    margin: 3rem 0 2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.glitch-about h2 {
+    font-weight: 400;
+}
+
+.glitch-about li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .glitch-app {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .glitch-stage {
+        position: static;
+    }
+
+    .glitch-drop {
+        min-height: 240px;
+    }
+
+    #glitch-canvas {
+        max-height: 70vh;
+    }
+}
