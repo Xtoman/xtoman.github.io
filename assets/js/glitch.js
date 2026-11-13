@@ -595,7 +595,7 @@
     }
 
     // HEIC/HEIF decoder (libheif, ~3 MB) is fetched only when a file needs it
-    var heicUrl = new URL('../lib/heic-to/heic-to.js', document.currentScript.src).href, heicPromise = null;
+    var heicUrl = new URL('../lib/heic-to/heic-to.js?v=1.6.7', document.currentScript.src).href, heicPromise = null;
     function loadHeicDecoder() {
         if (!heicPromise) {
             heicPromise = new Promise(function (resolve, reject) {
@@ -621,7 +621,8 @@
                 var heicTo = await loadHeicDecoder();
                 bmp = await heicTo({ blob: file, type: 'bitmap' });
             } catch (e2) {
-                setStatus('This file could not be opened as an image.');
+                var why = (e2 && (e2.message || e2.code)) || e2 || 'unknown format';
+                setStatus('This file could not be opened as an image (' + String(why).slice(0, 120) + ').');
                 return;
             }
         }
